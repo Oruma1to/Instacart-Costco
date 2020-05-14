@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import './SignUp.css'
 // import { signUp, signIn } from '../services/user'
@@ -70,4 +71,5 @@ class SignUp extends Component {
 }
 
 export default SignUp
+
 
