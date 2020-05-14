@@ -24,10 +24,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
+        <h1>Sup front</h1>
         <Switch>
-          <h1>Sup front</h1>
           <Route exact path="/" render={() => <LandingPage />} />
-          <SignIn />
+          <Route exact path="/sign-in" render={() => <SignIn />} />
         </Switch>
       </div>
     )

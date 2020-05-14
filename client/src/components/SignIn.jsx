@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './SignIn.css'
-// import { signIn } from '../services/user'
+import { signIn } from '../services/user'
 
 class SignIn extends Component {
   constructor() {
@@ -85,6 +85,12 @@ class SignIn extends Component {
           {this.renderError()}
 
 
+
+          <div className="orLoginInfo">
+            <img alt="facebook-login-button" src='' />
+            <img alt="google-login-button" src='' />
+            <h4>Already have an account? Log in.</h4>
+          </div>
 
 
         </form>
