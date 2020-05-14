@@ -13,10 +13,16 @@ export default class App extends Component {
   }
  }
 
- // async componentDidMount() {
- //   const user = await verifyUser
+ async componentDidMount() {
+  const user = await verifyUser()
+  if (user) {
+   this.setState(user)
+  }
+ }
 
- // }
+ setUser = user => this.setState({ user })
+
+ clearUser = () => this.setState({ user: null })
 
 
 
