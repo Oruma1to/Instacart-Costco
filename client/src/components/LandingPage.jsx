@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import LandingHeader from "./LandingHeader";
 import "./LandingHeader.css";
-// import "../images/backgroundimage.png"
 import { Redirect } from "react-router-dom";
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
- render() {
+  render() {
   return (
-   <>
+  <>
     <LandingHeader />
     <Redirect to="sign-up" />
-   </>
+  </>
   );
- }
+  }
 }
