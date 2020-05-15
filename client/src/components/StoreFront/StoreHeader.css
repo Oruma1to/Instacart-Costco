@@ -2,7 +2,7 @@ body{
   width:100%;
 }
 .apple-header{
-  background-image:url('../images/demapples.png');
+  background-image:url('../../images/demapples.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

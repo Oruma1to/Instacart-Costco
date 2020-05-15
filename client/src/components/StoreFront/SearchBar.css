@@ -1,0 +1,36 @@
+.search-input {
+width: 450px;
+height: 29.5px;
+margin: 0;
+color: grey;
+}
+
+.search-button {
+height: 5px;
+width: 5px;
+
+}
+
+.search-button-div{
+  background-color: green;
+ content: url('https://api.iconify.design/entypo-magnifying-glass.svg?color=%23ffff&height=20');
+ vertical-align: -0.125em;
+  height: 20px;
+  width: 20px;
+}
+
+.search-icon {
+  height: 32px;
+  margin: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  
+}
