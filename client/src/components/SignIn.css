@@ -12,7 +12,6 @@ justify-content: space-between;
 align-content: center;
 margin: 0px 40px 0px 40px;
 
-
 }
 
 
@@ -78,6 +77,38 @@ input {
   margin: 2px;
 
 }
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: grey;
+  font-size: 10px;
+  width:200px;
+  margin-left: 8px;
+  /* justify-content: center; */
+  margin: 4px auto;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid lightgrey;
+}
+.separator::before {
+  margin-right: .20em;
+}
+.separator::after {
+    margin-left: .20em;
+}
+
+
+/* .hr {
+ display: inline;
+} */
+
+/* hr{
+  display: inline;
+} */
 
 /* #emailInput {
   margin: auto;

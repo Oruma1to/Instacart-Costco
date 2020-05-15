@@ -91,9 +91,11 @@ class SignIn extends Component {
           </div>
           {this.renderError()}
 
+          <div className="separator">or</div>
 
-
-
+          {/* <div className="hr">
+            <hr />
+          </div> */}
 
           <div className="orLoginInfo">
             <div>
