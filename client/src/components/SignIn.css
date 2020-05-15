@@ -12,14 +12,12 @@ justify-content: space-between;
 align-content: center;
 margin: 0px 40px 0px 40px;
 
-
 }
 
 
 
 .welcome {
 color: solid #4444;
-padding-top: 20px;
 font-weight: heavy;
 
 }
@@ -126,7 +124,7 @@ input {
 } */
 
 .instacart-detail-image {
-height: 15vh;
+height: 80px;
 margin-top: 0;
 margin-right: 10px;
 background: no-repeat;
