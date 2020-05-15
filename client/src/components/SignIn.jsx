@@ -5,8 +5,8 @@ import LandingHeader from './LandingHeader'
 
 
 class SignIn extends Component {
- constructor() {
-  super()
+ constructor(props) {
+  super(props)
 
   this.state = {
    email: '',
@@ -26,14 +26,14 @@ class SignIn extends Component {
 
  onSignIn = event => {
   event.preventDefault()
-
+  console.log(this.props)
   const { history, setUser } = this.props
-
+  console.log(setUser)
   signIn(this.state)
    .then(res => {
     setUser(res.user)
    })
-   .then(() => history.push('/'))
+   .then(() => history.push('/costco'))
    .catch(error => {
     console.error(error)
     this.setState({
@@ -46,6 +46,7 @@ class SignIn extends Component {
  }
 
  renderError = () => {
+  console.log(this.state.email)
   const toggleForm = this.state.isError ? 'danger' : ''
   if (this.state.isError) {
    return (
