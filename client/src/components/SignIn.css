@@ -1,33 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 .form-container {
-border: 1px solid grey;
 background: white;
 text-align: center;
 display: flex;
-justify-content: flex-start;
 flex-direction: column;
-box-shadow: grey;
-border: 20px, 20px;
-padding: 20px;
-justify-content: space-between;
-align-content: center;
+justify-content: center;
+align-items: center;
+padding: 10px 20px 10px;
+justify-content: space-evenly;
 margin: 100px auto;
+box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+width: 350px;
+height: max-content;
 }
 
 
 
 .welcome {
 color: solid #4444;
-font-weight: heavy;
-
+font-size: 22px;
+margin-top: 0;
 }
 
 
 .login-prompt {
   color: grey;
-  margin: -20px;
-  font-size: 10px;
-  margin: 2px 2px;
-
+  font-size: 14px;
+  font-weight:600;
+  letter-spacing: .4px;
+  margin: 3px 0 8px 0;
 }
 
 .facebookButton {
@@ -36,8 +40,8 @@ font-weight: heavy;
   border: #375089;
   border-radius: 4px;
   padding: 5px 35px;
-  height: 25px;
-  width: 200px;
+  height: 28px;
+  width: 270px;
   margin: 2px;
 
 }
@@ -47,32 +51,37 @@ font-weight: heavy;
   border:  #214EC0;
   border-radius: 4px;
   padding: 5px 35px;
-  height: 25px;
-  width:200px;
+  height: 28px;
+  width: 270px;
   margin: 2px;
 
 }
 
 .alreadyLogin {
   color: grey;
-  font-size: 10px;
-
+  font-size: 13px; 
 }
 
 .logIn {
 background-color: rgb(45, 131, 40);
 color: white;
-height: 25px;
-width:200px;
+height: 28px;
+width: 270px;
 border-radius: 4px;
+padding: 5px 40px;
+font-weight: 600;
+margin: 5px 0 5px 0;
 
 }
 
 input {
-  height: 25px;
-  width: 192px; 
-  border-radius: 4px;
+  height: 30px;
+  width: 260px; 
+  border-radius: 3px;
+  border: 1.4px solid grey;
   margin: 2px;
+  padding: 0 0 0 5px;
+  
 
 }
 
@@ -82,21 +91,21 @@ input {
   text-align: center;
   color: grey;
   font-size: 10px;
-  width:200px;
+  width: 270px;
   margin-left: 8px;
-  /* justify-content: center; */
   margin: 4px auto;
+  justify-content: center;
 }
 .separator::before, .separator::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid lightgrey;
+  content: "  ";
+  flex: 2;
+  border-bottom: 1px solid gray;
 }
 .separator::before {
-  margin-right: .20em;
+  margin-right: 5px;
 }
 .separator::after {
-    margin-left: .20em;
+    margin-left: 5px;
 }
 
 
@@ -122,10 +131,10 @@ input {
   box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
 } */
 
-.instacart-detail-image {
-height: 80px;
-margin-top: 0;
-margin-right: 10px;
-background: no-repeat;
-background-image: url("../images/instacartlogo.png")
+img{
+ /* width: 120px; */
+ height: 90px;
+ margin-top: 10px;
+ margin-bottom: 0;
+ 
 }
