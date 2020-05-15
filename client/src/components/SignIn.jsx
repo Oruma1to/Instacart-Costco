@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './SignIn.css'
 import { signIn } from '../services/user'
+import LandingHeader from './LandingHeader'
 
 class SignIn extends Component {
   constructor() {
@@ -59,6 +60,10 @@ class SignIn extends Component {
   render() {
     const { email, password } = this.state
     return (
+
+      <>
+        <LandingHeader/>
+     
       <div className="form-container">
         <img className="instacart-detail-image" alt="instacart-logo" src="https://bloximages.chicago2.vip.townnews.com/cumberlink.com/content/tncms/assets/v3/editorial/6/3c/63c654ea-6acf-5290-b11e-0f0b0df93964/59b353e502139.image.jpg" />
         <h3>Welcome back</h3>
@@ -94,7 +99,8 @@ class SignIn extends Component {
 
 
         </form>
-      </div >
+        </div >
+        </>
     )
   }
 
