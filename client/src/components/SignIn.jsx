@@ -70,8 +70,6 @@ class SignIn extends Component {
           src={require('../images/instacartlogo.png')} /> */}
 
         <div className="instacart-detail-image">
-
-
         </div>
         <div className="welcome">
           Welcome back

@@ -10,8 +10,7 @@ border: 20px, 20px;
 padding: 20px;
 justify-content: space-between;
 align-content: center;
-margin: 0px 40px 0px 40px;
-
+margin: 100px auto;
 }
 
 
@@ -129,6 +128,4 @@ margin-top: 0;
 margin-right: 10px;
 background: no-repeat;
 background-image: url("../images/instacartlogo.png")
-
-    
 }

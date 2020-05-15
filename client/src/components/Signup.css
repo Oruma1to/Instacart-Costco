@@ -1,0 +1,32 @@
+#suForm {
+  padding: 0px
+}
+
+.createAcc {
+  color: gray;
+  font-size: 9px;
+  font-weight: bold
+}
+
+.terms {
+  font-size: 10px;
+  max-width: 60%;
+  margin: 0px auto 10px auto;
+  color: gray
+}
+
+.signIn {
+  color: green;
+  text-decoration: none;
+}
+
+.alreadyAcc {
+  color: gray;
+  font-size: 9px;
+  font-weight: bold
+}
+
+#carrot {
+  margin-left: 80px;
+  max-width: 200px
+}

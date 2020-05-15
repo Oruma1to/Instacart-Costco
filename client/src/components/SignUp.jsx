@@ -46,29 +46,48 @@ class SignUp extends Component {
     const { email } = this.state
     return (
       <>
-         <LandingHeader />
-      <div className="form-container">
-        <img src="" alt="" />
-        <p>Create an account to start shopping</p>
-        <form onSubmit={this.onSignUp}>
-          <label>Email address</label>
-          <input
-            required
-            type="email"
-            name="email"
-            value={email}
-            placeholder="Enter email"
-            onChange={this.handleChange}
-          />
-        </form>
-        <p>By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
-        <button className="eSignUp">Sign up with email</button>
-        <hr></hr><p>or</p><hr></hr>
-        <button className="facebook">Continue with Facebook</button>
-        <button className="google">Continue with Google</button>
-      <p>Already have an account? <Link src="/sign-in">Log in</Link> </p>
+        <LandingHeader />
+        <div id="suForm" className="form-container">
+
+          <div id="carrot" className="instacart-detail-image">
+          </div>
+          <div>
+            <p className="createAcc">Create an account to start shopping</p>
+          </div>
+          <form onSubmit={this.onSignUp}>
+            <div className="emailInput">
+              <input
+                required
+                type="text"
+                name="email"
+                value={email}
+                id="emailInput"
+                placeholder="Email address"
+                onChange={this.handleChange}
+              />
+            </div>
+            <div>
+              <p className="terms">By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
+            </div>
+
+            <button className="logIn">Sign up with email</button>
+
+            <div className="separator">or</div>
+
+            <div className="orLoginInfo" >
+              <div>
+                <button className="facebookButton">Continue with Facebook</button>
+              </div>
+              <div>
+                <button className="googleButton">Continue with Google</button>
+              </div>
+            </div>
+            <div className="alreadyAcc">
+              <p>Already have an account? <Link className="signIn" src="/sign-in">Log in</Link> </p>
+            </div>
+          </form>
         </div>
-        </>
+      </>
     )
   }
 }
