@@ -83,7 +83,7 @@ class SignUp extends Component {
        </div>
       </div>
       <div className="alreadyAcc">
-       Already have an account? <Link className="signIn" src="/sign-in">Log in</Link>
+       Already have an account? <Link className="signIn" to="/sign-in">Log in</Link>
       </div>
      </form>
     </div>

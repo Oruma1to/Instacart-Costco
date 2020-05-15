@@ -1,0 +1,9 @@
+body{
+  width:100%;
+}
+.apple-header{
+  background-image:url('../images/demapples.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
