@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../components/SignUp.css'
+import './SignUp.css'
 // import { signUp, signIn } from '../services/user'
 import { Link } from 'react-router-dom'
 import LandingHeader from "./LandingHeader"
