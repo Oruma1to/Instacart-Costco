@@ -47,10 +47,10 @@ class SignUp extends Component {
   return (
    <>
     <LandingHeader />
-    <div id="suForm" className="form-container">
+    <div id="suForm" className="form-container-signUP">
 
-     <div id="carrot" className="instacart-detail-image">
-     </div>
+     <img className="instacart-detail-image" alt="instacart-logo"
+      src={require('../images/instacartlogo@3x.png')} />
      <div>
       <p className="createAcc">Create an account to start shopping</p>
      </div>
@@ -83,7 +83,7 @@ class SignUp extends Component {
        </div>
       </div>
       <div className="alreadyAcc">
-       <p>Already have an account? <Link className="signIn" src="/sign-in">Log in</Link> </p>
+       Already have an account? <Link className="signIn" src="/sign-in">Log in</Link>
       </div>
      </form>
     </div>

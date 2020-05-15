@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+.form-container-signUP {
+background: white;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px 20px 10px;
+justify-content: space-evenly;
+margin: 100px auto;
+box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+width: 380px;
+height: 420px;
+} 
+/* #suForm {
+  padding: 0 0 20px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+    
+} */
+
+.createAcc {
+  color: gray;
+  font-size: 12px;
+  font-weight: bold
+}
+
+.terms {
+  font-size: 10px;
+  max-width: 60%;
+  margin: 0px auto 10px auto;
+  color: rgb(105, 101, 101);
+  font-weight:normal;
+  letter-spacing: .5px;
+}
+
+
+.signIn {
+  color: green;
+  text-decoration: none;
+}
+
+.alreadyAcc {
+  margin: 10px 0 10px 0;
+  color: gray;
+  font-size: 13px; 
+}
+
+#carrot {
+  margin-left: 80px;
+  max-width: 200px
+}
