@@ -12,6 +12,7 @@ justify-content: space-between;
 align-content: center;
 margin: 0px 40px 0px 40px;
 
+
 }
 
 
@@ -126,6 +127,10 @@ input {
 
 .instacart-detail-image {
 height: 15vh;
-margin: -20px;
+margin-top: 0;
+margin-right: 10px;
+background: no-repeat;
+background-image: url("../images/instacartlogo.png")
+
     
 }

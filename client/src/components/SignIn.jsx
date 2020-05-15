@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './SignIn.css'
 import { signIn } from '../services/user'
+import logo from "../images/instacartlogo.png"
 
 class SignIn extends Component {
   constructor() {
@@ -60,7 +61,13 @@ class SignIn extends Component {
     const { email, password } = this.state
     return (
       <div className="form-container">
-        <img className="instacart-detail-image" alt="instacart-logo" src="https://bloximages.chicago2.vip.townnews.com/cumberlink.com/content/tncms/assets/v3/editorial/6/3c/63c654ea-6acf-5290-b11e-0f0b0df93964/59b353e502139.image.jpg" />
+        {/* <img className="instacart-detail-image" alt="instacart-logo"
+          src={require('../images/instacartlogo.png')} /> */}
+
+        <div className="instacart-detail-image">
+
+
+        </div>
         <div className="welcome">
           Welcome back
         </div>
@@ -105,7 +112,7 @@ class SignIn extends Component {
               <button className="googleButton">Continue with Google</button>
             </div>
             <div className="alreadyLogin">
-              <h4>Already have an account?</h4>
+              <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
             </div>
           </div>
 
