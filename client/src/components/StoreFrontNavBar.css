@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
+.header-navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.left-side{
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.right-side{
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.instacart-logo{
+  margin: 15px;
+  width: 194px;
+  height: 39px;
+}
+
+.cart-logo{
+  height: 46px;
+  width: 52px;
+  margin: 15px;
+}
+
+a{
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.32px;
+}
