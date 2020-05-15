@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './SignIn.css'
 import { signIn } from '../services/user'
-import logo from "../images/instacartlogo.png"
+import LandingHeader from './LandingHeader'
+
 
 class SignIn extends Component {
   constructor() {
@@ -60,6 +61,10 @@ class SignIn extends Component {
   render() {
     const { email, password } = this.state
     return (
+
+      <>
+        <LandingHeader/>
+     
       <div className="form-container">
         {/* <img className="instacart-detail-image" alt="instacart-logo"
           src={require('../images/instacartlogo.png')} /> */}
@@ -118,7 +123,8 @@ class SignIn extends Component {
 
 
         </form>
-      </div >
+        </div >
+        </>
     )
   }
 

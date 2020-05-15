@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import './SignUp.css'
+import '../components/SignUp.css'
 // import { signUp, signIn } from '../services/user'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import LandingHeader from "./LandingHeader"
 
 class SignUp extends Component {
   constructor() {
@@ -44,6 +45,8 @@ class SignUp extends Component {
   render() {
     const { email } = this.state
     return (
+      <>
+         <LandingHeader />
       <div className="form-container">
         <img src="" alt="" />
         <p>Create an account to start shopping</p>
@@ -64,7 +67,8 @@ class SignUp extends Component {
         <button className="facebook">Continue with Facebook</button>
         <button className="google">Continue with Google</button>
       <p>Already have an account? <Link src="/sign-in">Log in</Link> </p>
-      </div>
+        </div>
+        </>
     )
   }
 }
