@@ -62,3 +62,9 @@ height: 420px;
  margin-top: -30px;
 }
 
+p > a{
+ color: #2f821f;
+ text-decoration: none;
+ font-weight: 600;
+}
+
