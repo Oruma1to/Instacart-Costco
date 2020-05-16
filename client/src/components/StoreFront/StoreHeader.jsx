@@ -14,7 +14,10 @@ export default class StoreHeader extends Component {
         
         <div className="costco-title">Costco</div>
         
-        <div className="view-more-links"><Link className="aboveSearch">View pricing policy</Link><span className="dot">.</span><Link className="aboveSearch">View more</Link></div>
+        <div className="view-more-links">
+          <Link className="aboveSearch">View pricing policy</Link>
+          <span className="dot">•</span>
+          <Link className="viewMoreText">More info</Link></div>
 
         <SearchBar />
       </div>

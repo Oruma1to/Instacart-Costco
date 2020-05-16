@@ -23,31 +23,35 @@ body{
   height: 120px;
   display: flex;
   justify-content: center;
-  margin: -50px auto 0 auto;
+  margin: -50px auto 0px auto;
 }
 
 .costco-logo {
    width: 110px;
-   height: 110px;
+   height: 100px;
    border-radius: 20%;
-   
 }
 
 .costco-title {
-  font-size: 28px;
+  font-size: 34px;
   color: white;
   font-weight: bolder
 }
 
 .view-more-links>a {
+  font-size: 17px;
   font-weight: lighter;
 }
 .view-more-links {
-  margin: 5px 0 20px 0
+  margin: 5px 0 20px 0;
 }
-/* 
+
 .dot {
+  content: "•"; 
   color: white;
-  font-weight: bolder;
-  font-size: 26px
+  margin: 0 -5px 0 -5px;
+}
+
+/* .aboveSearch {
+
 } */
