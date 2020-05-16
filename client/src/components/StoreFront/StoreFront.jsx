@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
-import StoreHeader from './StoreHeader'
+import React, { Component } from "react";
+import StoreHeader from "./StoreHeader";
+import { StoreBody } from "./StoreBody";
 
+import "./StoreFront.css";
 
 export default class StoreFront extends Component {
   render() {
     return (
-      <div>
+      <div className="store-front">
         <StoreHeader />
+        <StoreBody />
       </div>
-    )
+    );
   }
 }
