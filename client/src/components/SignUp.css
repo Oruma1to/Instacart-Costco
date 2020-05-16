@@ -22,10 +22,11 @@ height: 420px;
     
 } */
 
-.createAcc {
+.sign-up-createAcc {
   color: gray;
   font-size: 12px;
-  font-weight: bold
+  font-weight: bold;
+  margin: 0
 }
 
 .terms {
@@ -53,3 +54,8 @@ height: 420px;
   margin-left: 80px;
   max-width: 200px
 }
+
+.sign-up-instacart-detail-image{
+ margin-bottom: -50px;
+}
+
