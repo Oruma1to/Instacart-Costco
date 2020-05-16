@@ -107,6 +107,9 @@ input {
 .separator::after {
     margin-left: 5px;
 }
+.sign-in-instacart-detail-image{
+ margin-bottom: -18px;
+}
 
 
 /* .hr {
