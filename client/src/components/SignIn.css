@@ -19,10 +19,11 @@ height: max-content;
 
 
 
-.welcome {
-color: solid #4444;
-font-size: 22px;
-margin-top: 0;
+.sign-in-welcome{
+ color: solid #4444;
+ font-size: 20px;
+ margin-top: 0;
+ /* padding: 0 50px; */
 }
 
 
@@ -81,8 +82,6 @@ input {
   border: 1.4px solid grey;
   margin: 2px;
   padding: 0 0 0 5px;
-  
-
 }
 
 .separator {
@@ -108,7 +107,7 @@ input {
     margin-left: 5px;
 }
 .sign-in-instacart-detail-image{
- margin-bottom: -18px;
+ margin-bottom: -17px;
 }
 
 
