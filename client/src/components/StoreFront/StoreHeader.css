@@ -39,8 +39,12 @@ body{
 }
 
 .view-more-links>a {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: lighter;
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 0.32px; 
 }
 .view-more-links {
   margin: 5px 0 20px 0;
