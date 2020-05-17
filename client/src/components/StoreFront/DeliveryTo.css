@@ -37,6 +37,18 @@
   height: 6px;
 }
 
+.arrow-down:active{
+   border: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  margin: 0 0 3px 10px;
+  width: 6px;
+  height: 6px;
+}
+
 .drop-down {
   color: var(--tree-green);
 }
