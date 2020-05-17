@@ -96,23 +96,21 @@ class SignIn extends Component {
        />
       </div>
       {this.renderError()}
-
-      <div className="separator">or</div>
-
-      <div className="orLoginInfo">
-       <div>
-        <button className="facebookButton">Continue with Facebook</button>
-       </div>
-       <div>
-        <button className="googleButton">Continue with Google</button>
-       </div>
-       <div className="alreadyLogin">
-        <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
-       </div>
-      </div>
-
-
      </form>
+
+     <div className="separator">or</div>
+
+     <div className="orLoginInfo">
+      <div>
+       <button className="facebookButton">Continue with Facebook</button>
+      </div>
+      <div>
+       <button className="googleButton">Continue with Google</button>
+      </div>
+      <div className="alreadyLogin">
+       <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
+      </div>
+     </div>
     </div >
    </>
   )
