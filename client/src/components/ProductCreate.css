@@ -12,14 +12,14 @@ input:focus, textarea:focus, select:focus {
     outline: none;
 }
 
-input, textarea {
+/* input, textarea {
     font-size: 48px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
-}
+} */
 
 textarea {
     font-size: 24px;
@@ -52,4 +52,11 @@ textarea {
     border: none;
     box-shadow: 2px 2px 10px 2px #CECECE;
     cursor: pointer;
+}
+
+.select-departments{
+ width: 200px;
+}
+.select-category{
+ width: 200px;
 }

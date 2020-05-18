@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from "react-router-dom"
 import { createProduct } from '../services/product'
+import Select from 'react-select'
 import "./ProductCreate.css"
 
 export default class ProductCreate extends Component {
@@ -29,6 +30,16 @@ export default class ProductCreate extends Component {
    }
   })
  }
+ handleSelected = (selectedOption) => {
+  console.log(selectedOption)
+
+  this.setState({
+   post: {
+    ...this.state.post,
+    [selectedOption.name]: selectedOption.value
+   }
+  })
+ }
 
  handleSubmit = async (event) => {
   event.preventDefault()
@@ -36,7 +47,40 @@ export default class ProductCreate extends Component {
   this.setState({ created })
  }
 
+
  render() {
+  console.log("rendering ", this.state.post)
+
+
+  const departments = [
+   { value: 'Meat & Seafood', label: 'Meat & Seafood', name: "department" },
+   { value: 'Produce', label: 'Produce', name: "department" },
+   { value: 'Deli', label: 'Deli', name: "department" },
+   { value: 'Bakery & Dessert', label: 'Bakery & Dessert', name: "department" }
+  ];
+
+  const categories = [
+   { value: 'Prime Beef', label: 'Prime Beef', name: "category" },
+   { value: 'Pork & Lamb', label: 'Pork & Lamb', name: "category" },
+   { value: 'Seafood', label: 'Seafood', name: "category" },
+   { value: 'Poultry', label: 'Poultry', name: "category" },
+   { value: 'Meat', label: 'Meat' },
+   { value: 'Fruit & Vegetable Trays', label: 'Fruit & Vegetable Trays', name: "category" },
+   { value: 'Fruit', label: 'Fruit', name: "category" },
+   { value: 'Vegetables', label: 'Vegetables', name: "category" },
+   { value: 'Salad Mix', label: 'Salad Mix', name: "category" },
+   { value: 'Meat & Cheese Trays', label: 'Meat & Cheese Trays', name: "category" },
+   { value: 'Prepared Meals', label: 'Prepared Meals', name: "category" },
+   { value: 'Prepared Soups & Salad', label: 'Prepared Soups & Salad', name: "category" },
+   { value: 'Dips & Spreads', label: 'Dips & Spreads', name: "category" },
+   { value: 'Bread', label: 'Bread', name: "category" },
+   { value: 'Buns & Rolls', label: 'Buns & Rolls', name: "category" },
+   { value: 'Cookies', label: 'Cookies', name: "category" },
+   { value: 'Pies & Cakes', label: 'Pies & Cakes', name: "category" }
+
+  ];
+  console.log(departments)
+
   const { post, created } = this.state
 
   if (created) {
@@ -54,7 +98,7 @@ export default class ProductCreate extends Component {
       autoFocus
       onChange={this.handleChange}
      />
-     <input
+     {/* <input
       className="input-department"
       placeholder='Department'
       value={post.department}
@@ -62,8 +106,12 @@ export default class ProductCreate extends Component {
       required
       autoFocus
       onChange={this.handleChange}
-     />
-     <input
+     /> */}
+     {/* Department with select */}
+     <Select className="select-departments" name="department" options={departments} onChange={this.handleSelected} />
+
+
+     {/* <input
       className="input-category"
       placeholder='Category'
       value={post.category}
@@ -71,7 +119,9 @@ export default class ProductCreate extends Component {
       required
       autoFocus
       onChange={this.handleChange}
-     />
+     /> */}
+     {/* Category with select */}
+     <Select className="select-category" name="category" options={categories} onChange={this.handleSelected} />
      <input
       className="input-price"
       placeholder='Price'
