@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 .add-product-body{
   display: flex;
   justify-content: center;
 }
 .create-form {
-    padding-top: 50px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     height: max-content;
-    width: max-content;
+    width: 350px;
     justify-content: center;
     align-items: flex-start;
+    background-color: lightgray;
 }
 
 .add-product-input:focus{
@@ -17,27 +20,23 @@
 }
 
 .add-product-input{
-    font-size: 48px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
-}
-.input-name {
-    font-size: 48px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px;
+    width: 90%;
 }
 
 .input-price {
     padding-left: 10px;
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-image-link {
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .submit-button {
@@ -50,11 +49,14 @@
     border: none;
     box-shadow: 2px 2px 10px 2px #CECECE;
     cursor: pointer;
+    align-self:center;
 }
 
 .select-departments{
- width: 100%;
+  width:92%;
+  margin: 10px;
 }
 .select-category{
- width: 100%;
+ width: 92%;
+  margin: 10px;
 }

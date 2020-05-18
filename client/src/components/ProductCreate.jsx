@@ -11,12 +11,13 @@ export default class ProductCreate extends Component {
   this.state = {
    post: {
     name: '',
+    brand: '',
     department: '',
     category: '',
     price: 0,
     size: '',
     quantity: 0,
-    imgURL: ''
+    imageURL: ''
    },
    created: false
   }
@@ -56,7 +57,7 @@ export default class ProductCreate extends Component {
   const { post, created } = this.state
 
   if (created) {
-   return <Redirect to={`/posts`} />
+   return <Redirect to={`/costco`} />
   }
   return (
    <div className="add-product-body">
@@ -66,6 +67,15 @@ export default class ProductCreate extends Component {
       placeholder='Name'
       value={post.name}
       name='name'
+      required
+      autoFocus
+      onChange={this.handleChange}
+     />
+     <input
+      className="add-product-input input-brand"
+      placeholder='Brand'
+      value={post.brand}
+      name='brand'
       required
       autoFocus
       onChange={this.handleChange}
@@ -108,8 +118,8 @@ export default class ProductCreate extends Component {
      <input
       className="add-product-input input-image-link"
       placeholder='Image Link'
-      value={post.imgURL}
-      name='imgURL'
+      value={post.imageURL}
+      name='imageURL'
       required
       onChange={this.handleChange}
      />
