@@ -98,28 +98,9 @@ export default class ProductCreate extends Component {
       autoFocus
       onChange={this.handleChange}
      />
-     {/* <input
-      className="input-department"
-      placeholder='Department'
-      value={post.department}
-      name='department'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     /> */}
      {/* Department with select */}
      <Select className="select-departments" name="department" options={departments} onChange={this.handleSelected} />
 
-
-     {/* <input
-      className="input-category"
-      placeholder='Category'
-      value={post.category}
-      name='category'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     /> */}
      {/* Category with select */}
      <Select className="select-category" name="category" options={categories} onChange={this.handleSelected} />
      <input
