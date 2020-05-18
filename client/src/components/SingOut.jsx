@@ -6,7 +6,7 @@ class SignOut extends Component {
   const { history, clearUser, user } = this.props;
   signOut(user)
    .then(() => clearUser())
-   .finally(() => history.push("/"));
+   .finally(() => history.push("/sign-in"));
  }
  render() {
   return "";
