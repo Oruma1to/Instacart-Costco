@@ -1,5 +1,6 @@
-h1 {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+h1 {
 
 }
 
@@ -7,4 +8,9 @@ ul, li, a {
   color: #2f821f;
   text-decoration: none;
   list-style: none;
+}
+
+a {
+letter-spacing: .26px;
+font-family: 'Open Sans', sans-serif;
 }
