@@ -1,31 +1,29 @@
+.add-product-body{
+  display: flex;
+  justify-content: center;
+}
 .create-form {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+    height: max-content;
+    width: max-content;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-input:focus, textarea:focus, select:focus {
+.add-product-input:focus{
     outline: none;
 }
 
-/* input, textarea {
+.add-product-input{
     font-size: 48px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
-} */
-
-textarea {
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
 }
-
 .input-name {
     font-size: 48px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -55,8 +53,8 @@ textarea {
 }
 
 .select-departments{
- width: 200px;
+ width: 100%;
 }
 .select-category{
- width: 200px;
+ width: 100%;
 }

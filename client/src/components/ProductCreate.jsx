@@ -59,10 +59,10 @@ export default class ProductCreate extends Component {
    return <Redirect to={`/posts`} />
   }
   return (
-   <div>
+   <div className="add-product-body">
     <form className="create-form" onSubmit={this.handleSubmit}>
      <input
-      className="input-name"
+      className="add-product-input input-name"
       placeholder='Name'
       value={post.name}
       name='name'
@@ -71,11 +71,11 @@ export default class ProductCreate extends Component {
       onChange={this.handleChange}
      />
      {/* Department with select */}
-     <Select className="select-departments" name="department" options={departments} onChange={this.handleSelected} />
+     <Select className="select-departments" placeholder="Department" options={departments} onChange={this.handleSelected} />
      {/* Category with select */}
-     {this.state.post.department ? < Select className="select-category" name="category" options={checker(this.state.post.department)} onChange={this.handleSelected} /> : ""}
+     {this.state.post.department ? < Select className="select-category" placeholder="Category" options={checker(this.state.post.department)} onChange={this.handleSelected} /> : ""}
      <input
-      className="input-price"
+      className="add-product-input input-price"
       placeholder='Price'
       value={post.price}
       name='price'
@@ -84,7 +84,7 @@ export default class ProductCreate extends Component {
       onChange={this.handleChange}
      />
      <input
-      className="input-size"
+      className="add-product-input input-size"
       placeholder='Size'
       value={post.size}
       name='size'
@@ -94,7 +94,7 @@ export default class ProductCreate extends Component {
      />
      <input
       // This is until I edit my input-quantity css
-      className="input-price input-quantity"
+      className="add-product-input input-price input-quantity"
       placeholder='Quantity'
       value={post.quantity}
       name='quantity'
@@ -106,7 +106,7 @@ export default class ProductCreate extends Component {
 
      {/* ---- */}
      <input
-      className="input-image-link"
+      className="add-product-input input-image-link"
       placeholder='Image Link'
       value={post.imgURL}
       name='imgURL'
