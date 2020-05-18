@@ -45,9 +45,9 @@ The developers and designers of this recreation are in no way affiliated with In
 
 > API consumed for 'Instacart', including API snippet.
 
-| Deployed || Website                        | Query                                             |
+| Deployed | Website                        | Query                                             |
 | :---: | :----------------------------: | :------------------------------------------------:|
-| API | ____https://instacart-costco.herokuapp.com/api/____     | ___/products/___ |
+| API | ____https://instacart-costco.herokuapp.com/api/____     | ___/products___ |
 | website | ____http://instacart-costco.surge.sh/____     | ___-___ |
 
 API SNIPPET
