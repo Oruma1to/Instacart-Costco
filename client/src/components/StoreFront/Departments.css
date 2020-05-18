@@ -20,9 +20,16 @@ ul, li, .department-item {
   margin: 42px 47px;
 }
 
+.parent-sub-menu {
+padding: 5px 0px 5px 20px;
+
+  
+}
+
 .department-item {
 letter-spacing: .26px;
 font-family: 'Open Sans', sans-serif;
 font-size: 16px;
 line-height: 1.45;
 }
+

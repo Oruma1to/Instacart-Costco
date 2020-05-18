@@ -12,7 +12,7 @@ export default class Departments extends Component {
 
             <li><a className="department-item" href="#">Meat & Seafood</a>
 
-              <ul>
+              <ul className="parent-sub-menu">
 
                 <li><a className="department-item" href="#">Prime Beef</a></li>
 
@@ -32,7 +32,7 @@ export default class Departments extends Component {
 
             <li><a className="department-item" href="#">Produce</a>
 
-              <ul>
+              <ul className="parent-sub-menu">
 
                 <li><a className="department-item" href="#">Fruit & Vegetable Trays</a></li>
 
@@ -46,11 +46,9 @@ export default class Departments extends Component {
 
             <li><a className="department-item" href="#">Deli</a></li>
 
-            <ul>
+            <ul className="parent-sub-menu">
 
               <li><a className="department-item" href="#">Meat & Cheese Trays</a></li>
-
-              <li><a className="department-item" href="#">Prepared Meals</a></li>
 
               <li><a className="department-item" href="#">Prepared Meals</a></li>
 
@@ -61,7 +59,7 @@ export default class Departments extends Component {
 
             <li><a className="department-item" href="#">Bakery & Desserts</a>
 
-              <ul>
+              <ul className="parent-sub-menu">
 
                 <li><a className="department-item" href="#">Bread</a></li>
 
