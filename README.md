@@ -10,8 +10,7 @@ A team effort to recreate the Instacart desktop and mobile application. Instacar
 
 The developers and designers of this recreation are in no way affiliated with Instacart or the product development teams of its partnered grocery stores.
 
-- Please see the deployed site here: ###
-- Please see the deployed api here: ###
+- Please see the deployed site here: http://instacart-costco.surge.sh/
 
 ### Wireframes
 
@@ -45,10 +44,9 @@ The developers and designers of this recreation are in no way affiliated with In
 
 > API consumed for 'Instacart', including API snippet.
 
-| Deployed || Website                        | Query                                             |
+| Deployed | Website                        | Query                                             |
 | :---: | :----------------------------: | :------------------------------------------------:|
 | API | ____https://instacart-costco.herokuapp.com/api/____     | ___/products/___ |
-| website | ____http://instacart-costco.surge.sh/____     | ___-___ |
 
 API SNIPPET
 
