@@ -72,10 +72,7 @@ export default class ProductCreate extends Component {
      />
      {/* Department with select */}
      <Select className="select-departments" name="department" options={departments} onChange={this.handleSelected} />
-
      {/* Category with select */}
-     {}
-     {/* {this.state.post.department == ! '' ? < Select className="select-category" name="category" options={categories} onChange={this.handleSelected} /> : ''} */}
      {this.state.post.department ? < Select className="select-category" name="category" options={checker(this.state.post.department)} onChange={this.handleSelected} /> : ""}
      <input
       className="input-price"
