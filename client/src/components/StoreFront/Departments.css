@@ -1,16 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 h1 {
-
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.32px;
 }
 
-ul, li, a {
+ul, li, .department-item {
   color: #2f821f;
   text-decoration: none;
   list-style: none;
 }
 
-a {
+.parent-menu {
+  padding: 0;
+}
+
+.department-container {
+  margin: 42px 47px;
+}
+
+.department-item {
 letter-spacing: .26px;
 font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+line-height: 1.45;
 }

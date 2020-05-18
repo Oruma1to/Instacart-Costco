@@ -4,72 +4,72 @@ import './Departments.css'
 export default class Departments extends Component {
   render() {
     return (
-      <div>
+      <div className="department-container">
         <h1>Departments</h1>
         <nav id="side-menu">
 
           <ul class="parent-menu">
 
-            <li><a href="#">Meat & Seafood</a>
+            <li><a className="department-item" href="#">Meat & Seafood</a>
 
               <ul>
 
-                <li><a href="#">Prime Beef</a></li>
+                <li><a className="department-item" href="#">Prime Beef</a></li>
 
-                <li><a href="#">Pork & Lamb</a></li>
+                <li><a className="department-item" href="#">Pork & Lamb</a></li>
 
-                <li><a href="#">Beef</a></li>
+                <li><a className="department-item" href="#">Beef</a></li>
 
-                <li><a href="#">Seafood</a></li>
+                <li><a className="department-item" href="#">Seafood</a></li>
 
-                <li><a href="#">Poultry</a></li>
+                <li><a className="department-item" href="#">Poultry</a></li>
 
-                <li><a href="#">Meat</a></li>
+                <li><a className="department-item" href="#">Meat</a></li>
 
               </ul>
 
             </li>
 
-            <li><a href="#">Produce</a>
+            <li><a className="department-item" href="#">Produce</a>
 
               <ul>
 
-                <li><a href="#">Fruit & Vegetable Trays</a></li>
+                <li><a className="department-item" href="#">Fruit & Vegetable Trays</a></li>
 
-                <li><a href="#">Fruit</a></li>
+                <li><a className="department-item" href="#">Fruit</a></li>
 
-                <li><a href="#">Vegetables</a></li>
+                <li><a className="department-item" href="#">Vegetables</a></li>
 
-                <li><a href="#">Salad Mix</a></li>
+                <li><a className="department-item" href="#">Salad Mix</a></li>
 
               </ul></li>
 
-            <li><a href="#">Deli</a></li>
+            <li><a className="department-item" href="#">Deli</a></li>
+
+            <ul>
+
+              <li><a className="department-item" href="#">Meat & Cheese Trays</a></li>
+
+              <li><a className="department-item" href="#">Prepared Meals</a></li>
+
+              <li><a className="department-item" href="#">Prepared Meals</a></li>
+
+              <li><a className="department-item" href="#">Prepared Soups & Salad</a></li>
+
+              <li><a className="department-item" href="#">Dips & Spreads</a></li>
+            </ul>
+
+            <li><a className="department-item" href="#">Bakery & Desserts</a>
 
               <ul>
 
-                <li><a href="#">Meat & Cheese Trays</a></li>
+                <li><a className="department-item" href="#">Bread</a></li>
 
-                <li><a href="#">Prepared Meals</a></li>
+                <li><a className="department-item" href="#">Buns & Rolls</a></li>
 
-                <li><a href="#">Prepared Meals</a></li>
+                <li><a className="department-item" href="#">Cookies</a></li>
 
-                <li><a href="#">Prepared Soups & Salad</a></li>
-
-                <li><a href="#">Dips & Spreads</a></li>
-              </ul>
-
-            <li><a href="#">Bakery & Desserts</a>
-
-              <ul>
-
-                <li><a href="#">Bread</a></li>
-
-                <li><a href="#">Buns & Rolls</a></li>
-
-                <li><a href="#">Cookies</a></li>
-
-                <li><a href="#">Pies & Cakes</a></li>
+                <li><a className="department-item" href="#">Pies & Cakes</a></li>
 
               </ul>
 
