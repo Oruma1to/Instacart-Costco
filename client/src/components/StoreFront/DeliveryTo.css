@@ -36,6 +36,17 @@
   width: 6px;
   height: 6px;
 }
+.arrow-down:visited {
+  border: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(230);
+  -webkit-transform: rotate(230deg);
+  margin: 0 0 0 10px;
+  width: 6px;
+  height: 6px;
+}
 
 .arrow-down:active{
    border: solid;

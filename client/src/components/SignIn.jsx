@@ -26,9 +26,7 @@ class SignIn extends Component {
 
  onSignIn = event => {
   event.preventDefault()
-  console.log(this.props)
   const { history, setUser } = this.props
-  console.log(setUser)
   signIn(this.state)
    .then(res => {
     setUser(res.user)
@@ -46,7 +44,6 @@ class SignIn extends Component {
  }
 
  renderError = () => {
-  console.log(this.state.email)
   const toggleForm = this.state.isError ? 'danger' : ''
   if (this.state.isError) {
    return (
@@ -96,23 +93,21 @@ class SignIn extends Component {
        />
       </div>
       {this.renderError()}
-
-      <div className="separator">or</div>
-
-      <div className="orLoginInfo">
-       <div>
-        <button className="facebookButton">Continue with Facebook</button>
-       </div>
-       <div>
-        <button className="googleButton">Continue with Google</button>
-       </div>
-       <div className="alreadyLogin">
-        <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
-       </div>
-      </div>
-
-
      </form>
+
+     <div className="separator">or</div>
+
+     <div className="orLoginInfo">
+      <div>
+       <button className="facebookButton">Continue with Facebook</button>
+      </div>
+      <div>
+       <button className="googleButton">Continue with Google</button>
+      </div>
+      <div className="alreadyLogin">
+       <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
+      </div>
+     </div>
     </div >
    </>
   )

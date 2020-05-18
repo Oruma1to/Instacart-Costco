@@ -109,6 +109,16 @@ input {
 .sign-in-instacart-detail-image{
  margin-bottom: -17px;
 }
+.danger{
+background-color: rgba(148, 37, 37, 0.856);
+color: white;
+height: 28px;
+width: 270px;
+border-radius: 4px;
+padding: 5px 40px;
+font-weight: 600;
+margin: 5px 0 5px 0;
+}
 
 
 /* .hr {
