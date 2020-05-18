@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+h1 {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.32px;
+}
+
+ul, li, .department-item {
+  color: #2f821f;
+  text-decoration: none;
+  list-style: none;
+}
+
+.parent-menu {
+  padding: 0;
+}
+
+.department-container {
+  margin: 42px 47px;
+}
+
+.parent-sub-menu {
+padding: 5px 0px 5px 20px;
+
+  
+}
+
+.department-item {
+letter-spacing: .26px;
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+line-height: 1.45;
+}
+
