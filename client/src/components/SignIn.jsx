@@ -26,9 +26,7 @@ class SignIn extends Component {
 
  onSignIn = event => {
   event.preventDefault()
-  console.log(this.props)
   const { history, setUser } = this.props
-  console.log(setUser)
   signIn(this.state)
    .then(res => {
     setUser(res.user)
@@ -46,7 +44,6 @@ class SignIn extends Component {
  }
 
  renderError = () => {
-  console.log(this.state.email)
   const toggleForm = this.state.isError ? 'danger' : ''
   if (this.state.isError) {
    return (
