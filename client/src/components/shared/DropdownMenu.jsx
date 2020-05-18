@@ -4,16 +4,24 @@ import "./DropdownMenu.css"
 
 export default class DropdownMenu extends Component {
  render() {
+  console.log("In Store Dropdown Menu", this.props.user)
+
   let choosenMenu = [];
-  console.log("In DropDown Menu ", this.props)
   if (this.props.titleMenu === "Account") {
-   console.log("Yes it matches")
-   choosenMenu = [
-    <Link key="1" className="dropdown-links" to="#">Add new Product</Link>,
-    <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
-    <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
-    <Link key="4" className="dropdown-links" to="#">Sign Out</Link>
-   ]
+   if (this.props.user !== null) {
+    choosenMenu = [
+     <Link key="1" className="dropdown-links" to="#">Add new Product</Link>,
+     <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
+     <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
+     <Link key="4" className="dropdown-links" to="/sign-out">Sign Out</Link>
+    ]
+   } else {
+    choosenMenu = [
+     <Link key="1" className="dropdown-links" to="/sign-up">Sign Up</Link>,
+     <Link key="2" className="dropdown-links" to="/sign-in">Sign In</Link>,
+    ]
+   }
+
   } else if (this.props.titleMenu === "Stores") {
    choosenMenu = [
     <Link key="1" className="dropdown-links" to="#">Queen</Link>,
@@ -21,7 +29,6 @@ export default class DropdownMenu extends Component {
     <Link key="3" className="dropdown-links" to="#">Yonkers</Link>
    ]
   }
-  console.log("choosenMenu", choosenMenu)
   return (
    <div className="dropDownMenu" >
     <button className="dropbtn">{this.props.titleMenu}

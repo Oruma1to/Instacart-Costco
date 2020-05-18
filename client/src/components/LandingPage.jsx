@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import LandingHeader from "./LandingHeader";
-import DropdownMenu from "./shared/DropdownMenu"
 import "./LandingHeader.css";
 import { Redirect } from "react-router-dom";
 import './LandingPage.css'
