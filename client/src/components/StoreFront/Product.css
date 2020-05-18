@@ -1,6 +1,15 @@
+
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+}
+
 .product-wrapper {
   width: 140px;
   height: 300px;
+  margin-left: 40px
 }
 .product-image {
   width: 140px;
