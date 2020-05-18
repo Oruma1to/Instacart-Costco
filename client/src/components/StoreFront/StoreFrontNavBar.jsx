@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './StoreFrontNavBar.css'
-import DropdownMenu from '../Shared/DropdownMenu'
+import DropdownMenu from '../shared/DropdownMenu'
 
 export default class StoreFrontNavBar extends Component {
  render() {

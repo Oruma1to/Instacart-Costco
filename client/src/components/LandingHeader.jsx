@@ -10,13 +10,12 @@ const LandingHeader = () => {
     <button className="shopper-btn">Become a Shopper</button>
    </div>
 
-   {/* <div className="outer-btn"> */}
+
    <button className="login-link-container">
     <NavLink className="login-link" to="/sign-in">
      Log in
-          </NavLink>
+    </NavLink>
    </button>
-   {/* </div> */}
   </nav>
  );
 };
