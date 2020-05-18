@@ -10,10 +10,7 @@ export default class LandingPage extends Component {
   return (
    <>
     <LandingHeader />
-    <DropdownMenu titleMenu={"Account"} />
-    <DropdownMenu titleMenu={"Stores"} />
-
-    {/* <Redirect to="sign-up" /> */}
+    <Redirect to="sign-up" />
    </>
   );
  }
