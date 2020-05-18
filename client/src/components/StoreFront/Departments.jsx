@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Departments.css'
 
 export default class Departments extends Component {
   render() {
