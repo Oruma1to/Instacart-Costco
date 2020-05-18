@@ -19,17 +19,19 @@ class ProductList extends Component {
 
   render() {
     console.log("all products-->", this.state.products);
-    const PRODUCTS = this.state.products.map((product, index) => (
-      <Product
-        key={index}
-        _id={product._id}
-        imageURL={product.imageURL}
-        brand={product.brand}
-        name={product.name}
-        price={product.price}
-        size={product.size}
-      />
-    ));
+    const PRODUCTS = this.state.products
+      .slice(0, 4)
+      .map((product, index) => (
+        <Product
+          key={index}
+          _id={product._id}
+          imageURL={product.imageURL}
+          brand={product.brand}
+          name={product.name}
+          price={product.price}
+          size={product.size}
+        />
+      ));
 
     return (
       <>
