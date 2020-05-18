@@ -10,7 +10,7 @@ let apiUrl
 
 const apiUrls = {
  // production: 'https://sei-products-api.herokuapp.com/api',
- production: ' ',
+ production: 'https://instacart-costco.herokuapp.com/api',
  development: 'http://localhost:3000/api'
 }
 
