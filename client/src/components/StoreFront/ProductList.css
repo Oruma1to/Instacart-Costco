@@ -1,7 +1,16 @@
 .product-header {
-  display: inline-flex;
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.product-header-title {
+  margin-left: 40px
+}
+.product-header-vm {
+  margin-right: 35px
+}
+
 .carousel {
   display: flex;
   flex-direction: row;

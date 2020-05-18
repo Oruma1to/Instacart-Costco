@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { getProducts } from "../../services/product";
 import Product from "./Product";
 import "./ProductList.css";
+import { Link } from 'react-router-dom'
 
 class ProductList extends Component {
   constructor() {
