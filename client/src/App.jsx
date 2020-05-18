@@ -6,6 +6,7 @@ import SignUp from './components/SignUp'
 import LandingPage from "./components/LandingPage"
 import SignIn from './components/SignIn'
 import StoreFront from './components/StoreFront/StoreFront'
+import SignOut from './components/SingOut'
 
 
 export default class App extends Component {
@@ -37,8 +38,9 @@ export default class App extends Component {
    <div className="app">
     <Switch>
      <Route exact path="/" render={() => <LandingPage />} />
-     <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
      <Route exact path="/sign-up" render={() => <SignUp />} />
+     <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
+     <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
      <Route exact path="/costco" render={() => user ? <StoreFront user={user} /> : <Redirect to="/sign-up" />} />
      {/* <Route exact path="/costco" render={() => <StoreFront user={user} />} /> */}
     </Switch>
