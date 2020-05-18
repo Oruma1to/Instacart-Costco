@@ -30,9 +30,11 @@ export default class ProductCreate extends Component {
    }
   })
  }
- handleSelected = (selectedOption) => {
-  console.log(selectedOption)
-
+ handleDepartmentSelected = (selectedOption) => {
+  if (selectedOption.value) {
+   // setcategory(selectedOption.value)
+   console.log(selectedOption.value)
+  }
   this.setState({
    post: {
     ...this.state.post,
@@ -40,6 +42,7 @@ export default class ProductCreate extends Component {
    }
   })
  }
+ // setcategory(selectedOption.value)
 
  handleSubmit = async (event) => {
   event.preventDefault()
@@ -49,7 +52,7 @@ export default class ProductCreate extends Component {
 
 
  render() {
-  console.log("rendering ", this.state.post)
+  // console.log("rendering ", this.state.post)
 
 
   const departments = [
@@ -58,7 +61,6 @@ export default class ProductCreate extends Component {
    { value: 'Deli', label: 'Deli', name: "department" },
    { value: 'Bakery & Dessert', label: 'Bakery & Dessert', name: "department" }
   ];
-
   const categories = [
    { value: 'Prime Beef', label: 'Prime Beef', name: "category" },
    { value: 'Pork & Lamb', label: 'Pork & Lamb', name: "category" },
@@ -79,7 +81,7 @@ export default class ProductCreate extends Component {
    { value: 'Pies & Cakes', label: 'Pies & Cakes', name: "category" }
 
   ];
-  console.log(departments)
+  // console.log(departments)
 
   const { post, created } = this.state
 
@@ -99,10 +101,11 @@ export default class ProductCreate extends Component {
       onChange={this.handleChange}
      />
      {/* Department with select */}
-     <Select className="select-departments" name="department" options={departments} onChange={this.handleSelected} />
+     <Select className="select-departments" name="department" options={departments} onChange={this.handleDepartmentSelected} />
 
      {/* Category with select */}
-     <Select className="select-category" name="category" options={categories} onChange={this.handleSelected} />
+     {/* {this.state.post.department == ! '' ? < Select className="select-category" name="category" options={categories} onChange={this.handleSelected} /> : ''} */}
+     {/* {this.state.post.department ? < Select className="select-category" name="category" options={categories} onChange={this.handleSelected} /> : ""} */}
      <input
       className="input-price"
       placeholder='Price'
