@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from "react-router-dom"
 import { createProduct } from '../services/product'
 import Select from 'react-select'
-import { departments, categories } from "./selectedOptions"
+import { departments, categories, checker } from "./selectedOptions"
 import "./ProductCreate.css"
 
 export default class ProductCreate extends Component {
@@ -31,11 +31,10 @@ export default class ProductCreate extends Component {
    }
   })
  }
- handleDepartmentSelected = (selectedOption) => {
-  if (selectedOption.value) {
-   // setcategory(selectedOption.value)
-   console.log(selectedOption.value)
-  }
+
+
+
+ handleSelected = (selectedOption) => {
   this.setState({
    post: {
     ...this.state.post,
@@ -43,8 +42,6 @@ export default class ProductCreate extends Component {
    }
   })
  }
- // setcategory(selectedOption.value)
-
  handleSubmit = async (event) => {
   event.preventDefault()
   const created = await createProduct(this.state.post)
@@ -74,12 +71,12 @@ export default class ProductCreate extends Component {
       onChange={this.handleChange}
      />
      {/* Department with select */}
-     <Select className="select-departments" name="department" options={departments} onChange={this.handleDepartmentSelected} />
+     <Select className="select-departments" name="department" options={departments} onChange={this.handleSelected} />
 
      {/* Category with select */}
      {}
      {/* {this.state.post.department == ! '' ? < Select className="select-category" name="category" options={categories} onChange={this.handleSelected} /> : ''} */}
-     {/* {this.state.post.department ? < Select className="select-category" name="category" options={categories} onChange={this.handleSelected} /> : ""} */}
+     {this.state.post.department ? < Select className="select-category" name="category" options={checker(this.state.post.department)} onChange={this.handleSelected} /> : ""}
      <input
       className="input-price"
       placeholder='Price'
