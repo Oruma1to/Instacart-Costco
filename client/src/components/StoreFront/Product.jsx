@@ -5,7 +5,7 @@ const Product = (props) => {
   return (
     <>
       <img src={imageURL} alt={`${brand} ${name}`} />
-      <div className="product-price">{price}</div>
+      <div className="product-price">$ {price}</div>
       <div className="product-title">
         {brand} {name}
       </div>

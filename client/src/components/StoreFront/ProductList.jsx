@@ -25,6 +25,7 @@ class ProductList extends Component {
         imageURL={product.imageURL}
         brand={product.brand}
         name={product.name}
+        price={product.price}
         quantity={product.quantity}
       />
     ));
