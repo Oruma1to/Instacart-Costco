@@ -3,7 +3,6 @@ import LandingHeader from "./LandingHeader";
 import "./LandingHeader.css";
 import { Redirect } from "react-router-dom";
 import './LandingPage.css'
-import ProductCreate from "./ProductCreate";
 
 export default class LandingPage extends Component {
  render() {
@@ -11,7 +10,7 @@ export default class LandingPage extends Component {
    <>
     <LandingHeader />
     {/* <Redirect to="sign-up" /> */}
-    <ProductCreate />
+    <Redirect to="add-product" />
    </>
   );
  }
