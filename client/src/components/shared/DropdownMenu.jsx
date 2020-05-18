@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+import React, { Component } from './node_modules/react'
+import { Link } from "./node_modules/react-router-dom"
 import "./DropdownMenu.css"
 
 export default class DropdownMenu extends Component {
@@ -12,7 +12,7 @@ export default class DropdownMenu extends Component {
     <Link key="1" className="dropdown-links" to="#">Add new Product</Link>,
     <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
     <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
-    <Link key="4" className="dropdown-links" to="#">Sign Out</Link>
+    <Link key="4" className="dropdown-links" to="/sign-out">Sign Out</Link>
    ]
   } else if (this.props.titleMenu === "Stores") {
    choosenMenu = [
