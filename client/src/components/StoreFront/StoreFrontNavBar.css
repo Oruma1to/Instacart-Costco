@@ -34,10 +34,16 @@
 }
 
 .storeFrontNavBar-link{
+  font-weight: 600;
+  font-size: 18px;
   margin: 10px;
   text-decoration: none;
   color: #ffffff;
-  font-weight: 600;
-  font-size: 20px;
   letter-spacing: 0.32px;
+}
+
+
+/* This is to Edit the dropdown component */
+.dropDownMenu{
+ margin: 10px;
 }
