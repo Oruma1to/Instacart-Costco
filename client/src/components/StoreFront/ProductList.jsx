@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { getProducts } from "../../services/product";
 import Product from "./Product";
+import "./ProductList.css";
 
 class ProductList extends Component {
   constructor() {
@@ -37,10 +38,10 @@ class ProductList extends Component {
       <>
         <div className="buyagain">
           <div className="product-header">
-            <h1>Buy Again</h1>
-            <h3>view 57 more</h3>
+            <p className="product-header-title">Buy Again</p>
+            <p className="product-header-vm">view 57 more</p>
           </div>
-          <div>{PRODUCTS}</div>
+          <div className="carousel">{PRODUCTS}</div>
         </div>
       </>
     );
