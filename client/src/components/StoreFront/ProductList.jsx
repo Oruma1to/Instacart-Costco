@@ -22,15 +22,26 @@ class ProductList extends Component {
     const PRODUCTS = this.state.products.map((product, index) => (
       <Product
         key={index}
+        _id={product._id}
         imageURL={product.imageURL}
         brand={product.brand}
         name={product.name}
         price={product.price}
-        quantity={product.quantity}
+        size={product.size}
       />
     ));
 
-    return <div>{PRODUCTS}</div>;
+    return (
+      <>
+        <div className="buyagain">
+          <div className="product-header">
+            <h1>Buy Again</h1>
+            <h3>view 57 more</h3>
+          </div>
+          <div>{PRODUCTS}</div>
+        </div>
+      </>
+    );
   }
 }
 
