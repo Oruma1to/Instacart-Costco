@@ -101,8 +101,8 @@ export default class ProductCreate extends Component {
       <label className="create-label" for="price">Price</label>
       <input
        className="add-product-input input-number"
-       placeholder='Price'
-       value={post.price}
+       placeholder='$ Price'
+       value={`$${post.price}`}
        name='price'
        required
        autoFocus
