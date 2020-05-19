@@ -41,7 +41,7 @@ class ProductList extends Component {
         <div className="buyagain">
           <div className="product-header">
             <p className="product-header-title">Buy Again</p>
-            <p className="product-header-vm"><Link>view 57 more</Link></p>
+            <p className="product-header-vm"><Link to="#">view 57 more</Link></p>
           </div>
           <div className="carousel">{PRODUCTS}</div>
         </div>
@@ -49,7 +49,7 @@ class ProductList extends Component {
         <div className="buyagain">
           <div className="product-header">
             <p className="product-header-title">New Arrivals</p>
-            <p className="product-header-vm"><Link>view 57 more</Link></p>
+            <p className="product-header-vm"><Link to="#">view 57 more</Link></p>
           </div>
           <div className="carousel">{PRODUCTS}</div>
           </div>
