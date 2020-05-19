@@ -43,6 +43,7 @@
 .product-add-btn {
   width: 100px;
   height: 40px;
+  margin: 15px;
   background-color: #2f821f;
   color: #ffffff;
   font-size: 16px;

@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+
 .product-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 15px
+  margin-top: 20px
 }
 
 .product-header-title {
-  margin-left: 40px
+  margin-left: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #323232;
+  letter-spacing: .32px
 }
 .product-header-vm {
   margin-right: 35px;
   text-decoration: none;
-  color: #2f821f
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f821f;
+  letter-spacing: .26px
 }
 
 .carousel {
