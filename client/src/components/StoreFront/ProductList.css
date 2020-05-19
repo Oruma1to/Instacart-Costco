@@ -25,11 +25,13 @@
 .buyagain {
   margin: 10px 0 30px 0;
   background-color: white;
-  max-width: inherit
+ 
+  
 }
 
 .all-carousels {
+
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
 }
