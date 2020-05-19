@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import "./ProductDetail.css";
-import { getProduct } from "../services/product";
-import { Link } from "react-router-dom";
+import { getProduct, deleteProduct } from "../services/product";
+import { Link, Redirect } from "react-router-dom";
 
 class ProductDetail extends Component {
  constructor(props) {
@@ -19,6 +19,7 @@ class ProductDetail extends Component {
     quantity: 0,
     size: "",
    },
+   deleted: false
   };
  }
 
@@ -28,8 +29,25 @@ class ProductDetail extends Component {
   this.setState({ product });
  }
 
+ deletedThisBlog = async () => {
+  console.log("in deletethisblog")
+  const { product } = this.state
+  if (this.props.user) {
+   await deleteProduct(product._id)
+   this.setState({
+    deleted: true
+   }
+   )
+  } else {
+   alert("You are not a Member to delete this")
+  }
+ }
+
  render() {
-  const { product } = this.state;
+  const { product, deleted } = this.state;
+  if (deleted) {
+   return <Redirect to={`/costco`} />
+  }
   return (
    <div className="product-container">
     <div>
@@ -55,7 +73,7 @@ class ProductDetail extends Component {
       {this.props.user ? <button><Link className="edit-link" to={`/products/${product._id}/edit`}>Edit</Link></button> : ""}
      </button>
      <button className="delete-btn">
-      <Link to="">DELETE</Link>
+      {this.props.user ? <button onClick={this.deletedThisBlog}>Delete</button> : ""}
      </button>
     </div>
    </div>
