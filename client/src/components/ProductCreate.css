@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-
+.productCreate-Header > * {
+ background-color:lightgrey;
+}
 .add-product-body{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ justify-content: center;
+  /* align-items: center; */
 }
 .create-form {
     padding: 10px;
