@@ -44,10 +44,12 @@ class ProductDetail extends Component {
           <div className="">{product.quantity}</div>
           <div className="">{product.size}</div>
         </div>
-        {/* <div>
-          <button className="edit-btn"><Link>EDIT</Link></button>
+        <div>
+          <button className="edit-btn">
+            <Link>EDIT</Link>
+          </button>
           <button className="delete-btn">DELETE</button>
-        </div> */}
+        </div>
       </div>
     );
   }
