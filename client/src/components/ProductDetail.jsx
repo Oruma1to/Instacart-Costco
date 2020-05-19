@@ -31,19 +31,25 @@ class ProductDetail extends Component {
   render() {
     const { product } = this.state;
     return (
-      <div>
+      <div className="product-container">
         <div>
-          <img className="" src={product.imageURL} alt={product.name} />
+          <img
+            className="product-image"
+            src={product.imageURL}
+            alt={product.name}
+          />
         </div>
+
         <div>
-          <div className="">{product.name}</div>
-          <div className="">{product.brand}</div>
-          <div className="">{product.department}</div>
-          <div className="">{product.category}</div>
-          <div className="">${product.price}</div>
-          <div className="">{product.quantity}</div>
-          <div className="">{product.size}</div>
+          <div className="product-name">{product.name}</div>
+          <div className="product-brand">{product.brand}</div>
+          <div className="product-department">{product.department}</div>
+          <div className="product-category">{product.category}</div>
+          <div className="product-price">${product.price}</div>
+          <div className="product-quantity">{product.quantity}</div>
+          <div className="product-size">{product.size}</div>
         </div>
+
         <div>
           <button className="edit-btn">
             <Link to="">EDIT</Link>
