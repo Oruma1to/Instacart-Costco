@@ -9,8 +9,8 @@ export default class LandingPage extends Component {
   return (
    <>
     <LandingHeader />
-    {/* <Redirect to="sign-up" /> */}
-    <Redirect to="add-product" />
+    <Redirect to="sign-up" />
+    {/* <Redirect to="add-product" /> */}
    </>
   );
  }
