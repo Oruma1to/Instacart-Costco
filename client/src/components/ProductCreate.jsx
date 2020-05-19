@@ -63,7 +63,7 @@ export default class ProductCreate extends Component {
   }
   return (
    <div className="add-product-body">
-    {/* <StoreFrontNavBar user={this.props.user} /> */}
+    <StoreFrontNavBar user={this.props.user} />
     <form className="create-form" onSubmit={this.handleSubmit}>
      <input
       className="add-product-input input-name"

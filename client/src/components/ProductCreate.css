@@ -2,7 +2,9 @@
 
 .add-product-body{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .create-form {
     padding: 10px;
