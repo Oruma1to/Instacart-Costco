@@ -3,13 +3,14 @@
 .product-container {
   display: flex;
  flex-direction: row;
- background-color: blue;
+ background-color: grey;
  color: white;
+ padding: 10px;
+}
+.product-image-container {
+  padding: 40px;
 }
 
-.product-image {
-  
-}
 .items-details {
   display: flex;
   flex-direction: column;
@@ -17,10 +18,23 @@
   letter-spacing: 0.8px;
   /* padding: 60px; */
   justify-content: space-evenly;
+  padding-top: 40px ;
+  line-height: 25px;
   /* align-items: stretch ; */
 }
 
 .product-buttons {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-self: flex-end;
+ 
+ 
+}
+.edit-btn {
+  text-decoration: none;
+  color: blue;
+}
+.delete-btn {
+  text-decoration: none;
+  color: blue;
 }

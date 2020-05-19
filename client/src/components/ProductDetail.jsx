@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./ProductDetail.css";
 import { getProduct } from "../services/product";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 class ProductDetail extends Component {
   constructor(props) {
@@ -51,11 +51,11 @@ class ProductDetail extends Component {
         </div>
 
         <div className="product-buttons">
-          <button className="edit-btn">
-            <Link to="">EDIT</Link>
+          <button >
+            <Link className="edit-btn" to="">EDIT</Link>
           </button>
-          <button className="delete-btn">
-            <Link to="">DELETE</Link>
+          <button >
+            <Link className="delete-btn" to="">DELETE</Link>
           </button>
         </div>
       </div>
