@@ -66,7 +66,7 @@ export default class App extends Component {
             exact
             path="/costco/:id"
             render={(props) => (
-              <ProductDetail history={props.history} user={user} />
+              <ProductDetail {...props} history={props.history} user={user} />
             )}
           />
           } />

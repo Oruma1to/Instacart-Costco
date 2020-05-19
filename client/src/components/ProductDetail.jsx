@@ -46,9 +46,11 @@ class ProductDetail extends Component {
         </div>
         <div>
           <button className="edit-btn">
-            <Link>EDIT</Link>
+            <Link to="">EDIT</Link>
           </button>
-          <button className="delete-btn">DELETE</button>
+          <button className="delete-btn">
+            <Link to="">DELETE</Link>
+          </button>
         </div>
       </div>
     );
