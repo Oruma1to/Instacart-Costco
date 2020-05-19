@@ -13,11 +13,10 @@
   height: 100vw;
 }
 .create-form {
-
     display: flex;
     flex-direction: column;
     padding: 20px;
-    margin: 5%;
+    margin: 1% 5% 0 5%;
     height: max-content;
     width: 500px;
     justify-content: center;
@@ -47,7 +46,7 @@
 
 .input-number {
     padding-left: 10px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .input-image-link {
@@ -62,7 +61,7 @@
     background-color: #2f821f;
     color: white;
     border: none;
-    box-shadow: 2px 2px 10px 2px #CECECE;
+    box-shadow: 1px 1px 5px 1px #CECECE;
     cursor: pointer;
     align-self:center;
 }
@@ -77,5 +76,9 @@
   margin: 10px;
   font-size: inherit;
 }
-.create-label{
+.productCreate-title{
+ margin-top: 2%;
+ font-size: 30px;
+ font-family: inherit;
+ text-decoration: underline;
 }
