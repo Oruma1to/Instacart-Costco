@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
-/* 
-body{
-  width:100%;
-} */
 .apple-header{
   background-image:url('../../images/demapples.png');
   background-repeat: no-repeat;
@@ -55,7 +51,3 @@ body{
   color: white;
   margin: 0 -5px 0 -5px;
 }
-
-/* .aboveSearch {
-
-} */

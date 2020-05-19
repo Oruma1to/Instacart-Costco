@@ -1,5 +1,15 @@
-main{
+.storeBodyPage{
+ background-color: #f7f7f7;
+}
+
+.storeBodySection{
   display: flex;
-  justify-content: space-between;
-  /* background-color: #f7f7f7; */
+  justify-content: flex-start;
+  margin-left: 10px;
+  /* width: 100%; */
+}
+.storebody-products-list{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
 }
