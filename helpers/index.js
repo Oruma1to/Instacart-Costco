@@ -2,6 +2,7 @@ require("dotenv").config();
 module.exports = (req, res, next) => {
  const jwt = require("jsonwebtoken");
  const TOKEN_KEY = process.env.TOKEN_MASTER;
+ console.log("In the restrict part ")
  try {
   const token = req.headers.authorization.split(" ")[1];
   const data = jwt.verify(token, TOKEN_KEY);
@@ -12,3 +13,5 @@ module.exports = (req, res, next) => {
   res.status(403).send("Unauthorized");
  }
 };
+//This is for the back-End routes
+//validate json.token's header 
