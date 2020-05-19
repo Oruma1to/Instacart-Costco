@@ -62,75 +62,85 @@ export default class ProductCreate extends Component {
    return <Redirect to={`/costco`} />
   }
   return (
-   <div className="add-product-body">
+   <>
     <div className="productCreate-Header">
      <StoreFrontNavBar user={this.props.user} />
     </div>
-    <form className="create-form" onSubmit={this.handleSubmit}>
-     <input
-      className="add-product-input input-name"
-      placeholder='Name'
-      value={post.name}
-      name='name'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     />
-     <input
-      className="add-product-input input-brand"
-      placeholder='Brand'
-      value={post.brand}
-      name='brand'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     />
-     {/* Department with select */}
-     <Select className="select-departments" placeholder="Department" options={departments} onChange={this.handleSelected} />
-     {/* Category with select */}
-     {this.state.post.department ? < Select className="select-category" placeholder="Category" options={checker(this.state.post.department)} onChange={this.handleSelected} /> : ""}
-     <input
-      className="add-product-input input-price"
-      placeholder='Price'
-      value={post.price}
-      name='price'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     />
-     <input
-      className="add-product-input input-size"
-      placeholder='Size'
-      value={post.size}
-      name='size'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     />
-     <input
-      // This is until I edit my input-quantity css
-      className="add-product-input input-price input-quantity"
-      placeholder='Quantity'
-      value={post.quantity}
-      name='quantity'
-      required
-      autoFocus
-      onChange={this.handleChange}
-     />
+    <div className="add-product-body">
+     <form className="create-form" onSubmit={this.handleSubmit}>
+      <label className="create-label" for="name">Name</label>
+      <input
+       className="add-product-input input-name"
+       placeholder='Name'
+       value={post.name}
+       name='name'
+       required
+       autoFocus
+       onChange={this.handleChange}
+      />
+      <label className="create-label" for="brand">Brand</label>
+      <input
+       className="add-product-input input-brand"
+       placeholder='Brand'
+       value={post.brand}
+       name='brand'
+       required
+       autoFocus
+       onChange={this.handleChange}
+      />
+      {/* Department with select */}
+      <label className="create-label" for="deparment">Department</label>
+      <Select className="select-departments" placeholder="Department" options={departments} onChange={this.handleSelected} />
+      {/* Category with select */}
+      {this.state.post.department ? <>
+       <label className="create-label" for="category">Category</label>
+       <Select className="select-category" placeholder="Category" options={checker(this.state.post.department)} onChange={this.handleSelected} />
+      </> : ""}
 
-
-     {/* ---- */}
-     <input
-      className="add-product-input input-image-link"
-      placeholder='Image Link'
-      value={post.imageURL}
-      name='imageURL'
-      required
-      onChange={this.handleChange}
-     />
-     <button type='submit' className="submit-button">Submit</button>
-    </form>
-   </div>
+      <label className="create-label" for="price">Price</label>
+      <input
+       className="add-product-input input-price"
+       placeholder='Price'
+       value={post.price}
+       name='price'
+       required
+       autoFocus
+       onChange={this.handleChange}
+      />
+      <label className="create-label" for="size">Size</label>
+      <input
+       className="add-product-input input-size"
+       placeholder='Size'
+       value={post.size}
+       name='size'
+       required
+       autoFocus
+       onChange={this.handleChange}
+      />
+      <label className="create-label" for="quanity">Quantity</label>
+      <input
+       // This is until I edit my input-quantity css
+       className="add-product-input input-price input-quantity"
+       placeholder='Quantity'
+       value={post.quantity}
+       name='quantity'
+       required
+       autoFocus
+       onChange={this.handleChange}
+      />
+      <label className="create-label" for="imageURL">Image Link</label>
+      <input
+       className="add-product-input input-image-link"
+       placeholder='Image Link'
+       value={post.imageURL}
+       name='imageURL'
+       required
+       onChange={this.handleChange}
+      />
+      <button type='submit' className="submit-button">Submit</button>
+     </form>
+    </div>
+   </>
   )
  }
 }

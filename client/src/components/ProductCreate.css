@@ -5,8 +5,8 @@
 .add-product-body{
   display: flex;
   flex-direction: column;
- justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  margin: 5%;
 }
 .create-form {
     padding: 10px;
