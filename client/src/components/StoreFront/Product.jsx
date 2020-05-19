@@ -3,7 +3,7 @@ import React from "react";
 import "./Product.css";
 
 const Product = (props) => {
-  const { price, brand, imageURL, name, size } = props;
+  const { price, imageURL, name, size } = props;
   return (
     <>
       <div className="product-wrapper">
