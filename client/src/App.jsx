@@ -6,7 +6,7 @@ import SignUp from './components/SignUp'
 import LandingPage from "./components/LandingPage"
 import SignIn from './components/SignIn'
 import StoreFront from './components/StoreFront/StoreFront'
-import SignOut from './components/SingOut'
+import SignOut from './components/SignOut'
 import ProductCreate from './components/ProductCreate'
 import ProductDetail from "./components/ProductDetail";
 
