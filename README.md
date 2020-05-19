@@ -1,4 +1,4 @@
-<img src="https://cdn.dribbble.com/users/232783/screenshots/5897974/ecommerce-page-faster-shopping-experience-dribbble-cover.gif" alt= "shopping-cart-rocket" width="24.5%"/>
+<img src="https://cdn.dribbble.com/users/232783/screenshots/5897974/ecommerce-page-faster-shopping-experience-dribbble-cover.gif" alt= "shopping-cart-rocket" width="25%"/>
 
 ![Costco](https://media.giphy.com/media/A7Jsc3LEcsDCg/giphy.gif)
 
@@ -45,9 +45,10 @@ The developers and designers of this recreation are in no way affiliated with In
 
 > API consumed for 'Instacart', including API snippet.
 
-| Website                        | Query                                             |
-| :----------------------------: | :------------------------------------------------:|
-| ____##____     | ___/api/products/___ |
+| Deployed | Website                        | Query                                             |
+| :---: | :----------------------------: | :------------------------------------------------:|
+| API | ____https://instacart-costco.herokuapp.com/api/____     | ___/products___ |
+| website | ____http://instacart-costco.surge.sh/____     | ___-___ |
 
 API SNIPPET
 
