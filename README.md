@@ -46,7 +46,12 @@ The developers and designers of this recreation are in no way affiliated with In
 
 | Deployed | Website                        | Query                                             |
 | :---: | :----------------------------: | :------------------------------------------------:|
+<<<<<<< HEAD
 | API | ____https://instacart-costco.herokuapp.com/api/____     | ___/products/___ |
+=======
+| API | ____https://instacart-costco.herokuapp.com/api/____     | ___/products___ |
+| website | ____http://instacart-costco.surge.sh/____     | ___-___ |
+>>>>>>> 5115a77290a061e0d79f4d6faed02db71f117c29
 
 API SNIPPET
 
