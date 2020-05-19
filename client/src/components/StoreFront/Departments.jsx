@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Departments.css'
+import {Link} from 'react-router-dom'
 
 export default class Departments extends Component {
   render() {
@@ -8,66 +9,66 @@ export default class Departments extends Component {
         <h1>Departments</h1>
         <nav id="side-menu">
 
-          <ul class="parent-menu">
+          <ul className="parent-menu">
 
-            <li><a className="department-item" src="#">Meat & Seafood</a>
+            <li><Link className="department-item" to="#">Meat & Seafood</Link>
 
               <ul className="parent-sub-menu">
 
-                <li><a className="department-item" src="#">Prime Beef</a></li>
+                <li><Link className="department-item" to="#">Prime Beef</Link></li>
 
-                <li><a className="department-item" src="#">Pork & Lamb</a></li>
+                <li><Link className="department-item" to="#">Pork & Lamb</Link></li>
 
-                <li><a className="department-item" src="#">Beef</a></li>
+                <li><Link className="department-item" to="#">Beef</Link></li>
 
-                <li><a className="department-item" src="#">Seafood</a></li>
+                <li><Link className="department-item" to="#">Seafood</Link></li>
 
-                <li><a className="department-item" src="#">Poultry</a></li>
+                <li><Link className="department-item" to="#">Poultry</Link></li>
 
-                <li><a className="department-item" src="#">Meat</a></li>
+                <li><Link className="department-item" to="#">Meat</Link></li>
 
               </ul>
 
             </li>
 
-            <li><a className="department-item" src="#">Produce</a>
+            <li><Link className="department-item" to="#">Produce</Link>
 
               <ul className="parent-sub-menu">
 
-                <li><a className="department-item" src="#">Fruit & Vegetable Trays</a></li>
+                <li><Link className="department-item" to="#">Fruit & Vegetable Trays</Link></li>
 
-                <li><a className="department-item" src="#">Fruit</a></li>
+                <li><Link className="department-item" to="#">Fruit</Link></li>
 
-                <li><a className="department-item" src="#">Vegetables</a></li>
+                <li><Link className="department-item" to="#">Vegetables</Link></li>
 
-                <li><a className="department-item" src="#">Salad Mix</a></li>
+                <li><Link className="department-item" to="#">Salad Mix</Link></li>
 
               </ul></li>
 
-            <li><a className="department-item" src="#">Deli</a></li>
+            <li><Link className="department-item" to="#">Deli</Link></li>
 
             <ul className="parent-sub-menu">
 
-              <li><a className="department-item" src="#">Meat & Cheese Trays</a></li>
+              <li><Link className="department-item" to="#">Meat & Cheese Trays</Link></li>
 
-              <li><a className="department-item" src="#">Prepared Meals</a></li>
+              <li><Link className="department-item" to="#">Prepared Meals</Link></li>
 
-              <li><a className="department-item" src="#">Prepared Soups & Salad</a></li>
+              <li><Link className="department-item" to="#">Prepared Soups & Salad</Link></li>
 
-              <li><a className="department-item" src="#">Dips & Spreads</a></li>
+              <li><Link className="department-item" to="#">Dips & Spreads</Link></li>
             </ul>
 
-            <li><a className="department-item" src="#">Bakery & Desserts</a>
+            <li><Link className="department-item" to="#">Bakery & Desserts</Link>
 
               <ul className="parent-sub-menu">
 
-                <li><a className="department-item" src="#">Bread</a></li>
+                <li><Link className="department-item" to="#">Bread</Link></li>
 
-                <li><a className="department-item" src="#">Buns & Rolls</a></li>
+                <li><Link className="department-item" to="#">Buns & Rolls</Link></li>
 
-                <li><a className="department-item" src="#">Cookies</a></li>
+                <li><Link className="department-item" to="#">Cookies</Link></li>
 
-                <li><a className="department-item" src="#">Pies & Cakes</a></li>
+                <li><Link className="department-item" to="#">Pies & Cakes</Link></li>
 
               </ul>
 
