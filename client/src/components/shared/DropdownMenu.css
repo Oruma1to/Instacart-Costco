@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .dropDownMenu {
   float: left;
@@ -7,14 +7,14 @@
 }
 
 .dropDownMenu .dropbtn {
-  font-size: 18px;  
+  font-size: 20px;  
   border: none;
   outline: none;
   color: white;
-  /* color: black; */
   background-color: inherit;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: .32px;
   margin: 0;
 }
 
@@ -73,5 +73,3 @@
   width: 1px;
   height: 1px;
 }
-
-

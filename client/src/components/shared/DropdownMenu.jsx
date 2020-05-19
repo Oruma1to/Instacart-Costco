@@ -3,8 +3,9 @@ import { Link } from "react-router-dom"
 import "./DropdownMenu.css"
 
 export default class DropdownMenu extends Component {
- render() {
-  console.log("In Store Dropdown Menu", this.props.user)
+  render() {
+    console.log("In Store Dropdown Menu", this.props.user)
+
 
   let choosenMenu = [];
   if (this.props.titleMenu === "Account") {
@@ -22,24 +23,24 @@ export default class DropdownMenu extends Component {
     ]
    }
 
-  } else if (this.props.titleMenu === "Stores") {
-   choosenMenu = [
-    <Link key="1" className="dropdown-links" to="#">Queen</Link>,
-    <Link key="2" className="dropdown-links" to="#">Manhattan</Link>,
-    <Link key="3" className="dropdown-links" to="#">Yonkers</Link>
-   ]
+    } else if (this.props.titleMenu === "Stores") {
+      choosenMenu = [
+        <Link key="1" className="dropdown-links" to="#">Queen</Link>,
+        <Link key="2" className="dropdown-links" to="#">Manhattan</Link>,
+        <Link key="3" className="dropdown-links" to="#">Yonkers</Link>
+      ]
+    }
+    return (
+      <div className="dropDownMenu" >
+        <button className="dropbtn">{this.props.titleMenu}
+          <i className="dropdown-arrow-down"></i>
+        </button>
+        <div className="dropdown-content">
+          {choosenMenu.map(tag => tag)}
+        </div>
+      </div>
+    )
   }
-  return (
-   <div className="dropDownMenu" >
-    <button className="dropbtn">{this.props.titleMenu}
-     <i className="dropdown-arrow-down"></i>
-    </button>
-    <div className="dropdown-content">
-     {choosenMenu.map(tag => tag)}
-    </div>
-   </div>
-  )
- }
 }
 
 //Testing purposes

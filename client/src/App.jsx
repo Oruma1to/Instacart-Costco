@@ -8,33 +8,33 @@ import SignIn from './components/SignIn'
 import StoreFront from './components/StoreFront/StoreFront'
 import SignOut from './components/SingOut'
 import ProductCreate from './components/ProductCreate'
-
+import ProductDetail from "./components/ProductDetail";
 
 
 export default class App extends Component {
- constructor() {
-  super()
-  this.state = {
-   user: null
+  constructor() {
+    super();
+    this.state = {
+      user: null,
+    };
   }
- }
 
-
- async componentDidMount() {
-  const user = await verifyUser()
-  if (user) {
-   this.setState(user)
+  async componentDidMount() {
+    const user = await verifyUser();
+    if (user) {
+      this.setState(user);
+    }
   }
- }
 
- setUser = user => this.setState({ user })
+  setUser = (user) => this.setState({ user });
 
- clearUser = () => this.setState({ user: null })
+  clearUser = () => this.setState({ user: null });
 
- render() {
-  const { setUser, clearUser } = this
-  const { user } = this.state
-  console.log("In App page", user);
+  render() {
+    const { setUser, clearUser } = this;
+    const { user } = this.state;
+    console.log("In App page", user);
+
 
   return (
    <div className="app">
@@ -46,6 +46,14 @@ export default class App extends Component {
      <Route exact path="/costco" render={() => <StoreFront user={user} />} />
      <Route exact path="/" render={() => <StoreFront user={user} />} />
      <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
+     <Route
+            exact
+            path="/costco/:id"
+            render={(props) => (
+              <ProductDetail {...props} history={props.history} user={user} />
+            )}
+          />
+          } />
     </Switch>
    </div>
   )

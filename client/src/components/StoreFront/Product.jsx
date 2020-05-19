@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Product.css";
 
 const Product = (props) => {
-  const { price, imageURL, name, size } = props;
+  const { price, imageURL, name, size, _id } = props;
   return (
     <>
       <div className="product-wrapper">
@@ -14,7 +15,9 @@ const Product = (props) => {
           <div className="product-size">{size}</div>
         </div>
         <div className="button-container">
-          <button className="product-add-btn">Add</button>
+          <button className="product-add-btn">
+            <Link to={`/costco/${_id}`}>Add</Link>
+          </button>
         </div>
       </div>
     </>
