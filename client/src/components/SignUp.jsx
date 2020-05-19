@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './SignUp.css'
 // import { signUp, signIn } from '../services/user'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import LandingHeader from "./LandingHeader"
 
 class SignUp extends Component {
@@ -20,26 +20,30 @@ class SignUp extends Component {
    errorMsg: ''
   })
 
- // onSignUp = event => {
- //   event.preventDefault()
+ onSignUp = event => {
+  event.preventDefault()
+  if (this.state) {
+   this.props.history.push("/costco")
+  }
+  // history.push("/costco")
+  // event.preventDefault()
+  // const { history, setUser } = this.props
 
- //   const { history, setUser } = this.props
+  // signUp(this.state)
+  //   .then(() => signIn(this.state))
+  //   .then(res => setUser(res.user))
+  //   .then(() => history.push('/'))
+  //   .catch(error => {
+  //     console.error(error)
+  //     this.setState({
+  //       email: '',
+  //       isError: true,
+  //       errorMsg: 'Please Enter a Valid Email'
 
- //   signUp(this.state)
- //     .then(() => signIn(this.state))
- //     .then(res => setUser(res.user))
- //     .then(() => history.push('/'))
- //     .catch(error => {
- //       console.error(error)
- //       this.setState({
- //         email: '',
- //         isError: true,
- //         errorMsg: 'Please Enter a Valid Email'
+  //     })
+  //   })
 
- //       })
- //     })
-
- //   }      
+ }
 
 
  render() {
