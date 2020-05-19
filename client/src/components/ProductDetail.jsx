@@ -51,12 +51,13 @@ class ProductDetail extends Component {
         </div>
 
         <div className="product-buttons">
-          <button >
+          {this.props.user ? <button >
             <Link className="edit-btn" to="">EDIT</Link>
-          </button>
-          <button >
+          </button> : ""}
+
+          {this.props.user ? <button >
             <Link className="delete-btn" to="">DELETE</Link>
-          </button>
+          </button> : ""}
         </div>
       </div>
     );
