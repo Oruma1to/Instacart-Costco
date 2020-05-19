@@ -29,6 +29,7 @@
 .product-price {
   font-size: 12px;
   font-weight: bold;
+  color:#565656;
   margin: 5px
 }
 .product-title {
@@ -52,6 +53,6 @@
   font-weight: bold;
 }
 .button-container {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }

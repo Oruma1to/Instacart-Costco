@@ -12,7 +12,8 @@
   margin-left: 40px;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: #323232;
+  color: #565656;
+  font-weight: 400;
   letter-spacing: .32px
 }
 .product-header-vm {
