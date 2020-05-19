@@ -1,5 +1,8 @@
-main{
+.storeBodyPage{
+ background-color: #f7f7f7;
+}
+
+.storeBodySection{
   display: flex;
   justify-content: space-between;
-  /* background-color: #f7f7f7; */
 }
