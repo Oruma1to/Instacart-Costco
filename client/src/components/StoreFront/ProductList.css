@@ -19,19 +19,20 @@
 .carousel {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  /* justify-content: flex-end; */
+  width: 100%;
+  overflow-x: scroll;
 }
 
 .buyagain {
-  margin: 10px 0 30px 0;
+  /* margin: 10px 0 30px 0; */
   background-color: white;
- 
-  
+  width: 80%;
+  margin: 10px 0;
 }
 
-.all-carousels {
-
+/* .all-carousels {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
+} */

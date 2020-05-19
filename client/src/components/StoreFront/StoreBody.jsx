@@ -10,7 +10,10 @@ export const StoreBody = () => {
    <DeliveryTo />
    <main className="storeBodySection">
     <Departments />
-    <ProductList />
+    <div className="storebody-products-list">
+     <ProductList />
+     <ProductList />
+    </div>
    </main>
   </div>
  );

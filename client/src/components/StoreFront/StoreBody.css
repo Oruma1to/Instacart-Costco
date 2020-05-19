@@ -6,4 +6,10 @@
   display: flex;
   justify-content: flex-start;
   margin-left: 10px;
+  /* width: 100%; */
+}
+.storebody-products-list{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
 }

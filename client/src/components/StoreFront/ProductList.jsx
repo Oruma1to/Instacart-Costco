@@ -22,7 +22,7 @@ class ProductList extends Component {
  render() {
   console.log("all products-->", this.state.products);
   const PRODUCTS = this.state.products
-   .slice(0, 4)
+   // .slice(0, 4)
    .map((product, index) => (
     <Product
      key={index}
@@ -36,7 +36,8 @@ class ProductList extends Component {
    ));
 
   return (
-   <div className="all-carousels">
+   // <div className="all-carousels"></div>
+   <>
     <div className="buyagain">
      <div className="product-header">
       <p className="product-header-title">Buy Again</p>
@@ -44,15 +45,16 @@ class ProductList extends Component {
      </div>
      <div className="carousel">{PRODUCTS}</div>
     </div>
-    <div className="buyagain">
+    {/* <div className="buyagain">
      <div className="product-header">
       <p className="product-header-title">New Arrivals</p>
       <p className="product-header-vm"><Link to="#">view 57 more</Link></p>
      </div>
      <div className="carousel">{PRODUCTS}</div>
-    </div>
+    </div> */}
+   </>
 
-   </div>
+
 
 
   );

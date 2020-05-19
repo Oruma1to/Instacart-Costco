@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+.product-wrapper {
+  /* width: 140px;
+  height: 300px;
+  margin: 30px 50px 10px 50px */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 30px 50px 10px 50px
 
+}
 .product-container {
   display: flex;
   flex-direction: column;
@@ -9,29 +19,26 @@
 .product-container > * {
   margin: 2px 0;
 }
-
-.product-wrapper {
-  width: 140px;
-  height: 300px;
-  margin: 30px 50px 10px 50px
-
-}
 .product-image {
   width: 140px;
   height: 150px;
+  margin: 10px auto;
 }
 
 .product-price {
   font-size: 12px;
   font-weight: bold;
+  margin: 5px
 }
 .product-title {
   font-size: 12px;
   color: #717171;
+  margin: 5px
 }
 .product-size {
   font-size: 12px;
   color: #717171;
+  margin: 5px;
 }
 .product-add-btn {
   width: 100px;
@@ -43,5 +50,6 @@
   font-weight: bold;
 }
 .button-container {
+  margin-top: 20px;
   text-align: center;
 }
