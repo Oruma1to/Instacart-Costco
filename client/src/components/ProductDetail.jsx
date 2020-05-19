@@ -32,7 +32,7 @@ class ProductDetail extends Component {
     const { product } = this.state;
     return (
       <div className="product-container">
-        <div>
+        <div className="product-image-container">
           <img
             className="product-image"
             src={product.imageURL}
@@ -40,7 +40,7 @@ class ProductDetail extends Component {
           />
         </div>
 
-        <div>
+        <div className="items-details">
           <div className="product-name">{product.name}</div>
           <div className="product-brand">{product.brand}</div>
           <div className="product-department">{product.department}</div>
@@ -50,7 +50,7 @@ class ProductDetail extends Component {
           <div className="product-size">{product.size}</div>
         </div>
 
-        <div>
+        <div className="product-buttons">
           <button className="edit-btn">
             <Link to="">EDIT</Link>
           </button>
