@@ -9,7 +9,7 @@
 }
 
 .product-header-title {
-  margin-left: 40px;
+  margin-left: 50px;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #565656;
@@ -34,8 +34,8 @@
 }
 
 .buyagain {
-  /* margin: 10px 0 30px 0; */
   background-color: white;
+  text-align: left;
   width: 80%;
   margin: 10px 0;
 }
