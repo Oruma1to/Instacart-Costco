@@ -1,95 +1,122 @@
 import React, { Component } from 'react'
-import './SignUp.css'
-// import { signUp, signIn } from '../services/user'
-import { Link } from 'react-router-dom'
-import LandingHeader from "./LandingHeader"
+import './CreateAccount.css'
+import { signUp } from '../services/user'
+import LandingHeader from './LandingHeader'
 
-class SignUp extends Component {
- constructor() {
-  super()
 
-  this.state = {
-   email: ''
+class CreateAccount extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      email: '',
+      password: '',
+      passwordConfirm: '',
+      isError: false,
+      errorMsg: ''
+    }
   }
- }
 
- handleChange = event =>
-  this.setState({
-   [event.target.name]: event.target.value,
-   isError: false,
-   errorMsg: ''
-  })
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value,
+      isError: false,
+      errorMsg: ''
+    })
+  }
 
- // onSignUp = event => {
- //   event.preventDefault()
+  onSignUp = event => {
+    event.preventDefault()
 
- //   const { history, setUser } = this.props
+    const { history, setUser } = this.props
 
- //   signUp(this.state)
- //     .then(() => signIn(this.state))
- //     .then(res => setUser(res.user))
- //     .then(() => history.push('/'))
- //     .catch(error => {
- //       console.error(error)
- //       this.setState({
- //         email: '',
- //         isError: true,
- //         errorMsg: 'Please Enter a Valid Email'
-
- //       })
- //     })
-
- //   }      
-
-
- render() {
-  const { email } = this.state
-  return (
-   <>
-    <LandingHeader />
-    <div id="suForm" className="form-container-signUP">
-
-     <img className="sign-up-instacart-detail-image" alt="instacart-logo"
-      src={require('../images/instacartlogo@3x.png')} />
-     <div>
-      <p className="sign-up-createAcc">Create an account to start shopping</p>
-     </div>
-     <form onSubmit={this.onSignUp}>
-      <div className="sign-up-emailInput">
-       <input
-        required
-        type="text"
-        name="email"
-        value={email}
-        id="emailInput"
-        placeholder="Email address"
-        onChange={this.handleChange}
-       />
-      </div>
-      <div>
-       <p className="terms">By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
-      </div>
-
-      <button className="logIn">Sign up with email</button>
-
-      <div className="separator">or</div>
-
-      <div className="orLoginInfo" >
-       <div>
-        <button className="facebookButton">Continue with Facebook</button>
-       </div>
-       <div>
-        <button className="googleButton">Continue with Google</button>
-       </div>
-      </div>
-      <div className="alreadyAcc">
-       Already have an account? <Link className="signIn" to="/sign-in">Log in</Link>
-      </div>
-     </form>
-    </div>
-   </>
-  )
- }
+    signUp(this.state)
+        .then(() => signIn(this.state))
+        .then(res => setUser(res.user))
+        .then(() => history.push('/costco'))
+        .catch(error => {
+            console.error(error)
+            this.setState({
+                email: '',
+                password: '',
+                passwordConfirmation: '',
+                isError: true,
+                errorMsg: 'Sign Up Details Invalid'
+            })
+        })
 }
 
-export default SignUp
+  renderError = () => {
+    const toggleForm = this.state.isError ? 'danger' : ''
+    if (this.state.isError) {
+      return (
+        <button type="submit" className={toggleForm}>
+          {this.state.errorMsg}
+        </button>
+      )
+    } else {
+      return <button className="logIn" type="submit">Log In</button>
+    }
+  }
+
+  render() {
+    const { email, password } = this.state
+    return (
+
+      <>
+        <LandingHeader />
+
+        <div className="form-container">
+          <img className="sign-in-instacart-detail-image" alt="instacart-logo"
+            src={require('../images/instacartlogo@3x.png')} />
+
+          {/* <div className="instacart-detail-image"></div> */}
+          <div className="sign-in-welcome">Welcome back</div>
+          <div className="login-prompt">Log in with your email and password</div>
+          <form onSubmit={this.onSignIn}>
+            <div className="emailInput">
+              <input
+                required
+                type="text"
+                name="email"
+                value={email}
+                id="emailInput"
+                placeholder="Email address"
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="passwordInput">
+              <input
+                required
+                type="text"
+                name="password"
+                value={password}
+                placeholder="Password (min 6 characters)"
+                onChange={this.handleChange}
+              />
+            </div>
+            {this.renderError()}
+          </form>
+
+          <div className="separator">or</div>
+
+          <div className="orLoginInfo">
+            <div>
+              <button className="facebookButton">Continue with Facebook</button>
+            </div>
+            <div>
+              <button className="googleButton">Continue with Google</button>
+            </div>
+            <div className="alreadyLogin">
+              <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
+            </div>
+          </div>
+        </div >
+      </>
+    )
+  }
+
+
+}
+
+export default CreateAccount
