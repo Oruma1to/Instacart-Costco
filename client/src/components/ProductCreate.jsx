@@ -99,7 +99,7 @@ export default class ProductCreate extends Component {
 
       <label className="create-label" for="price">Price</label>
       <input
-       className="add-product-input input-price"
+       className="add-product-input input-number"
        placeholder='Price'
        value={post.price}
        name='price'
@@ -120,7 +120,7 @@ export default class ProductCreate extends Component {
       <label className="create-label" for="quanity">Quantity</label>
       <input
        // This is until I edit my input-quantity css
-       className="add-product-input input-price input-quantity"
+       className="add-product-input input-number"
        placeholder='Quantity'
        value={post.quantity}
        name='quantity'
