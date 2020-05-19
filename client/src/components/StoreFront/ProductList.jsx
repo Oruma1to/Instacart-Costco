@@ -37,12 +37,22 @@ class ProductList extends Component {
 
     return (
       <>
+        <div className="all-carousels">
         <div className="buyagain">
           <div className="product-header">
             <p className="product-header-title">Buy Again</p>
-            <p className="product-header-vm">view 57 more</p>
+            <p className="product-header-vm"><Link>view 57 more</Link></p>
           </div>
           <div className="carousel">{PRODUCTS}</div>
+        </div>
+
+        <div className="buyagain">
+          <div className="product-header">
+            <p className="product-header-title">New Arrivals</p>
+            <p className="product-header-vm"><Link>view 57 more</Link></p>
+          </div>
+          <div className="carousel">{PRODUCTS}</div>
+          </div>
         </div>
       </>
     );
