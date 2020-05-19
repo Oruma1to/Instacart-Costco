@@ -23,9 +23,9 @@
 }
 
 .costco-logo {
-   width: 110px;
-   height: 100px;
-   border-radius: 20%;
+  width: 110px;
+  height: 100px;
+  border-radius: 20%;
 }
 
 .costco-title {
@@ -47,7 +47,6 @@
 }
 
 .dot {
-  content: "•"; 
   color: white;
   margin: 0 -5px 0 -5px;
 }
