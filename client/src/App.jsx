@@ -1,13 +1,15 @@
-import React, { Component } from "react";
-import "./App.css";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { verifyUser } from "./services/user";
-import SignUp from "./components/SignUp";
-import LandingPage from "./components/LandingPage";
-import SignIn from "./components/SignIn";
-import StoreFront from "./components/StoreFront/StoreFront";
-import SignOut from "./components/SingOut";
+import React, { Component } from 'react'
+import "./App.css"
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { verifyUser } from './services/user'
+import SignUp from './components/SignUp'
+import LandingPage from "./components/LandingPage"
+import SignIn from './components/SignIn'
+import StoreFront from './components/StoreFront/StoreFront'
+import SignOut from './components/SingOut'
+import ProductCreate from './components/ProductCreate'
 import ProductDetail from "./components/ProductDetail";
+
 
 export default class App extends Component {
   constructor() {
@@ -33,36 +35,18 @@ export default class App extends Component {
     const { user } = this.state;
     console.log("In App page", user);
 
-    return (
-      <div className="app">
-        <Switch>
-          <Route exact path="/" render={() => <LandingPage />} />
-          <Route exact path="/sign-up" render={() => <SignUp />} />
-          <Route
-            exact
-            path="/sign-in"
-            render={(routerProps) => (
-              <SignIn setUser={setUser} history={routerProps.history} />
-            )}
-          />
-          <Route
-            exact
-            path="/sign-out"
-            render={(props) => (
-              <SignOut
-                user={user}
-                clearUser={clearUser}
-                history={props.history}
-              />
-            )}
-          />
-          {/* <Route exact path="/costco" render={() => user ? <StoreFront user={user} /> : <Redirect to="/sign-up" />} /> */}
-          <Route
-            exact
-            path="/costco"
-            render={() => <StoreFront user={user} />}
-          />
-          <Route
+
+  return (
+   <div className="app">
+    <Switch>
+     <Route exact path="/" render={() => <LandingPage />} />
+     <Route exact path="/sign-up" render={() => <SignUp />} />
+     <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
+     <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
+     <Route exact path="/costco" render={() => <StoreFront user={user} />} />
+     <Route exact path="/" render={() => <StoreFront user={user} />} />
+     <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
+     <Route
             exact
             path="/costco/:id"
             render={(props) => (
@@ -70,8 +54,8 @@ export default class App extends Component {
             )}
           />
           } />
-        </Switch>
-      </div>
-    );
-  }
+    </Switch>
+   </div>
+  )
+ }
 }

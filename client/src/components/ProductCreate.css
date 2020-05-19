@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.productCreate-Header{
+ background-color: #2f821f;
+}
+.add-product-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  background-color: #aeaeae;
+  height: 100vw;
+}
+.create-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 1% 5% 0 5%;
+    height: max-content;
+    width: 500px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color:#ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.add-product-input:focus{
+    outline: none;
+}
+
+.add-product-input{
+    font-size: 22px;
+    /* border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden; */
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    margin: 10px;
+    width: 90%;
+}
+
+.input-number {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.input-image-link {
+    font-size: 18px;
+}
+
+.submit-button {
+    font-size: 22px;
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #2f821f;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 5px 1px #CECECE;
+    cursor: pointer;
+    align-self:center;
+}
+
+.select-departments{
+  width:92%;
+  margin: 10px;
+  font-size: inherit;
+}
+.select-category{
+ width: 92%;
+  margin: 10px;
+  font-size: inherit;
+}
+.productCreate-title{
+ margin-top: 2%;
+ font-size: 30px;
+ font-family: inherit;
+ text-decoration: underline;
+}

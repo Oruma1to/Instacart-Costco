@@ -8,8 +8,8 @@ router.get('/', (req, res) => res.send('There is no food here'))
 
 router.get('/products', controllers.getProducts)
 router.get('/products/:id', controllers.getProduct)
-router.post('/products', controllers.createProduct)
-router.put('/products/:id', controllers.updateProduct)
+router.post('/products', restrict, controllers.createProduct)
+router.put('/products/:id', restrict, controllers.updateProduct)
 router.delete('/products/:id', restrict, controllers.deleteProduct)
 
 //Testing new arrivals

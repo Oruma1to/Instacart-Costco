@@ -10,6 +10,7 @@ export default class LandingPage extends Component {
    <>
     <LandingHeader />
     <Redirect to="sign-up" />
+    {/* <Redirect to="add-product" /> */}
    </>
   );
  }
