@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .product-container {
   display: flex;
@@ -6,15 +6,21 @@
   height: 250px;
 }
 
+.product-container > * {
+  margin: 2px 0;
+}
+
 .product-wrapper {
   width: 140px;
   height: 300px;
-  margin-left: 40px
+  margin: 30px 0 10px 20px
+
 }
 .product-image {
   width: 140px;
   height: 150px;
 }
+
 .product-price {
   font-size: 12px;
   font-weight: bold;
