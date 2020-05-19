@@ -31,34 +31,38 @@ class ProductDetail extends Component {
   render() {
     const { product } = this.state;
     return (
-      <div className="product-container">
-        <div className="product-image-container">
+      <div className="productDetail-container">
+
+        <div className="productDetail-image-container">
           <img
-            className="product-image"
+            className="productdetail-image"
             src={product.imageURL}
             alt={product.name}
           />
         </div>
 
+
         <div className="items-details">
-          <div className="product-name">{product.name}</div>
-          <div className="product-brand">{product.brand}</div>
-          <div className="product-department">{product.department}</div>
-          <div className="product-category">{product.category}</div>
-          <div className="product-price">${product.price}</div>
-          <div className="product-quantity">{product.quantity}</div>
-          <div className="product-size">{product.size}</div>
-        </div>
+          <div className="productDetail-name">{product.name}</div>
+          <div className="productDetail-brand">{product.brand}</div>
+          <div className="productDetail-department">{product.department}</div>
+          <div className="productdetail-category">{product.category}</div>
+          <div className="productDetail-price">${product.price}</div>
+          <div className="productDetail-quantity">{product.quantity}</div>
+          <div className="productDetail-size">{product.size}</div>
 
-        <div className="product-buttons">
-          {this.props.user ? <button >
+          <div className="productDetail-buttons">
+            {/* {this.props.user ? <button > */}
             <Link className="edit-btn" to="">EDIT</Link>
-          </button> : ""}
+            {/* </button> : ""} */}
 
-          {this.props.user ? <button >
+            {/* {this.props.user ? <button > */}
             <Link className="delete-btn" to="">DELETE</Link>
-          </button> : ""}
+            {/* </button> : ""} */}
+          </div>
         </div>
+
+
       </div>
     );
   }
