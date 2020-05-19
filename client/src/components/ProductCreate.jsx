@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { Redirect } from "react-router-dom"
 import { createProduct } from '../services/product'
 import Select from 'react-select'
-import { departments, categories, checker } from "./selectedOptions"
+import { departments, checker } from "./selectedOptions"
 import "./ProductCreate.css"
+import StoreFrontNavBar from './StoreFront/StoreFrontNavBar'
 
 export default class ProductCreate extends Component {
  constructor() {
@@ -43,6 +44,7 @@ export default class ProductCreate extends Component {
    }
   })
  }
+
  handleSubmit = async (event) => {
   event.preventDefault()
   const created = await createProduct(this.state.post)
@@ -52,7 +54,7 @@ export default class ProductCreate extends Component {
 
  render() {
   console.log("rendering ", this.state.post)
-  console.log(departments)
+  console.log("product create", this.props.user)
 
   const { post, created } = this.state
 
@@ -61,6 +63,7 @@ export default class ProductCreate extends Component {
   }
   return (
    <div className="add-product-body">
+    {/* <StoreFrontNavBar user={this.props.user} /> */}
     <form className="create-form" onSubmit={this.handleSubmit}>
      <input
       className="add-product-input input-name"

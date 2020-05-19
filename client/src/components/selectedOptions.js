@@ -6,28 +6,6 @@ export const departments = [
  { value: 'Bakery & Dessert', label: 'Bakery & Dessert', name: "department" }
 ];
 
-//Category list
-// export const categories = [
-//  { value: 'Prime Beef', label: 'Prime Beef', name: "category" },
-//  { value: 'Pork & Lamb', label: 'Pork & Lamb', name: "category" },
-//  { value: 'Seafood', label: 'Seafood', name: "category" },
-//  { value: 'Poultry', label: 'Poultry', name: "category" },
-//  { value: 'Meat', label: 'Meat' },
-//  { value: 'Fruit & Vegetable Trays', label: 'Fruit & Vegetable Trays', name: "category" },
-//  { value: 'Fruit', label: 'Fruit', name: "category" },
-//  { value: 'Vegetables', label: 'Vegetables', name: "category" },
-//  { value: 'Salad Mix', label: 'Salad Mix', name: "category" },
-//  { value: 'Meat & Cheese Trays', label: 'Meat & Cheese Trays', name: "category" },
-//  { value: 'Prepared Meals', label: 'Prepared Meals', name: "category" },
-//  { value: 'Prepared Soups & Salad', label: 'Prepared Soups & Salad', name: "category" },
-//  { value: 'Dips & Spreads', label: 'Dips & Spreads', name: "category" },
-//  { value: 'Bread', label: 'Bread', name: "category" },
-//  { value: 'Buns & Rolls', label: 'Buns & Rolls', name: "category" },
-//  { value: 'Cookies', label: 'Cookies', name: "category" },
-//  { value: 'Pies & Cakes', label: 'Pies & Cakes', name: "category" }
-
-// ];
-
 export const checker = (value) => {
  let category;
  switch (value) {
@@ -66,6 +44,5 @@ export const checker = (value) => {
   default:
    break;
  }
-
  return category
 }
