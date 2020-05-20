@@ -31,3 +31,9 @@ font-size: 14px;
 line-height: 1.45;
 }
 
+@media (max-width: 900px){
+  .department-container{
+    display: none;
+  }
+}
+
