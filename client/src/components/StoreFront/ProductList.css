@@ -45,3 +45,12 @@
   flex-direction: column;
   width: 100%;
 } */
+@media(max-width: 740px){
+  .buyagain{
+    width: 700px;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+}

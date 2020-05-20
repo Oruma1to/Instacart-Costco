@@ -67,6 +67,27 @@
   font-weight: bold; 
 }
 .product-Link{
- text-decoration: none;
- color: ivory;
+  text-decoration: none;
+  color: ivory;
+}
+
+@media(max-width: 740px){
+  .product-wrapper {
+    margin: 0px 50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .product-price, .product-size, .product-title{
+    font-size: 14px;
+    margin: 0 5px
+  }
+  .product-image{
+    width: 75px;
+    height: 75px;
+    margin: 0px 10px
+  }
+  .product-add-btn, .product-edit-btn{
+    font-size: 18px;
+    margin: 0 15px
+  }
 }
