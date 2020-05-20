@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './EditProduct.css'
 import { Redirect } from 'react-router-dom'
 import StoreFrontNavBar from './StoreFront/StoreFrontNavBar'
+import { departments, checker } from './selectedOptions'
+import Select from 'react-select'
 //This is tentative naming...I have to wait till josh finish his services
 import { getProduct, updateProduct } from '../services/product'
 
@@ -45,6 +47,15 @@ class PostEdit extends Component {
   let { id } = this.props.match.params
   const updated = await updateProduct(id, this.state.product)
   this.setState({ updated })
+ }
+
+ handleSelected = (selectedOption) => {
+  this.setState({
+   product: {
+    ...this.state.product,
+    [selectedOption.name]: selectedOption.value
+   }
+  })
  }
 
  render() {
@@ -132,18 +143,32 @@ class PostEdit extends Component {
        />
        <div className="editProduct-label">Deparment:</div>
        <div className="editProduct">{product.department}</div>
+       <Select
+        className="editProduct"
+        placeholder={product.department}
+        value={product.department}
+        options={departments}
+        onChange={this.handleSelected}
+       />
        <div className="editProduct-label">Category: </div>
        <div className="editProduct">{product.category}</div>
+       {product.department ?
+        <Select
+         className="editProduct"
+         placeholder={product.category}
+         options={checker(product.department)}
+         onChange={this.handleSelected}
+        />
+        : ""}
        {/* </div> */}
       </form>
-
      </div>
      <div className="editProduct-button">
       <button type='submit' className="editProduct-save">Save</button>
      </div>
 
     </div>
-   </div>
+   </div >
 
    // <div className="product-edit">
    //  <div className="image-container">
