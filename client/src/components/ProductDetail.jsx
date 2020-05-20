@@ -18,6 +18,7 @@ class ProductDetail extends Component {
     quantity: 0,
     size: "",
    },
+   deleted: false
   };
  }
 
@@ -27,9 +28,26 @@ class ProductDetail extends Component {
   this.setState({ product });
  }
 
+ deletedThisBlog = async () => {
+  console.log("in deletethisblog")
+  const { product } = this.state
+  if (this.props.user) {
+   await deleteProduct(product._id)
+   this.setState({
+    deleted: true
+   }
+   )
+  } else {
+   alert("You are not a Member to delete this")
+  }
+ }
+
 
  render() {
-  const { product } = this.state;
+  const { product, deleted } = this.state
+  if (deleted) {
+   return <Redirect to={`/costco`} />
+  }
   return (
    <div className="productDetail-container">
 
@@ -52,13 +70,8 @@ class ProductDetail extends Component {
      <div className="productDetail-size">{product.size}</div>
 
      <div className="productDetail-buttons">
-      {/* {this.props.user ? <button > */}
-      <Link className="edit-btn" to="">EDIT</Link>
-      {/* </button> : ""} */}
-
-      {/* {this.props.user ? <button > */}
-      <Link className="delete-btn" to="">DELETE</Link>
-      {/* </button> : ""} */}
+      {this.props.user ? <button className="edit-btn"><Link className="edit-link" to={`/costco/${product._id}/edit`}>Edit</Link></button> : ""}
+      {this.props.user ? <button className="delete-btn" onClick={this.deletedThisBlog}>Delete</button> : ""}
      </div>
     </div>
 
