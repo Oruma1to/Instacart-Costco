@@ -61,10 +61,10 @@ class Welcome extends Component {
 
             <div className="orLoginInfo" >
               <div>
-                <button className="facebookButton">Continue with Facebook</button>
+                <button className="facebook-button-signup">Continue with Facebook</button>
               </div>
               <div>
-                <button className="googleButton">Continue with Google</button>
+                <button className="google-button-signup">Continue with Google</button>
               </div>
             </div>
             <div className="alreadyAcc">

@@ -28,14 +28,6 @@
   padding-top: 5px;
 }
 
-@media (max-width: 700px){
-  .shopper-text{
-    display: none;
-  }
-  .nav-main {
-    justify-content: space-evenly
-  }
-}
 .shopper-btn {
   color: var(--tree-green);
   margin: 10px 0 4px 10px;
@@ -67,14 +59,22 @@
   letter-spacing: 0.09px;
   border: 1px solid var(--tree-green);
 }
+.login-link {
+  color: white;
+  text-decoration: none;
+  padding: 0px;
+}
 @media (min-width: 701px){
   .login-link-container{
     position: absolute;
   }
 }
 
-.login-link {
-  color: white;
-  text-decoration: none;
-  padding: 0px;
+@media (max-width: 700px){
+  .shopper-text{
+    display: none;
+  }
+  .nav-main {
+    justify-content: space-evenly
+  }
 }

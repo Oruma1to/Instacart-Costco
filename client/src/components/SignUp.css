@@ -74,7 +74,28 @@ height: 420px;
 .sign-up-emailInput{
  margin-top: -30px;
 }
+.facebook-button-signup {
+  color: white;
+  background-color: #375089;
+  border: #375089;
+  border-radius: 4px;
+  padding: 5px 35px;
+  height: 28px;
+  width: 270px;
+  margin: 2px;
 
+}
+.google-button-signup {
+  color: white;
+  background-color: #214EC0;
+  border:  #214EC0;
+  border-radius: 4px;
+  padding: 5px 35px;
+  height: 28px;
+  width: 270px;
+  margin: 2px;
+
+}
 p > a{
  color: #2f821f;
  text-decoration: none;
@@ -94,8 +115,11 @@ p > a{
   .sign-up-createAcc{
     font-size: 15px
   }
-  .sign-up{
+  .sign-up, .google-button-signup, .facebook-button-signup{
     width: 238px;
     height: 40px
   }
+ 
+
+  
 }
