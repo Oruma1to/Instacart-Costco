@@ -22,11 +22,11 @@ class ProductDetail extends Component {
   };
  }
 
- async componentDidMount() {
-  let { id } = this.props.match.params;
-  const product = await getProduct(id);
-  this.setState({ product });
- }
+  async componentDidMount() {
+    let { id } = this.props.match.params;
+    const product = await getProduct(id);
+    this.setState({ product });
+  }
 
  deletedThisProduct = async () => {
   console.log("in deletethisblog")
