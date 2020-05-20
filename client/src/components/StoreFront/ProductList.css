@@ -53,5 +53,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
+    width:calc(100vw - 50px);
   }
 }

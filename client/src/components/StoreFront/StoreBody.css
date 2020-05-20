@@ -18,5 +18,7 @@
   .storebody-products-list{
     align-items: center;
   }
-
+  .storeBodySection{
+    margin: 0;
+  }
 }
