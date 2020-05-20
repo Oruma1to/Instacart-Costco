@@ -83,7 +83,7 @@ input {
   padding: 0 0 0 5px;
 } 
 
-.separator {
+.separator-signin {
   display: flex;
   align-items: center;
   text-align: center;
@@ -94,15 +94,15 @@ input {
   margin: 4px auto;
   justify-content: center;
 }
-.separator::before, .separator::after {
+.separator-signin::before, .separator-signin::after {
   content: "  ";
   flex: 2;
   border-bottom: 1px solid gray;
 }
-.separator::before {
+.separator-signin::before {
   margin-right: 5px;
 }
-.separator::after {
+.separator-signin::after {
     margin-left: 5px;
 }
 .sign-in-instacart-detail-image{
@@ -152,7 +152,7 @@ img{
 @media(max-width: 450px){
   .form-container{
     width: 298px;
-    height: 426px
+    height: 503px
   }
 }
 
@@ -160,11 +160,12 @@ img{
   .form-container{
     width: 280px;
   }
+
   .sign-up-createAcc{
     font-size: 15px;
     margin-bottom: 20px
   }
-  .log-in, #email-input, #password-input,.google-button-signup, .facebook-button-signup{
+  .log-in, #email-input, #password-input,.google-button-signin, .facebook-button-signin{
     width: 238px;
     height: 40px;
     font-size: 14px;
@@ -175,22 +176,16 @@ img{
     margin-top: 10px;
     font-size: 16px
   }
-  .sign-up-instacart-detail-image{
-    margin: 0px
-  }
-  .link-container > span, .link-container > a{
-    margin: 0px;
-    font-size: 12px;
-  }
+
   .terms-container{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .alreadyAcc {
+  .alreadyLogin {
     font-size: 16px;
   }
-  .separator-signup{
+  .separator-signin{
     font-size: 14px
   } 
 }
