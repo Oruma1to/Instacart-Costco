@@ -1,22 +1,23 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 .productDetail-outerDiv{
   font-family: 'Open Sans', sans-serif;
   background-color: #aeaeae;
-  height: 100vw;
+  height: 100vmax;
 }
+
 .productDetail-container {
   display: flex;
- flex-direction: column;
+  flex-direction: column;
+
  background-color:  #ffffff;
  margin: 50px auto;
  width: 600px;
  height: max-content;
  padding: 20px;
  box-shadow: 2px 2px 10px 2px #CECECE;
-}
-/* tag for the image */
+ }
+ /* tag for the image */
 .productDetail-image-container {
   padding: 40px;
   align-self: center;
@@ -88,3 +89,12 @@
   margin-top: 2px;
   margin-left: 10px;
 }
+
+.edit-link{
+ text-decoration: none;
+ color: white;
+}
+.edit-link:visited{
+ color: white;
+}
+

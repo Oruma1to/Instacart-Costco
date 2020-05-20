@@ -41,6 +41,7 @@ export const checker = (value) => {
     { value: 'Cookies', label: 'Cookies', name: "category" },
     { value: 'Pies & Cakes', label: 'Pies & Cakes', name: "category" }
    ]
+   break;
   default:
    break;
  }
