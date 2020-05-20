@@ -19,7 +19,7 @@ const Product = (props) => {
      {user ?
       <button className="product-edit-btn">
        <Link className="product-Link" to={`/costco/${_id}`}>
-        Edit
+        Details
         </Link>
       </button>
       :
