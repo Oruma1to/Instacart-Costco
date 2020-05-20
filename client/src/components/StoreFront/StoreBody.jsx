@@ -12,8 +12,8 @@ export const StoreBody = (props) => {
    <main className="storeBodySection">
     <Departments />
     <div className="storebody-products-list">
-     <ProductList user={props.user} dataInfo={1} />
-     <ProductList user={props.user} dataInfo={2} />
+     <ProductList user={props.user} dataInfo={1} title="Buy Again" />
+     <ProductList user={props.user} dataInfo={2} title="New Arrivals" />
     </div>
    </main>
   </div>

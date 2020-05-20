@@ -46,7 +46,7 @@ class ProductList extends Component {
    <>
     <div className="buyagain">
      <div className="product-header">
-      <p className="product-header-title">{this.props.dataInfo === 1 ? "Buy Again" : "New Arrivals"}</p>
+      <p className="product-header-title">{this.props.title}</p>
       <p className="product-header-vm"><Link to="#">View 57 more ></Link></p>
      </div>
      <div className="carousel">{PRODUCTS}</div>
