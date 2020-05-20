@@ -5,13 +5,12 @@ import { Redirect } from "react-router-dom";
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
-  render() {
-    return (
-      <>
-        <LandingHeader />
-        <Redirect to="/welcome" />
-        {/* <Redirect to="add-product" /> */}
-      </>
-    );
-  }
+ render() {
+  return (
+   <>
+    <LandingHeader />
+    <Redirect to="/welcome" />
+   </>
+  );
+ }
 }
