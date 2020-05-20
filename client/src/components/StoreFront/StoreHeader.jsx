@@ -11,7 +11,9 @@ export default class StoreHeader extends Component {
       <div className='apple-header'>
         <StoreFrontNavBar user={this.props.user} />
 
-        <div className="circle-logo"><img className="costco-logo" src={require("../../images/costco-logo2.png")} alt="costco-logo" /></div>
+        <div className="circle-logo">
+          <img className="costco-logo" src={require("../../images/costco-logo2.png")} alt="costco-logo" />
+        </div>
 
         <div className="costco-title">Costco</div>
 

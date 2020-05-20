@@ -53,3 +53,10 @@
   height: max-content;
  text-decoration: none;
 } */
+
+@media (max-width: 900px){
+  .storeFrontNavBar-link{
+    display: none
+  }
+  
+}
