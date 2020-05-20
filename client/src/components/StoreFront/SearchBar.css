@@ -45,10 +45,15 @@ width: 5px;
 
 @media(max-width: 515px){
   .search-bar{
-    width: 293px
+    width: 380px
   }
   .search-bar-container{
     display: flex;
     justify-content: center;
+  }
+}
+@media(max-width: 515px){
+  .search-bar{
+    width: 320px
   }
 }
