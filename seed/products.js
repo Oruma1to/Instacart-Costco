@@ -69,6 +69,37 @@ const main = async () => {
       size: "6 lbs",
       quantity: 19
     },
+    {
+      name: "Kirkland Signature USDA Choice Beef Chuck Pot Roast Boneless",
+      brand: "Kirkland",
+      department: "Meat & Seafood",
+      category: "Beef",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/171x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_af835117-0ced-4945-a813-b5d31cc0a5b1.jpeg",
+      price: 46.23,
+      size: "1.9 lbs",
+      quantity: 19
+    },
+    {
+      name: "Blue Hill Bay Smoked Salmon, 16oz",
+      brand: "Blue Hill Bay",
+      department: "Meat & Seafood",
+      category: "Seafood",
+      imageURL: "",
+      price: 18.29,
+      size: "16 oz",
+      quantity: 19
+    },
+    {
+      name: "Kirkland Signature Organice Whole Young Chicken",
+      brand: "Kirkland",
+      department: "Meat & Seafood",
+      category: "Poultry",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/171x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_3250466a-f94e-4d32-8d99-54a603852269.jpeg",
+      price: 14.17,
+      size: "6 lbs",
+      quantity: 3
+    },
+
 
 
   ]
