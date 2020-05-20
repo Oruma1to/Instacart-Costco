@@ -30,7 +30,7 @@ class CreateAccount extends Component {
     event.preventDefault()
 
     const { history, setUser } = this.props
-
+    console.log(this.state)
     signUp(this.state)
         .then(() => signIn(this.state))
         .then(res => setUser(res.user))
@@ -74,7 +74,7 @@ class CreateAccount extends Component {
           {/* <div className="instacart-detail-image"></div> */}
           <div className="sign-in-welcome">Welcome to Instacart</div>
           <div className="login-prompt">Create a profile using your email and password</div>
-          <form onSubmit={this.onSignIn}>
+          <form onSubmit={this.onSignUp}>
 
             <div className="usernameInput">
               <input
