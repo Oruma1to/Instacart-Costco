@@ -50,3 +50,11 @@
   color: white;
   margin: 0 -5px 0 -5px;
 }
+@media (max-width: 900px){
+  .costco-title{
+    display: none;
+  }
+  .circle-logo{
+    margin: 0 auto;
+  }
+}
