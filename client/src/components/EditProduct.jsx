@@ -66,6 +66,16 @@ class PostEdit extends Component {
      <div className="details-of-editProduct">
       <div className="editProduct-image-container">
        <img className="editProduct-image" src={product.imageURL} alt={product.name} />
+       <form onSubmit={this.handleSubmit}>
+        <input
+         className="edit-input-image-link"
+         placeholder='Image Link'
+         value={product.imageURL}
+         name='imageURL'
+         required
+         onChange={this.handleChange}
+        />
+       </form>
       </div>
 
       <div className="editProduct-items-details">
@@ -98,16 +108,16 @@ class PostEdit extends Component {
    // <div className="product-edit">
    //  <div className="image-container">
    //   <img className="edit-product-image" src={product.imageURL} alt={product.title} />
-   //   <form onSubmit={this.handleSubmit}>
-   //    <input
-   //     className="edit-input-image-link"
-   //     placeholder='Image Link'
-   //     value={product.imageURL}
-   //     name='imageURL'
-   //     required
-   //     onChange={this.handleChange}
-   //    />
-   //   </form>
+   // <form onSubmit={this.handleSubmit}>
+   //  <input
+   //   className="edit-input-image-link"
+   //   placeholder='Image Link'
+   //   value={product.imageURL}
+   //   name='imageURL'
+   //   required
+   //   onChange={this.handleChange}
+   //  />
+   // </form>
    //  </div>
    //  <form className="edit-form" onSubmit={this.handleSubmit}>
    //   <input

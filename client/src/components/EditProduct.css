@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
+
 .editProduct-outerDiv{
   font-family: 'Open Sans', sans-serif;
   background-color: #aeaeae;
@@ -65,4 +68,12 @@
     box-shadow: 1px 1px 5px 1px #CECECE;
     cursor: pointer;
     align-self:center;
+}
+
+.edit-input-image-link {
+    width: 200px;
+    height: 30px;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
