@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './CreateAccount.css'
-import { signUp } from '../services/user'
+import { signUp, signIn } from '../services/user'
 import LandingHeader from './LandingHeader'
 
 
@@ -9,6 +9,7 @@ class CreateAccount extends Component {
     super(props)
 
     this.state = {
+      username: '',
       email: '',
       password: '',
       passwordConfirm: '',
@@ -36,10 +37,10 @@ class CreateAccount extends Component {
         .then(() => history.push('/costco'))
         .catch(error => {
             console.error(error)
-            this.setState({
+          this.setState({
+                username: '',
                 email: '',
                 password: '',
-                passwordConfirmation: '',
                 isError: true,
                 errorMsg: 'Sign Up Details Invalid'
             })
@@ -60,7 +61,7 @@ class CreateAccount extends Component {
   }
 
   render() {
-    const { email, password } = this.state
+    const { username, email, password } = this.state
     return (
 
       <>
@@ -71,9 +72,22 @@ class CreateAccount extends Component {
             src={require('../images/instacartlogo@3x.png')} />
 
           {/* <div className="instacart-detail-image"></div> */}
-          <div className="sign-in-welcome">Welcome back</div>
-          <div className="login-prompt">Log in with your email and password</div>
+          <div className="sign-in-welcome">Welcome to Instacart</div>
+          <div className="login-prompt">Create a profile using your email and password</div>
           <form onSubmit={this.onSignIn}>
+
+            <div className="usernameInput">
+              <input
+                required
+                type="text"
+                name="username"
+                value={username}
+                id="usernameInput"
+                placeholder="Username"
+                onChange={this.handleChange}
+              />
+            </div>
+
             <div className="emailInput">
               <input
                 required
@@ -102,10 +116,10 @@ class CreateAccount extends Component {
 
           <div className="orLoginInfo">
             <div>
-              <button className="facebookButton">Continue with Facebook</button>
+              <button className="facebookButton">Sign up with Facebook</button>
             </div>
             <div>
-              <button className="googleButton">Continue with Google</button>
+              <button className="googleButton">Sign up with Google</button>
             </div>
             <div className="alreadyLogin">
               <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
