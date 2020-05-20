@@ -14,11 +14,19 @@ const Product = (props) => {
      <div className="product-title">{name}</div>
      <div className="product-size">{size}</div>
     </div>
+
     <div className="button-container">
-     <button className="product-add-btn">
-      {/* {this.props.user ? <button className="delete-btn" onClick={this.deletedThisBlog}>Delete</button> : ""} */}
-      <Link to={`/costco/${_id}`}>Add</Link>
-     </button>
+     {user ?
+      <button className="product-edit-btn">
+       <Link className="product-Link" to={`/costco/${_id}`}>
+        Edit
+        </Link>
+      </button>
+      :
+      <button className="product-add-btn">
+       <Link className="product-Link" to="#">Add</Link>
+      </button>
+     }
     </div>
    </div>
   </>
