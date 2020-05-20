@@ -1,0 +1,33 @@
+.editProduct-outerDiv{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #aeaeae;
+  height: 100vmax;
+}
+.editProduct-Header{
+  background-color: #2f821f;
+}
+
+.editProduct-container {
+  display: flex;
+  flex-direction: column;
+ background-color:  #ffffff;
+ margin: 50px auto;
+ width: 600px;
+ height: max-content;
+ padding: 20px;
+ box-shadow: 2px 2px 10px 2px rgb(148, 142, 142);
+ }
+ .details-of-editProduct{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ .editProduct-image-container{
+  padding: 40px;
+  align-self: center;
+}
+.editProduct-image {
+  width: 200px;
+  height: 200px;
+}
