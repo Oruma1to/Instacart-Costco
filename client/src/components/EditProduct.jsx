@@ -21,7 +21,8 @@ class PostEdit extends Component {
     size: '',
     quantity: 0
    },
-   updated: false
+   updated: false,
+   isEditing: false
   }
  }
 
@@ -57,7 +58,6 @@ class PostEdit extends Component {
    }
   })
  }
-
  render() {
 
   const { product, updated } = this.state
@@ -114,6 +114,8 @@ class PostEdit extends Component {
        <div className="editProduct-label">Price:</div>
        <input
         className="editProduct"
+        type="number"
+        step="0.01"
         placeholder="Price"
         value={`${product.price}`}
         name='price'
@@ -124,6 +126,7 @@ class PostEdit extends Component {
        <div className="editProduct-label">Quantity:</div>
        <input
         className="editProduct"
+        type="number"
         placeholder='Quantity'
         value={product.quantity}
         name='quantity'
@@ -169,80 +172,6 @@ class PostEdit extends Component {
 
     </div>
    </div >
-
-   // <div className="product-edit">
-   //  <div className="image-container">
-   //   <img className="edit-product-image" src={product.imageURL} alt={product.title} />
-   // <form onSubmit={this.handleSubmit}>
-   //  <input
-   //   className="edit-input-image-link"
-   //   placeholder='Image Link'
-   //   value={product.imageURL}
-   //   name='imageURL'
-   //   required
-   //   onChange={this.handleChange}
-   //  />
-   // </form>
-   //  </div>
-   //  <form className="edit-form" onSubmit={this.handleSubmit}>
-   //   <input
-   //    className="input-name"
-   //    placeholder='Name'
-   //    value={product.name}
-   //    name='name'
-   //    required
-   //    autoFocus
-   //    onChange={this.handleChange}
-   //   />
-   //   <input
-   //    className="input-brand"
-   //    placeholder='Brand'
-   //    value={product.brand}
-   //    name='brand'
-   //    required
-   //    autoFocus
-   //    onChange={this.handleChange}
-   //   />
-   //   <input
-   //    className="input-department"
-   //    placeholder='Department'
-   //    value={product.department}
-   //    name='deparment'
-   //    required
-   //    autoFocus
-   //    onChange={this.handleChange}
-   //   />
-   //   <input
-   //    className="input-category"
-   //    placeholder='Category:'
-   //    value={product.category}
-   //    name='category'
-   //    required
-   //    autoFocus
-   //    onChange={this.handleChange}
-   //   />
-   //   <input
-   //    className="input-price"
-   //    placeholder='Price:'
-   //    value={product.price}
-   //    name='price'
-   //    required
-   //    autoFocus
-   //    onChange={this.handleChange}
-   //   />
-   //   <input
-   //    className="input-quantity"
-   //    placeholder='Price:'
-   //    value={product.quantity}
-   //    name='quantity'
-   //    required
-   //    autoFocus
-   //    onChange={this.handleChange}
-   //   />
-   //   <button type='submit' className="save-button">Save</button>
-   //  </form>
-   // </div>
-
 
   )
  }
