@@ -88,6 +88,7 @@
   }
   .product-add-btn, .product-edit-btn{
     font-size: 18px;
-    margin: 0 15px
+    margin: 0 15px 10px;
+    
   }
 }

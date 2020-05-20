@@ -48,9 +48,10 @@
 @media(max-width: 740px){
   .buyagain{
     width: 700px;
-    height: 274px;
+    height: 325px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    align-content: center;
   }
 }
