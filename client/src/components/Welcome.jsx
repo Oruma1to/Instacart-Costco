@@ -36,9 +36,9 @@ class Welcome extends Component {
 
           <img className="sign-up-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
-          <div className="testing">
+          {/* <div> */}
             <p className="sign-up-createAcc">Create an account to start shopping</p>
-          </div>
+          {/* </div> */}
           <form onSubmit={this.onSignUp}>
             <div className="sign-up-emailInput">
               <input

@@ -114,11 +114,18 @@ p > a{
     width: 280px;
   }
   .sign-up-createAcc{
-    font-size: 15px
+    font-size: 15px;
+    margin-bottom: 20px
   }
   .sign-up, #emailInput ,.google-button-signup, .facebook-button-signup{
     width: 238px;
     height: 40px
+  }
+  #emailInput{
+    margin-top: 10px
+  }
+  .sign-up-instacart-detail-image{
+    margin: 0px
   }
 
 
