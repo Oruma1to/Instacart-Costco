@@ -47,12 +47,22 @@
 } */
 @media(max-width: 740px){
   .buyagain{
-    width: 700px;
+    width:calc(100vw - 50px);
     height: 325px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    width:calc(100vw - 50px);
   }
 }
+@media(max-width: 425px){
+  .buyagain{
+    width: 100vw;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+
