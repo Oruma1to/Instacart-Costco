@@ -35,7 +35,7 @@ height: max-content;
   margin: 3px 0 8px 0;
 }
 
-.facebookButton {
+.facebook-button-signin{
   color: white;
   background-color: #375089;
   border: #375089;
@@ -46,7 +46,7 @@ height: max-content;
   margin: 2px;
 
 }
-.googleButton {
+.google-button-signin {
   color: white;
   background-color: #214EC0;
   border:  #214EC0;
@@ -63,7 +63,7 @@ height: max-content;
   font-size: 13px; 
 }
 
-.logIn {
+.log-in {
   background-color: rgb(45, 131, 40);
   color: white;
   height: 28px;
@@ -81,7 +81,7 @@ input {
   border: 1.4px solid grey;
   margin: 2px;
   padding: 0 0 0 5px;
-}
+} 
 
 .separator {
   display: flex;
@@ -144,8 +144,53 @@ margin: 5px 0 5px 0;
 
 img{
  /* width: 120px; */
- height: 90px;
- margin-top: 10px;
- margin-bottom: 0;
- 
+  height: 90px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+@media(max-width: 450px){
+  .form-container{
+    width: 298px;
+    height: 426px
+  }
+}
+
+@media(max-width: 360px){
+  .form-container{
+    width: 280px;
+  }
+  .sign-up-createAcc{
+    font-size: 15px;
+    margin-bottom: 20px
+  }
+  .log-in, #email-input, #password-input,.google-button-signup, .facebook-button-signup{
+    width: 238px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600; 
+  }
+
+  #email-input, #password-input{
+    margin-top: 10px;
+    font-size: 16px
+  }
+  .sign-up-instacart-detail-image{
+    margin: 0px
+  }
+  .link-container > span, .link-container > a{
+    margin: 0px;
+    font-size: 12px;
+  }
+  .terms-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .alreadyAcc {
+    font-size: 16px;
+  }
+  .separator-signup{
+    font-size: 14px
+  } 
 }
