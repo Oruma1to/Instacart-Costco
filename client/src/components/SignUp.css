@@ -68,3 +68,7 @@ p > a{
  font-weight: 600;
 }
 
+h4 > a{
+ text-decoration: none;
+ color: rgb(45, 131, 40);
+}

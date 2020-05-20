@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './CreateAccount.css'
 import { signUp, signIn } from '../services/user'
 import LandingHeader from './LandingHeader'
+import { Link } from 'react-router-dom'
 
 class CreateAccount extends Component {
  constructor(props) {
@@ -121,7 +122,7 @@ class CreateAccount extends Component {
        <button className="googleButton">Sign up with Google</button>
       </div>
       <div className="alreadyLogin">
-       <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
+       <h4>Already have an account? <Link to="/sign-in">Log In</Link></h4>
       </div>
      </div>
     </div >
