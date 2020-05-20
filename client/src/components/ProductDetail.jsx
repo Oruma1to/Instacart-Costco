@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./ProductDetail.css";
 import { getProduct } from "../services/product";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 class ProductDetail extends Component {
  constructor(props) {
@@ -27,39 +27,46 @@ class ProductDetail extends Component {
   this.setState({ product });
  }
 
- render() {
-  const { product } = this.state;
-  return (
-   <div className="product-container">
-    <div>
-     <img
-      className="product-image"
-      src={product.imageURL}
-      alt={product.name}
-     />
-    </div>
 
-    <div>
-     <div className="product-name">{product.name}</div>
-     <div className="product-brand">{product.brand}</div>
-     <div className="product-department">{product.department}</div>
-     <div className="product-category">{product.category}</div>
-     <div className="product-price">${product.price}</div>
-     <div className="product-quantity">{product.quantity}</div>
-     <div className="product-size">{product.size}</div>
-    </div>
+  render() {
+    const { product } = this.state;
+    return (
+      <div className="productDetail-container">
 
-    <div>
-     <button className="edit-btn">
-      <Link to="">EDIT</Link>
-     </button>
-     <button className="delete-btn">
-      <Link to="">DELETE</Link>
-     </button>
-    </div>
-   </div>
-  );
- }
+        <div className="productDetail-image-container">
+          <img
+            className="productdetail-image"
+            src={product.imageURL}
+            alt={product.name}
+          />
+        </div>
+
+
+        <div className="items-details">
+          <div className="productDetail-name">{product.name}</div>
+          <div className="productDetail-brand">{product.brand}</div>
+          <div className="productDetail-department">{product.department}</div>
+          <div className="productdetail-category">{product.category}</div>
+          <div className="productDetail-price">${product.price}</div>
+          <div className="productDetail-quantity">{product.quantity}</div>
+          <div className="productDetail-size">{product.size}</div>
+
+          <div className="productDetail-buttons">
+            {/* {this.props.user ? <button > */}
+            <Link className="edit-btn" to="">EDIT</Link>
+            {/* </button> : ""} */}
+
+            {/* {this.props.user ? <button > */}
+            <Link className="delete-btn" to="">DELETE</Link>
+            {/* </button> : ""} */}
+          </div>
+        </div>
+
+
+      </div>
+    );
+  }
+
 }
 
 export default ProductDetail;
