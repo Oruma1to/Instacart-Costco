@@ -67,10 +67,32 @@ height: 420px;
   margin-left: 80px;
   max-width: 200px
 }
-
+.separator-signup {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: grey;
+  font-size: 10px;
+  width: 270px;
+  margin-left: 8px;
+  margin: 4px auto;
+  justify-content: center;
+}
+.separator-signup::before, .separator-signup::after {
+  content: "  ";
+  flex: 2;
+  border-bottom: 1px solid gray;
+}
+.separator-signup::before {
+  margin-right: 5px;
+}
+.separator-signup::after {
+    margin-left: 5px;
+}
 .sign-up-instacart-detail-image{
   margin-bottom: -55px;
 }
+
 .sign-up-emailInput{
   margin-top: -30px;
 }
@@ -120,7 +142,9 @@ height: 420px;
   }
   .sign-up, #emailInput ,.google-button-signup, .facebook-button-signup{
     width: 238px;
-    height: 40px
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
   }
   #emailInput{
     margin-top: 10px;
@@ -129,7 +153,7 @@ height: 420px;
   .sign-up-instacart-detail-image{
     margin: 0px
   }
-  .terms, .link-container > span, .link-container > a{
+  .link-container > span, .link-container > a{
     margin: 0px;
     font-size: 12px;
   }
@@ -137,7 +161,12 @@ height: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+  }
+  .alreadyAcc {
+    font-size: 16px;
+  }
+  .separator-signup{
+    font-size: 14px
   }
 
 

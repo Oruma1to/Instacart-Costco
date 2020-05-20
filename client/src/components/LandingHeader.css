@@ -78,3 +78,9 @@
     justify-content: space-evenly
   }
 }
+@media (max-width: 360px){
+  .nav-main {
+    justify-content: space-between;
+    margin: 0 10px
+  }
+}

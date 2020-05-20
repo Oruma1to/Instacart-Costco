@@ -60,7 +60,7 @@ class Welcome extends Component {
 
             <button className="sign-up">Sign up with email</button>
 
-            <div className="separator">or</div>
+            <div className="separator-signup">or</div>
 
             <div className="orLoginInfo" >
               <div>
