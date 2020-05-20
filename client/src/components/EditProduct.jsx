@@ -54,6 +54,8 @@ class PostEdit extends Component {
   if (updated) {
    return <Redirect to={`/costco/${this.props.match.params.id}`} />
   }
+
+
   return (
    <div className="editProduct-outerDiv">
     <div className="editProduct-Header">
@@ -65,6 +67,7 @@ class PostEdit extends Component {
       <div className="editProduct-image-container">
        <img className="editProduct-image" src={product.imageURL} alt={product.name} />
       </div>
+
       <div className="editProduct-items-details">
        <div className="editProduct-label">Name:</div>
        <div className="editProduct">{product.name}</div>
@@ -82,6 +85,10 @@ class PostEdit extends Component {
        <div className="editProduct">{product.category}</div>
       </div>
      </div>
+     <div className="editProduct-button">
+      <button type='submit' className="editProduct-save">Save</button>
+     </div>
+
     </div>
    </div>
 
