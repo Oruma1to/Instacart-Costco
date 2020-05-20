@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "./ProductDetail.css";
 import { getProduct, deleteProduct } from "../services/product";
 import { Link, Redirect } from "react-router-dom";
@@ -26,56 +27,46 @@ class ProductDetail extends Component {
   this.setState({ product });
  }
 
- deletedThisBlog = async () => {
-  console.log("in deletethisblog")
-  const { product } = this.state
-  if (this.props.user) {
-   await deleteProduct(product._id)
-   this.setState({
-    deleted: true
-   }
-   )
-  } else {
-   alert("You are not a Member to delete this")
-  }
- }
 
  render() {
-  const { product, deleted } = this.state;
-  if (deleted) {
-   return <Redirect to={`/costco`} />
-  }
+  const { product } = this.state;
   return (
-   <div className="product-container">
-    <div>
+   <div className="productDetail-container">
+
+    <div className="productDetail-image-container">
      <img
-      className="product-image"
+      className="productdetail-image"
       src={product.imageURL}
       alt={product.name}
      />
     </div>
 
-    <div>
-     <div className="product-name">{product.name}</div>
-     <div className="product-brand">{product.brand}</div>
-     <div className="product-department">{product.department}</div>
-     <div className="product-category">{product.category}</div>
-     <div className="product-price">${product.price}</div>
-     <div className="product-quantity">{product.quantity}</div>
-     <div className="product-size">{product.size}</div>
+
+    <div className="items-details">
+     <div className="productDetail-name">{product.name}</div>
+     <div className="productDetail-brand">{product.brand}</div>
+     <div className="productDetail-department">{product.department}</div>
+     <div className="productdetail-category">{product.category}</div>
+     <div className="productDetail-price">${product.price}</div>
+     <div className="productDetail-quantity">{product.quantity}</div>
+     <div className="productDetail-size">{product.size}</div>
+
+     <div className="productDetail-buttons">
+      {/* {this.props.user ? <button > */}
+      <Link className="edit-btn" to="">EDIT</Link>
+      {/* </button> : ""} */}
+
+      {/* {this.props.user ? <button > */}
+      <Link className="delete-btn" to="">DELETE</Link>
+      {/* </button> : ""} */}
+     </div>
     </div>
 
-    <div>
-     <button className="edit-btn">
-      {this.props.user ? <button><Link className="edit-link" to={`/products/${product._id}/edit`}>Edit</Link></button> : ""}
-     </button>
-     <button className="delete-btn">
-      {this.props.user ? <button onClick={this.deletedThisBlog}>Delete</button> : ""}
-     </button>
-    </div>
+
    </div>
   );
  }
+
 }
 
 export default ProductDetail;
