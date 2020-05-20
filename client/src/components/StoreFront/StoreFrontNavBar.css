@@ -55,8 +55,10 @@
 } */
 
 @media (max-width: 900px){
-  .storeFrontNavBar-link{
-    display: none
+  .storeFrontNavBar-link, .left-side, .cart-logo{
+    display: none;
   }
-  
+  .header-navBar{
+    justify-content: center;
+  }
 }
