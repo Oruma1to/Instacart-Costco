@@ -10,19 +10,23 @@ export default class DropdownMenu extends Component {
   console.log(loc)
   let choosenMenu = [];
   if (this.props.titleMenu === "Account") {
+
+   let path = "/add-product"
+   let content = "Add new Product"
+
+   if (window.location.pathname !== "/costco") {
+    path = "/costco"
+    content = "Main Page"
+   }
+
    if (this.props.user !== null) {
-    let path = "/add-product"
-    let content = "Add new Product"
-    if (window.location.pathname !== "/costco") {
-     path = "/costco"
-     content = "Main Page"
-    }
     choosenMenu = [
      <Link key="1" className="dropdown-links" to={path}>{content}</Link>,
      <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
      <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
      <Link key="4" className="dropdown-links" to="/sign-out">Sign Out</Link>
     ]
+
    } else {
     choosenMenu = [
      <Link key="1" className="dropdown-links" to="/sign-up">Sign Up</Link>,
