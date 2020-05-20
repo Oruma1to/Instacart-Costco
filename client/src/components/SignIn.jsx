@@ -52,7 +52,7 @@ class SignIn extends Component {
         </button>
       )
     } else {
-      return <button className="logIn" type="submit">Log In</button>
+      return <button className="log-in" type="submit">Log In</button>
     }
   }
 
@@ -77,7 +77,7 @@ class SignIn extends Component {
                 type="text"
                 name="email"
                 value={email}
-                id="emailInput"
+                id="email-input"
                 placeholder="Email address"
                 onChange={this.handleChange}
               />
@@ -88,6 +88,7 @@ class SignIn extends Component {
                 type="text"
                 name="password"
                 value={password}
+                id="password-input"
                 placeholder="Password (min 6 characters)"
                 onChange={this.handleChange}
               />
@@ -95,14 +96,14 @@ class SignIn extends Component {
             {this.renderError()}
           </form>
 
-          <div className="separator">or</div>
+          <div className="separator-signin">or</div>
 
           <div className="orLoginInfo">
             <div>
-              <button className="facebookButton">Continue with Facebook</button>
+              <button className="facebook-button-signin">Continue with Facebook</button>
             </div>
             <div>
-              <button className="googleButton">Continue with Google</button>
+              <button className="google-button-signin">Continue with Google</button>
             </div>
             <div className="alreadyLogin">
               <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
