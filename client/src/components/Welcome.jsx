@@ -32,11 +32,11 @@ class Welcome extends Component {
     return (
       <>
         <LandingHeader />
-        <div id="suForm" className="form-container-signUP">
+        <div id="suForm" className="form-container-signup">
 
           <img className="sign-up-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
-          <div>
+          <div className="testing">
             <p className="sign-up-createAcc">Create an account to start shopping</p>
           </div>
           <form onSubmit={this.onSignUp}>
@@ -55,7 +55,7 @@ class Welcome extends Component {
               <p className="terms">By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
             </div>
 
-            <button className="logIn">Sign up with email</button>
+            <button className="sign-up">Sign up with email</button>
 
             <div className="separator">or</div>
 

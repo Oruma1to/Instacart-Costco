@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-.form-container-signUP {
+
+
+.form-container-signup {
 background: white;
 text-align: center;
 display: flex;
@@ -15,6 +17,23 @@ font-weight: bold;
 width: 380px;
 height: 420px;
 } 
+
+@media(max-width: 450px){
+  .form-container-signup{
+    width: 300px;
+  }
+}
+
+@media(max-width: 360px){
+  .form-container-signup{
+    width: 280px;
+  }
+  .sign-up{
+    width: 238px;
+    height: 40px
+  }
+}
+
 /* #suForm {
   padding: 0 0 20px 0;
   font-family: 'Open Sans', sans-serif;
@@ -37,7 +56,16 @@ height: 420px;
   font-weight:normal;
   letter-spacing: .5px;
 }
-
+.sign-up {
+  background-color: rgb(45, 131, 40);
+  color: white;
+  height: 28px;
+  width: 270px;
+  border-radius: 4px;
+  padding: 5px 40px;
+  font-weight: 600;
+  margin: 5px 0 5px 0;
+}
 
 .signIn {
   color: green;
