@@ -6,6 +6,7 @@ import DropdownMenu from '../shared/DropdownMenu'
 export default class StoreFrontNavBar extends Component {
 
  render() {
+  console.log("frontnavheaader", window.location)
   console.log("In Store Front Nav Bar ", this.props.user)
   return (
    <>

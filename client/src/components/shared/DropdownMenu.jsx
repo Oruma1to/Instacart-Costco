@@ -5,16 +5,23 @@ import "./DropdownMenu.css"
 export default class DropdownMenu extends Component {
  render() {
   console.log("In Store Dropdown Menu", this.props.user)
-
-
+  console.log(window.location.pathname === "/add-product")
+  let loc = window.location.pathname
+  console.log(loc)
   let choosenMenu = [];
   if (this.props.titleMenu === "Account") {
    if (this.props.user !== null) {
+    let path = "/add-product"
+    let content = "Add new Product"
+    if (window.location.pathname === "/add-product") {
+     path = "/costco"
+     content = "Main Page"
+    }
     choosenMenu = [
-     <Link key="1" className="dropdown-links-user" to="/add-product">Add new Product</Link>,
-     <Link key="2" className="dropdown-links-user" to="#">Edit Product</Link>,
-     <Link key="3" className="dropdown-links-user" to="#">Delete Product</Link>,
-     <Link key="4" className="dropdown-links-user" to="/sign-out">Sign Out</Link>
+     <Link key="1" className="dropdown-links" to={path}>{content}</Link>,
+     <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
+     <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
+     <Link key="4" className="dropdown-links" to="/sign-out">Sign Out</Link>
     ]
    } else {
     choosenMenu = [
