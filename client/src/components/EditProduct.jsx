@@ -161,10 +161,10 @@ class PostEdit extends Component {
         />
         : ""}
        {/* </div> */}
+       <div className="editProduct-button">
+        <button type='submit' className="editProduct-save">Save</button>
+       </div>
       </form>
-     </div>
-     <div className="editProduct-button">
-      <button type='submit' className="editProduct-save">Save</button>
      </div>
 
     </div>
