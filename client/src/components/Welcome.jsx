@@ -51,8 +51,9 @@ class Welcome extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
-              <p className="terms">By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
+            <div className="terms-container">
+              <p className="terms">By signing up, you agree to our</p>
+              <Link src="#blank">Terms of Service</Link> <span>&</span> <Link src="#blank">Privacy Policy</Link>
             </div>
 
             <button className="sign-up">Sign up with email</button>
