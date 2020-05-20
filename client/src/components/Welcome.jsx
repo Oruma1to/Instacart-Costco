@@ -32,13 +32,13 @@ class Welcome extends Component {
     return (
       <>
         <LandingHeader />
-        <div id="suForm" className="form-container-signUP">
+        <div id="suForm" className="form-container-signup">
 
           <img className="sign-up-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
-          <div>
+          {/* <div> */}
             <p className="sign-up-createAcc">Create an account to start shopping</p>
-          </div>
+          {/* </div> */}
           <form onSubmit={this.onSignUp}>
             <div className="sign-up-emailInput">
               <input
@@ -51,20 +51,23 @@ class Welcome extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
-              <p className="terms">By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
+            <div className="terms-container">
+              <p className="terms">By signing up, you agree to our</p>
+              <div className= "link-container">
+                <Link src="#blank">Terms of Service</Link> <span>&</span> <Link src="#blank">Privacy Policy</Link>
+              </div>
             </div>
 
-            <button className="logIn">Sign up with email</button>
+            <button className="sign-up">Sign up with email</button>
 
-            <div className="separator">or</div>
+            <div className="separator-signup">or</div>
 
             <div className="orLoginInfo" >
               <div>
-                <button className="facebookButton">Continue with Facebook</button>
+                <button className="facebook-button-signup">Continue with Facebook</button>
               </div>
               <div>
-                <button className="googleButton">Continue with Google</button>
+                <button className="google-button-signup">Continue with Google</button>
               </div>
             </div>
             <div className="alreadyAcc">

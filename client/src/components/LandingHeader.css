@@ -16,22 +16,23 @@
   border-bottom: solid 2px var(--brownish-grey);
 }
 
+
 .shopper {
   display: flex;
   font-size: 13px;
 }
-p {
+.shopper-text {
   color: var(--brownish-grey);
   font-weight: 600;
   letter-spacing: 0.5px;
   padding-top: 5px;
 }
+
 .shopper-btn {
   color: var(--tree-green);
   margin: 10px 0 4px 10px;
   border: 1.5px solid var(--tree-green);
   border-radius: 4px;
-
   font-weight: 600;
   padding: 10px 5px;
   font-size: 15px;
@@ -39,15 +40,14 @@ p {
 
 
 
-.outer-btn {
+/* .outer-btn {
   display:absolute;
   right: 10%
-    /* justify-content: flex-end; */
-}
+    justify-content: flex-end;
+} */
 
 .login-link-container {
   /* margin-right: 80px; */
-  position: absolute;
   right: 80px;
   width: 74px;
   height: 46px;
@@ -59,9 +59,28 @@ p {
   letter-spacing: 0.09px;
   border: 1px solid var(--tree-green);
 }
-
 .login-link {
   color: white;
   text-decoration: none;
   padding: 0px;
+}
+@media (min-width: 701px){
+  .login-link-container{
+    position: absolute;
+  }
+}
+
+@media (max-width: 700px){
+  .shopper-text{
+    display: none;
+  }
+  .nav-main {
+    justify-content: space-evenly
+  }
+}
+@media (max-width: 360px){
+  .nav-main {
+    justify-content: space-between;
+    margin: 0 10px
+  }
 }
