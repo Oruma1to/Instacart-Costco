@@ -129,6 +129,46 @@ const main = async () => {
       size: "42.4 oz",
       quantity: 19
     },
+    {
+      name: "Kirkland Signature Roasted Chicken & Swiss Roller Tray",
+      brand: "Kirkland",
+      department: "Deli",
+      category: "Meat & Cheese Trays",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_77aee842-3e02-4dd4-a5b8-7eb381aa754a.jpeg",
+      price: 12.19,
+      size: "12 ct",
+      quantity: 19
+    },
+    {
+      name: "Amylu Organic Paleo Italian Meatball",
+      brand: "Amylu",
+      department: "Deli",
+      category: "Prepared Meals",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d2f5f142-782d-416b-907c-c062474633cb.jpeg",
+      price: 17.09,
+      size: "32 oz",
+      quantity: 19
+    },
+    {
+      name: "Azuma Gourmet Seaweed Salad",
+      brand: "Azuma Gourmet",
+      department: "Deli",
+      category: "Prepared Soups & Salad",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_58c59392-71da-464b-b4d8-f36720e7159a.jpeg",
+      price: 13.89,
+      size: "28 oz",
+      quantity: 19
+    },
+    {
+      name: "Sabra Roasted Pine Nut",
+      brand: "Sabra",
+      department: "Deli",
+      category: "Dips & Spreads",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_591f41e6-0d13-4464-9e48-506604bf6a0f.jpg",
+      price: 7.39,
+      size: "32 oz",
+      quantity: 19
+    },
 
 
   ]
