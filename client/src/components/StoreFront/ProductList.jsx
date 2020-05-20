@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { getProducts } from "../../services/product";
+import { getProducts, getNewArrivals } from "../../services/product";
 import Product from "./Product";
 import "./ProductList.css";
 import { Link } from 'react-router-dom'
@@ -15,13 +15,18 @@ class ProductList extends Component {
  }
 
  async componentDidMount() {
-  const products = await getProducts();
+  let products;
+  if (this.props.dataInfo === 1) {
+   products = await getProducts();
+  } else {
+   products = await getNewArrivals();
+  }
   this.setState({ products });
  }
 
  render() {
   console.log("all products-->", this.state.products);
-  console.log("all products-->", this.props.user);
+  console.log("all products-->", this.props);
   const PRODUCTS = this.state.products
    // .slice(0, 4)
    .map((product, index) => (
