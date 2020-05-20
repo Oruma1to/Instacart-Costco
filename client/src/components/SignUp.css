@@ -69,10 +69,10 @@ height: 420px;
 }
 
 .sign-up-instacart-detail-image{
- margin-bottom: -55px;
+  margin-bottom: -55px;
 }
 .sign-up-emailInput{
- margin-top: -30px;
+  margin-top: -30px;
 }
 .facebook-button-signup {
   color: white;
@@ -97,14 +97,15 @@ height: 420px;
 
 }
 p > a{
- color: #2f821f;
- text-decoration: none;
- font-weight: 600;
+  color: #2f821f;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 @media(max-width: 450px){
   .form-container-signup{
-    width: 300px;
+    width: 298px;
+    height: 426px
   }
 }
 
@@ -115,11 +116,11 @@ p > a{
   .sign-up-createAcc{
     font-size: 15px
   }
-  .sign-up, .google-button-signup, .facebook-button-signup{
+  .sign-up, #emailInput ,.google-button-signup, .facebook-button-signup{
     width: 238px;
     height: 40px
   }
- 
+
 
   
 }
