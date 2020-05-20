@@ -28,7 +28,6 @@ class ProductList extends Component {
   console.log("all products-->", this.state.products);
   console.log("all products-->", this.props);
   const PRODUCTS = this.state.products
-   // .slice(0, 4)
    .map((product, index) => (
     <Product
      user={this.props.user}
@@ -47,7 +46,7 @@ class ProductList extends Component {
    <>
     <div className="buyagain">
      <div className="product-header">
-      <p className="product-header-title">Buy Again</p>
+      <p className="product-header-title">{this.props.dataInfo === 1 ? "Buy Again" : "New Arrivals"}</p>
       <p className="product-header-vm"><Link to="#">View 57 more ></Link></p>
      </div>
      <div className="carousel">{PRODUCTS}</div>
