@@ -11,7 +11,9 @@ export default class StoreFrontNavBar extends Component {
    <>
     <nav className='header-navBar'>
      <div className='left-side'>
-      <img className="instacart-logo" src={require("../../images/instacart-logo-white@3x.png")} alt="instacart" />
+      <Link className="storeFrontNav-img-link" to="/costco">
+       <img className="instacart-logo" src={require("../../images/instacart-logo-white@3x.png")} alt="instacart" />
+      </Link>
       <DropdownMenu titleMenu={"Stores"} user={this.props.user} />
      </div>
 
