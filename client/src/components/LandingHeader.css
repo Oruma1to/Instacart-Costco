@@ -16,6 +16,7 @@
   border-bottom: solid 2px var(--brownish-grey);
 }
 
+
 .shopper {
   display: flex;
   font-size: 13px;
@@ -30,6 +31,9 @@
 @media (max-width: 700px){
   .shopper-text{
     display: none;
+  };
+  .login-link-container{
+    position: static;
   }
 }
 .shopper-btn {
@@ -37,7 +41,6 @@
   margin: 10px 0 4px 10px;
   border: 1.5px solid var(--tree-green);
   border-radius: 4px;
-
   font-weight: 600;
   padding: 10px 5px;
   font-size: 15px;
@@ -45,15 +48,14 @@
 
 
 
-.outer-btn {
+/* .outer-btn {
   display:absolute;
   right: 10%
-    /* justify-content: flex-end; */
-}
+    justify-content: flex-end;
+} */
 
 .login-link-container {
   /* margin-right: 80px; */
-  position: absolute;
   right: 80px;
   width: 74px;
   height: 46px;
@@ -64,6 +66,11 @@
   font-weight: 600;
   letter-spacing: 0.09px;
   border: 1px solid var(--tree-green);
+}
+@media (min-width: 701px){
+  .login-link-container{
+    position: absolute;
+  }
 }
 
 .login-link {
