@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./ProductDetail.css";
-import { getProduct } from "../services/product";
-import { Link, NavLink } from "react-router-dom";
+import { getProduct, deleteProduct } from "../services/product";
+import { Link, Redirect } from "react-router-dom";
 
 class ProductDetail extends Component {
  constructor(props) {
