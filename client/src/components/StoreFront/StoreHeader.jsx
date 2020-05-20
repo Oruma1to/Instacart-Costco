@@ -20,7 +20,8 @@ export default class StoreHeader extends Component {
         <div className="view-more-links">
           <Link to="#">View pricing policy</Link>
           <span className="dot">•</span>
-          <Link to="#">More info</Link></div>
+          <Link to="#">More info</Link>
+        </div>
 
         <SearchBar />
       </div>

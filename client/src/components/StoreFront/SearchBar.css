@@ -42,3 +42,13 @@ width: 5px;
 .search-bar > * {
   height: 45px;
 }
+
+@media(max-width: 515px){
+  .search-bar{
+    width: 293px
+  }
+  .search-bar-container{
+    display: flex;
+    justify-content: center;
+  }
+}
