@@ -31,9 +31,9 @@
 @media (max-width: 700px){
   .shopper-text{
     display: none;
-  };
-  .login-link-container{
-    position: static;
+  }
+  .nav-main {
+    justify-content: space-evenly
   }
 }
 .shopper-btn {
