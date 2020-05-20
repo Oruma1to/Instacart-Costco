@@ -58,3 +58,9 @@
     margin: 0 auto;
   }
 }
+@media (max-width: 420px){
+  .view-more-links>a{
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
