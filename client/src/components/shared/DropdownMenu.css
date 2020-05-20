@@ -34,12 +34,13 @@
 }
 
 .dropdown-content > a {
-  float: none;
+  /* float: none; */
   color: #717171;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  width: 100px;
 }
 
 .dropdown-content .dropdown-links:hover {

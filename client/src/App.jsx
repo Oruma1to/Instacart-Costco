@@ -46,10 +46,8 @@ export default class App extends Component {
      <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
      <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
      <Route exact path="/costco" render={() => <StoreFront user={user} />} />
-     {/* <Route exact path="/" render={() => <StoreFront user={user} />} /> */}
      <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
-     <Route exact path="/costco/:id" render={props => <ProductDetail {...props} history={props.history} user={user} />} />
-     {/* <Route exact path="/costco/:id/edit" render={(props) => user ? <EditProduct{...props} user={user} /> : <Redirect to='/costco' />} /> */}
+     <Route exact path="/costco/:id" render={props => user ? <ProductDetail {...props} history={props.history} user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id/edit" render={props => <EditProduct {...props} user={user} />} />
 
     </Switch>
