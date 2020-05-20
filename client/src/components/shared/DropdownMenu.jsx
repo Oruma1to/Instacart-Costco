@@ -13,7 +13,7 @@ export default class DropdownMenu extends Component {
    if (this.props.user !== null) {
     let path = "/add-product"
     let content = "Add new Product"
-    if (window.location.pathname === "/add-product") {
+    if (window.location.pathname !== "/costco") {
      path = "/costco"
      content = "Main Page"
     }
