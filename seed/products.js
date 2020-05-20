@@ -84,7 +84,7 @@ const main = async () => {
       brand: "Blue Hill Bay",
       department: "Meat & Seafood",
       category: "Seafood",
-      imageURL: "",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_2b738098-d959-464c-9e02-5f537a7d34de.jpeg",
       price: 18.29,
       size: "16 oz",
       quantity: 19
