@@ -77,23 +77,66 @@ class PostEdit extends Component {
         />
        </form>
       </div>
-
-      <div className="editProduct-items-details">
+      <form className="editProduct-items-details" onSubmit={this.handleSubmit}>
+       {/* <div className="editProduct-items-details"> */}
        <div className="editProduct-label">Name:</div>
-       <div className="editProduct">{product.name}</div>
+       {/* <div className="editProduct">{product.name}</div> */}
+       <input
+        className="editProduct"
+        placeholder='Name'
+        value={product.name}
+        name='name'
+        required
+        autoFocus
+        onChange={this.handleChange}
+       />
        <div className="editProduct-label">Brand:</div>
-       <div className="editProduct">{product.brand}</div>
+       <input
+        className="editProduct"
+        placeholder='Brand'
+        value={product.brand}
+        name='brand'
+        required
+        autoFocus
+        onChange={this.handleChange}
+       />
        <div className="editProduct-label">Price:</div>
-       <div className="editProduct">${product.price}</div>
+       <input
+        className="editProduct"
+        placeholder="Price"
+        value={`${product.price}`}
+        name='price'
+        required
+        autoFocus
+        onChange={this.handleChange}
+       />
        <div className="editProduct-label">Quantity:</div>
-       <div className="editProduct">{product.quantity}</div>
+       <input
+        className="editProduct"
+        placeholder='Quantity'
+        value={product.quantity}
+        name='quantity'
+        required
+        autoFocus
+        onChange={this.handleChange}
+       />
        <div className="editProduct-label">Size:</div>
-       <div className="editProduct">{product.size}</div>
+       <input
+        className="editProduct"
+        placeholder='Size'
+        value={product.size}
+        name='size'
+        required
+        autoFocus
+        onChange={this.handleChange}
+       />
        <div className="editProduct-label">Deparment:</div>
        <div className="editProduct">{product.department}</div>
        <div className="editProduct-label">Category: </div>
        <div className="editProduct">{product.category}</div>
-      </div>
+       {/* </div> */}
+      </form>
+
      </div>
      <div className="editProduct-button">
       <button type='submit' className="editProduct-save">Save</button>
@@ -101,9 +144,6 @@ class PostEdit extends Component {
 
     </div>
    </div>
-
-
-
 
    // <div className="product-edit">
    //  <div className="image-container">
