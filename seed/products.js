@@ -169,8 +169,36 @@ const main = async () => {
       size: "32 oz",
       quantity: 19
     },
-
-
+    {
+      name: "Martin's Potato Bread",
+      brand: "Martin's",
+      department: "Bakery & Desserts",
+      category: "Bread",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_56614c40-9737-4578-8e36-d9ac56c76d63.jpg",
+      price: 7.69,
+      size: "2x18 oz",
+      quantity: 20
+    },
+    {
+      name: "Jj Cassone Sandwich Rolls",
+      brand: "Jj",
+      department: "Bakery & Desserts",
+      category: "Bread",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_830dabb6-7b5b-4d16-a84a-3991cfd1a56c.jpeg",
+      price: 3.69,
+      size: "12 ct",
+      quantity: 12
+    },
+    {
+      name: "Hostess Cupcakes & Twinkies",
+      brand: "Hostess",
+      department: "Bakery & Desserts",
+      category: "Pies & Cakes",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_87395609-c0c8-4ea0-a2e5-f4c4190453db.jpeg",
+      price: 8.59,
+      size: "32 ct",
+      quantity: 10
+    }
   ]
   await Product.insertMany(products)
   console.log("Created Products!")
