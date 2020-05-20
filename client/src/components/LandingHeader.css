@@ -20,11 +20,17 @@
   display: flex;
   font-size: 13px;
 }
-p {
+.shopper-text {
   color: var(--brownish-grey);
   font-weight: 600;
   letter-spacing: 0.5px;
   padding-top: 5px;
+}
+
+@media (max-width: 700px){
+  .shopper-text{
+    display: none;
+  }
 }
 .shopper-btn {
   color: var(--tree-green);
