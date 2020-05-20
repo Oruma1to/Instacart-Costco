@@ -10,8 +10,8 @@ export default class StoreFrontNavBar extends Component {
     console.log("In Store Front Nav Bar ", this.props.user)
     return (
       <>
+        <HamburgerNav />
         <nav className='header-navBar'>
-          <HamburgerNav />
           
           <div className='left-side'>
             <Link className="storeFrontNav-img-link" to="/costco">

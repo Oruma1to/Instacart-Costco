@@ -6,7 +6,7 @@ export default class HamburgerNav extends Component {
   render() {
     return (
       <div className= 'hamburger-menu'>
-        <Menu>
+        <Menu width={ '280px' }>
           <a href="google.com">google.com</a>
           <a href="/sign-in">SignIn</a>
         </Menu>
