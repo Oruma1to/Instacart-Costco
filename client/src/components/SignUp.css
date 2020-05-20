@@ -125,6 +125,11 @@ height: 420px;
   font-size: 10px
 }
 
+h4 > a{
+ text-decoration: none;
+ color: rgb(45, 131, 40);
+}
+
 @media(max-width: 450px){
   .form-container-signup{
     width: 298px;
@@ -168,7 +173,5 @@ height: 420px;
   .separator-signup{
     font-size: 14px
   }
-
-
-  
 }
+

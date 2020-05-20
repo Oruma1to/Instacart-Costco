@@ -6,8 +6,6 @@ export default class DropdownMenu extends Component {
  render() {
   console.log("In Store Dropdown Menu", this.props.user)
   console.log(window.location.pathname === "/add-product")
-  let loc = window.location.pathname
-  console.log(loc)
   let choosenMenu = [];
   if (this.props.titleMenu === "Account") {
 
