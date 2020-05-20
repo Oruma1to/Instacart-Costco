@@ -11,8 +11,9 @@ export default class StoreFrontNavBar extends Component {
     return (
       <>
         <nav className='header-navBar'>
+          <HamburgerNav />
+          
           <div className='left-side'>
-            <HamburgerNav/>
             <Link className="storeFrontNav-img-link" to="/costco">
               <img className="instacart-logo" src={require("../../images/instacart-logo-white@3x.png")} alt="instacart" />
             </Link>
