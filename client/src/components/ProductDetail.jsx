@@ -5,28 +5,28 @@ import { getProduct } from "../services/product";
 import { Link, NavLink } from "react-router-dom";
 
 class ProductDetail extends Component {
-  constructor(props) {
-    super(props);
+ constructor(props) {
+  super(props);
+  this.state = {
+   product: {
+    name: "",
+    brand: "",
+    department: "",
+    category: "",
+    imageURL: "",
+    price: 0,
+    quantity: 0,
+    size: "",
+   },
+  };
+ }
 
-    this.state = {
-      product: {
-        name: "",
-        brand: "",
-        department: "",
-        category: "",
-        imageURL: "",
-        price: 0,
-        quantity: 0,
-        size: "",
-      },
-    };
-  }
+ async componentDidMount() {
+  let { id } = this.props.match.params;
+  const product = await getProduct(id);
+  this.setState({ product });
+ }
 
-  async componentDidMount() {
-    let { id } = this.props.match.params;
-    const product = await getProduct(id);
-    this.setState({ product });
-  }
 
   render() {
     const { product } = this.state;
@@ -66,6 +66,7 @@ class ProductDetail extends Component {
       </div>
     );
   }
+
 }
 
 export default ProductDetail;
