@@ -92,3 +92,11 @@
     
   }
 }
+@media(max-width: 740px){
+  .product-wrapper {
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 5px
+  }
+}
