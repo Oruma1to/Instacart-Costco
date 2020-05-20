@@ -11,7 +11,7 @@ export default class Departments extends Component {
 
      <ul className="parent-menu">
 
-      <li><Link className="department-item" to="#">Meat & Seafood</Link>
+      <li><Link className="department-item" to="#">Meat & Seafood</Link> 
 
        <ul className="parent-sub-menu">
 
