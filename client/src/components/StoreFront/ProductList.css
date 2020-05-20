@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px
 }
 
@@ -45,3 +46,30 @@
   flex-direction: column;
   width: 100%;
 } */
+@media(max-width: 740px){
+  .buyagain{
+    width:calc(100vw - 50px);
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+@media(max-width: 425px){
+  .buyagain{
+    width: 100vw;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  .product-header-vm{
+    margin-right: 10px
+  }
+  .product-header-title{
+    margin: 0px 10px
+  }
+}
+

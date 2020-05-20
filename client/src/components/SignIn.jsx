@@ -6,66 +6,66 @@ import { Link } from 'react-router-dom'
 
 
 class SignIn extends Component {
- constructor(props) {
-  super(props)
+  constructor(props) {
+    super(props)
 
-  this.state = {
-   email: '',
-   password: '',
-   isError: false,
-   errorMsg: ''
+    this.state = {
+      email: '',
+      password: '',
+      isError: false,
+      errorMsg: ''
+    }
   }
- }
 
- handleChange = event => {
-  this.setState({
-   [event.target.name]: event.target.value,
-   isError: false,
-   errorMsg: ''
-  })
- }
-
- onSignIn = event => {
-  event.preventDefault()
-  const { history, setUser } = this.props
-  signIn(this.state)
-   .then(res => {
-    setUser(res.user)
-   })
-   .then(() => history.push('/costco'))
-   .catch(error => {
-    console.error(error)
+  handleChange = event => {
     this.setState({
-     isError: true,
-     errorMsg: 'Invalid Credentials',
-     email: '',
-     password: ''
+      [event.target.name]: event.target.value,
+      isError: false,
+      errorMsg: ''
     })
-   })
- }
-
- renderError = () => {
-  const toggleForm = this.state.isError ? 'danger' : ''
-  if (this.state.isError) {
-   return (
-    <button type="submit" className={toggleForm}>
-     {this.state.errorMsg}
-    </button>
-   )
-  } else {
-   return <button className="logIn" type="submit">Log In</button>
   }
- }
 
- render() {
-  const { email, password } = this.state
-  return (
-   <>
-    <LandingHeader />
+  onSignIn = event => {
+    event.preventDefault()
+    const { history, setUser } = this.props
+    signIn(this.state)
+      .then(res => {
+        setUser(res.user)
+      })
+      .then(() => history.push('/costco'))
+      .catch(error => {
+        console.error(error)
+        this.setState({
+          isError: true,
+          errorMsg: 'Invalid Credentials',
+          email: '',
+          password: ''
+        })
+      })
+  }
 
-    <div className="form-container">
-     <img className="sign-in-instacart-detail-image" alt="instacart-logo"
-      src={require('../images/instacartlogo@3x.png')} />
+  renderError = () => {
+    const toggleForm = this.state.isError ? 'danger' : ''
+    if (this.state.isError) {
+      return (
+        <button type="submit" className={toggleForm}>
+          {this.state.errorMsg}
+        </button>
+      )
+    } else {
+      return <button className="log-in" type="submit">Log In</button>
+    }
+  }
+
+  render() {
+    const { email, password } = this.state
+    return (
+      <>
+        <LandingHeader />
+
+        <div className="form-container">
+          <img className="sign-in-instacart-detail-image" alt="instacart-logo"
+            src={require('../images/instacartlogo@3x.png')} />
           {/* <div className="instacart-detail-image"></div> */}
           <div className="sign-in-welcome">Welcome back</div>
           <div className="login-prompt">Log in with your email and password</div>
@@ -99,13 +99,13 @@ class SignIn extends Component {
 
           <div className="orLoginInfo">
             <div>
-              <button className="facebook-button-signin">Continue with Facebook</button> 
+              <button className="facebook-button-signin">Continue with Facebook</button>
             </div>
             <div>
               <button className="google-button-signin">Continue with Google</button>
             </div>
             <div className="alreadyLogin">
-       <h4>Don't have an Account? <Link className="signIn" to="/sign-up">Sign Up</Link></h4>            </div>
+              <h4>Don't have an Account? <Link className="signIn" to="/sign-up">Sign Up</Link></h4>            </div>
           </div>
         </div >
       </>

@@ -71,3 +71,18 @@
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
 }
+
+@media(max-width: 420px){
+  .delivery-text, .drop-down, .delivery-date, .info-icon{
+    margin: 0px 2px;
+  }  
+  .zip, .arrow-down{
+    font-weight: 600;
+  }
+  .arrow-down{
+    width: 2px;
+    height: 2px;
+    margin: 5px 5px 10px 5px;
+    padding: 3px
+  }
+}

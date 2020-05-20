@@ -53,3 +53,15 @@
   height: max-content;
  text-decoration: none;
 } */
+
+@media (max-width: 900px){
+  .storeFrontNavBar-link, .left-side, .cart-logo{
+    display: none;
+  }
+  /* .cart-logo{
+    margin: 0px
+  } */
+  .header-navBar{
+    justify-content: center;
+  }
+}
