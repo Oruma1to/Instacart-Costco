@@ -12,29 +12,28 @@ import ProductDetail from "./components/ProductDetail";
 import SignUp from './components/SignUp'
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      user: null,
-    };
+ constructor() {
+  super();
+  this.state = {
+   user: null,
+  };
+ }
+
+ async componentDidMount() {
+  const user = await verifyUser();
+  if (user) {
+   this.setState(user);
   }
+ }
 
-  async componentDidMount() {
-    const user = await verifyUser();
-    if (user) {
-      this.setState(user);
-    }
-  }
+ setUser = (user) => this.setState({ user });
 
-  setUser = (user) => this.setState({ user });
+ clearUser = () => this.setState({ user: null });
 
-  clearUser = () => this.setState({ user: null });
-
-  render() {
-    const { setUser, clearUser } = this;
-    const { user } = this.state;
-    console.log("In App page", user);
-
+ render() {
+  const { setUser, clearUser } = this;
+  const { user } = this.state;
+  console.log("In App page", user);
 
     return (
       <div className="app">
