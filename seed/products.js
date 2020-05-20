@@ -80,7 +80,7 @@ const main = async () => {
       quantity: 19
     },
     {
-      name: "Blue Hill Bay Smoked Salmon, 16oz",
+      name: "Blue Hill Bay Smoked Salmon",
       brand: "Blue Hill Bay",
       department: "Meat & Seafood",
       category: "Seafood",
@@ -99,7 +99,36 @@ const main = async () => {
       size: "6 lbs",
       quantity: 3
     },
-
+    {
+      name: "Fresh Cut Fruit Bowl",
+      brand: "Nature",
+      department: "Fruit & Vegetable Trays",
+      category: "Produce",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_550633da-8939-483d-911e-c20a67d24f01.jpeg",
+      price: 13.49,
+      size: "3 lbs",
+      quantity: 19
+    },
+    {
+      name: "Mini Peppers, Greenhouse Grown",
+      brand: "Nature",
+      department: "Fruits & Vegetable Trays",
+      category: "Produce",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d331c905-63d1-4cf4-9ae4-82e5487fa945.jpeg",
+      price: 7.39,
+      size: "1.5 lbs",
+      quantity: 19
+    },
+    {
+      name: "Summer Fresh Tuscan Bean Salad",
+      brand: "Summer Fresh",
+      department: "Produce",
+      category: "Salad Mix",
+      imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_66764c9d-6caa-47b9-a1c0-a1735bcdc630.jpeg",
+      price: 10.49,
+      size: "42.4 oz",
+      quantity: 19
+    },
 
 
   ]
