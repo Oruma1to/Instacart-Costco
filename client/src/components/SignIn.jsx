@@ -100,7 +100,7 @@ class SignIn extends Component {
 
           <div className="orLoginInfo">
             <div>
-              <button className="facebook-button-signin">Continue with Facebook</button>
+              <button className="facebook-button-signin">Continue with Facebook</button> 
             </div>
             <div>
               <button className="google-button-signin">Continue with Google</button>
