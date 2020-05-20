@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-
 import "./ProductDetail.css";
-import { getProduct, deleteProduct } from "../services/product";
-import { Link, Redirect } from "react-router-dom";
+import { getProduct } from "../services/product";
+import { Link, NavLink } from "react-router-dom";
 
 class ProductDetail extends Component {
  constructor(props) {
   super(props);
-
   this.state = {
    product: {
     name: "",
@@ -19,7 +17,6 @@ class ProductDetail extends Component {
     quantity: 0,
     size: "",
    },
-   deleted: false
   };
  }
 

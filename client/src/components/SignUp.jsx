@@ -1,65 +1,93 @@
 import React, { Component } from 'react'
-import './SignUp.css'
-// import { signUp, signIn } from '../services/user'
-import { Link, Redirect } from 'react-router-dom'
-import LandingHeader from "./LandingHeader"
+import './CreateAccount.css'
+import { signUp, signIn } from '../services/user'
+import LandingHeader from './LandingHeader'
 
-class SignUp extends Component {
- constructor() {
-  super()
+class CreateAccount extends Component {
+ constructor(props) {
+  super(props)
 
   this.state = {
-   email: ''
+   username: '',
+   email: '',
+   password: '',
+   passwordConfirm: '',
+   isError: false,
+   errorMsg: ''
   }
  }
 
- handleChange = event =>
+ handleChange = event => {
   this.setState({
    [event.target.name]: event.target.value,
    isError: false,
    errorMsg: ''
   })
+ }
 
  onSignUp = event => {
   event.preventDefault()
-  if (this.state) {
-   this.props.history.push("/costco")
-  }
-  // history.push("/costco")
-  // event.preventDefault()
-  // const { history, setUser } = this.props
 
-  // signUp(this.state)
-  //   .then(() => signIn(this.state))
-  //   .then(res => setUser(res.user))
-  //   .then(() => history.push('/'))
-  //   .catch(error => {
-  //     console.error(error)
-  //     this.setState({
-  //       email: '',
-  //       isError: true,
-  //       errorMsg: 'Please Enter a Valid Email'
-
-  //     })
-  //   })
-
+  const { history, setUser } = this.props
+  console.log(this.state)
+  signUp(this.state)
+   .then(() => signIn(this.state))
+   .then(res => setUser(res.user))
+   .then(() => history.push('/costco'))
+   .catch(error => {
+    console.error(error)
+    this.setState({
+     username: '',
+     email: '',
+     password: '',
+     isError: true,
+     errorMsg: 'Sign Up Details Invalid'
+    })
+   })
  }
 
+ renderError = () => {
+  const toggleForm = this.state.isError ? 'danger' : ''
+  if (this.state.isError) {
+   return (
+    <button type="submit" className={toggleForm}>
+     {this.state.errorMsg}
+    </button>
+   )
+  } else {
+   return <button className="logIn" type="submit">Log In</button>
+  }
+ }
 
  render() {
-  const { email } = this.state
+  const { username, email, password } = this.state
   return (
+
    <>
     <LandingHeader />
-    <div id="suForm" className="form-container-signUP">
 
-     <img className="sign-up-instacart-detail-image" alt="instacart-logo"
+    <div className="form-container">
+     <img className="sign-in-instacart-detail-image" alt="instacart-logo"
       src={require('../images/instacartlogo@3x.png')} />
-     <div>
-      <p className="sign-up-createAcc">Create an account to start shopping</p>
-     </div>
+
+     {/* <div className="instacart-detail-image"></div> */}
+     <div className="sign-in-welcome">Welcome to Instacart</div>
+     <div className="login-prompt">Create a profile using your email and password</div>
      <form onSubmit={this.onSignUp}>
-      <div className="sign-up-emailInput">
+
+      <div className="usernameInput">
+       <input
+        required
+        type="text"
+        name="username"
+        value={username}
+        id="usernameInput"
+        placeholder="Username"
+        onChange={this.handleChange}
+       />
+      </div>
+
+      <div className="emailInput">
        <input
         required
         type="text"
@@ -70,30 +98,36 @@ class SignUp extends Component {
         onChange={this.handleChange}
        />
       </div>
-      <div>
-       <p className="terms">By signing up, you agree to our <Link src="#blank">Terms of Service</Link> & <Link src="#blank">Privacy Policy</Link></p>
+      <div className="passwordInput">
+       <input
+        required
+        type="text"
+        name="password"
+        value={password}
+        placeholder="Password (min 6 characters)"
+        onChange={this.handleChange}
+       />
       </div>
-
-      <button className="logIn">Sign up with email</button>
-
-      <div className="separator">or</div>
-
-      <div className="orLoginInfo" >
-       <div>
-        <button className="facebookButton">Continue with Facebook</button>
-       </div>
-       <div>
-        <button className="googleButton">Continue with Google</button>
-       </div>
-      </div>
-      <div className="alreadyAcc">
-       Already have an account? <Link className="signIn" to="/sign-in">Log in</Link>
-      </div>
+      {this.renderError()}
      </form>
-    </div>
+
+     <div className="separator">or</div>
+
+     <div className="orLoginInfo">
+      <div>
+       <button className="facebookButton">Sign up with Facebook</button>
+      </div>
+      <div>
+       <button className="googleButton">Sign up with Google</button>
+      </div>
+      <div className="alreadyLogin">
+       <h4>Already have an account? <span style={{ color: "green" }}> Log In </span></h4>
+      </div>
+     </div>
+    </div >
    </>
   )
  }
 }
 
-export default SignUp
+export default CreateAccount
