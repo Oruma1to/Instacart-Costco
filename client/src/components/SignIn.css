@@ -188,4 +188,7 @@ img{
   .separator-signin{
     font-size: 14px
   } 
+  .login-prompt{
+    font-size: 16px
+  }
 }
