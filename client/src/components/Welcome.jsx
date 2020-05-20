@@ -53,7 +53,9 @@ class Welcome extends Component {
             </div>
             <div className="terms-container">
               <p className="terms">By signing up, you agree to our</p>
-              <Link src="#blank">Terms of Service</Link> <span>&</span> <Link src="#blank">Privacy Policy</Link>
+              <div className= "link-container">
+                <Link src="#blank">Terms of Service</Link> <span>&</span> <Link src="#blank">Privacy Policy</Link>
+              </div>
             </div>
 
             <button className="sign-up">Sign up with email</button>
