@@ -60,61 +60,57 @@ class SignIn extends Component {
  render() {
   const { email, password } = this.state
   return (
-
    <>
     <LandingHeader />
 
     <div className="form-container">
      <img className="sign-in-instacart-detail-image" alt="instacart-logo"
       src={require('../images/instacartlogo@3x.png')} />
+          {/* <div className="instacart-detail-image"></div> */}
+          <div className="sign-in-welcome">Welcome back</div>
+          <div className="login-prompt">Log in with your email and password</div>
+          <form onSubmit={this.onSignIn}>
+            <div className="emailInput">
+              <input
+                required
+                type="text"
+                name="email"
+                value={email}
+                id="email-input"
+                placeholder="Email address"
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="passwordInput">
+              <input
+                required
+                type="text"
+                name="password"
+                value={password}
+                id="password-input"
+                placeholder="Password (min 6 characters)"
+                onChange={this.handleChange}
+              />
+            </div>
+            {this.renderError()}
+          </form>
 
-     {/* <div className="instacart-detail-image"></div> */}
-     <div className="sign-in-welcome">Welcome back</div>
-     <div className="login-prompt">Log in with your email and password</div>
-     <form onSubmit={this.onSignIn}>
-      <div className="emailInput">
-       <input
-        required
-        type="text"
-        name="email"
-        value={email}
-        id="emailInput"
-        placeholder="Email address"
-        onChange={this.handleChange}
-       />
-      </div>
-      <div className="passwordInput">
-       <input
-        required
-        type="text"
-        name="password"
-        value={password}
-        placeholder="Password (min 6 characters)"
-        onChange={this.handleChange}
-       />
-      </div>
-      {this.renderError()}
-     </form>
+          <div className="separator-signin">or</div>
 
-     <div className="separator">or</div>
-
-     <div className="orLoginInfo">
-      <div>
-       <button className="facebookButton">Continue with Facebook</button>
-      </div>
-      <div>
-       <button className="googleButton">Continue with Google</button>
-      </div>
-      <div className="alreadyLogin">
-       <h4>Don't have an Account? <Link className="signIn" to="/sign-up">Sign Up</Link></h4>
-      </div>
-     </div>
-    </div >
-   </>
-  )
- }
-
-
+          <div className="orLoginInfo">
+            <div>
+              <button className="facebook-button-signin">Continue with Facebook</button>
+            </div>
+            <div>
+              <button className="google-button-signin">Continue with Google</button>
+            </div>
+            <div className="alreadyLogin">
+       <h4>Don't have an Account? <Link className="signIn" to="/sign-up">Sign Up</Link></h4>            </div>
+          </div>
+        </div >
+      </>
+    )
+  }
 }
 
 export default SignIn

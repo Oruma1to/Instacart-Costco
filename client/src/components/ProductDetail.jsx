@@ -22,13 +22,13 @@ class ProductDetail extends Component {
   };
  }
 
- async componentDidMount() {
-  let { id } = this.props.match.params;
-  const product = await getProduct(id);
-  this.setState({ product });
- }
+  async componentDidMount() {
+    let { id } = this.props.match.params;
+    const product = await getProduct(id);
+    this.setState({ product });
+  }
 
- deletedThisBlog = async () => {
+ deletedThisProduct = async () => {
   console.log("in deletethisblog")
   const { product } = this.state
   if (this.props.user) {
@@ -79,7 +79,7 @@ class ProductDetail extends Component {
      </div>
      <div className="productDetail-buttons">
       {this.props.user ? <button className="edit-btn"><Link className="edit-link" to={`/costco/${product._id}/edit`}>Edit</Link></button> : ""}
-      {this.props.user ? <button className="delete-btn" onClick={this.deletedThisBlog}>Delete</button> : ""}
+      {this.props.user ? <button className="delete-btn" onClick={this.deletedThisProduct}>Delete</button> : ""}
      </div>
     </div>
    </div>

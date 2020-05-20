@@ -9,6 +9,7 @@
 .productDetail-container {
   display: flex;
   flex-direction: column;
+
  background-color:  #ffffff;
  margin: 50px auto;
  width: 600px;
@@ -33,7 +34,7 @@
   margin: 0 auto;
   letter-spacing: 0.8px;
   padding-top: 40px ;
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .productDetail-buttons {
@@ -96,3 +97,4 @@
 .edit-link:visited{
  color: white;
 }
+
