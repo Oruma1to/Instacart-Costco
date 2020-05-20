@@ -6,8 +6,8 @@ import "./ProductList.css";
 import { Link } from 'react-router-dom'
 
 class ProductList extends Component {
- constructor() {
-  super();
+ constructor(props) {
+  super(props);
 
   this.state = {
    products: [],
@@ -21,10 +21,12 @@ class ProductList extends Component {
 
  render() {
   console.log("all products-->", this.state.products);
+  console.log("all products-->", this.props.user);
   const PRODUCTS = this.state.products
    // .slice(0, 4)
    .map((product, index) => (
     <Product
+     user={this.props.user}
      key={index}
      _id={product._id}
      imageURL={product.imageURL}
@@ -45,13 +47,6 @@ class ProductList extends Component {
      </div>
      <div className="carousel">{PRODUCTS}</div>
     </div>
-    {/* <div className="buyagain">
-     <div className="product-header">
-      <p className="product-header-title">New Arrivals</p>
-      <p className="product-header-vm"><Link to="#">view 57 more</Link></p>
-     </div>
-     <div className="carousel">{PRODUCTS}</div>
-    </div> */}
    </>
 
 

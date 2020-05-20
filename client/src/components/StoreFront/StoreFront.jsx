@@ -10,7 +10,7 @@ export default class StoreFront extends Component {
   return (
    <div className="store-front">
     <StoreHeader user={this.props.user} />
-    <StoreBody />
+    <StoreBody user={this.props.user} />
    </div>
   );
  }
