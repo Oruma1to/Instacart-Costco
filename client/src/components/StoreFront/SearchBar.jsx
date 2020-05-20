@@ -6,11 +6,11 @@ export default class SearchBar extends Component {
  render(props) {
   return (
    <div className="search-bar-container" >
-    <form className="search-bar" onSubmit={(e) => props.onSubmit(e)}>
+    <form className="search-bar">
      <input
       className="search-input"
-      value={props.value}
-      onChange={(e) => props.onChange(e)}
+      // value={props.value}
+      // onChange={(e) => props.onChange(e)}
       name="Search"
       placeholder="Search Costco..."
       type="text"
