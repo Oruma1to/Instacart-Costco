@@ -22,9 +22,6 @@ export default class StoreBody extends Component {
   this.setState({ filterValue })
  }
 
-
-
-
  linkNavBar = (property, value) => {
   console.log("linkNavBar", property, value)
   let products = this.state.filterValue.filter(function (product) {
@@ -41,12 +38,7 @@ export default class StoreBody extends Component {
      <Product
       user={this.props.user}
       key={index}
-      _id={product._id}
-      imageURL={product.imageURL}
-      brand={product.brand}
-      name={product.name}
-      price={product.price}
-      size={product.size}
+      {...product}
      />
     ))
   } else if (this.state.found.length > 0) {
@@ -55,18 +47,17 @@ export default class StoreBody extends Component {
      user={this.props.user}
      key={index}
      _id={product._id}
-     imageURL={product.imageURL}
-     brand={product.brand}
-     name={product.name}
-     price={product.price}
-     size={product.size}
+     {...product}
     />
    ))
   }
-
   return value
  }
-
+ componentDidUpdate = () => {
+  if (this.props.searchProducts !== null && this.state.found.length) {
+   this.setState({ found: [] })
+  }
+ }
 
  render() {
   let products = null
