@@ -4,9 +4,7 @@
 
 .storeBodySection{
   display: flex;
-  /* justify-content: flex-start; */
   margin-left: 10px;
-  /* width: 100%; */
 }
 .storebody-products-list{
   display: flex;
@@ -21,4 +19,18 @@
   .storeBodySection{
     margin: 0;
   }
+}
+
+/* Search Result CSS */
+.searchProductsOuterDiv{
+ display: flex;
+ flex-wrap: wrap;
+ background-color: white;
+ margin: 10px 0;
+ margin-right: 15px;
+}
+.searchProductsOuterDiv > *:hover{
+  border: 3px dotted #ff7a59;
+  color: #ff7a59;
+  background: #fff;
 }
