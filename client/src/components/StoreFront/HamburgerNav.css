@@ -79,6 +79,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .parent-menu-hamburger, .departments-header{
   text-align: left;
 }
+.parent-sub-menu-hamburger{
+  padding-left: 20px
+}
 ul, li, .department-item-hamburger {
   color: #2f821f;
   text-decoration: none;
@@ -107,29 +110,10 @@ ul, li, .department-item-hamburger {
     left: 20px;
     top: 20px;
   }
-  .department-item-hamburger {
-    font-size: 15px;
-  }
-  .departments-header{
-    font-size: 24px;
-  }
-}
-@media(max-width: 615px){
-  .bm-menu {
-    padding: 2.5em .5em 0;
-    font-size: 1.15em;
-  }
 }
 @media(max-width: 400px){
   .bm-burger-button {
     width: 32px;
     height: 28px;
   }
-  .bm-menu {
-    background: rgba(255, 255,255, .8);
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-
-
 }

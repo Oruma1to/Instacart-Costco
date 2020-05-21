@@ -35,7 +35,7 @@ export default class Departments extends Component {
 
               <ul className="parent-sub-menu">
 
-                <li><Link className="department-item" to="#">Fruit & Vegetable Trays</Link></li>
+                <li><Link className="department-item" to="#">Fruit & Vegetable</Link></li>
 
                 <li><Link className="department-item" to="#">Fruit</Link></li>
 
@@ -49,11 +49,11 @@ export default class Departments extends Component {
 
             <ul className="parent-sub-menu">
 
-              <li><Link className="department-item" to="#">Meat & Cheese Trays</Link></li>
+              <li><Link className="department-item" to="#">Meat & Cheese</Link></li>
 
               <li><Link className="department-item" to="#">Prepared Meals</Link></li>
 
-              <li><Link className="department-item" to="#">Prepared Soups & Salad</Link></li>
+              <li><Link className="department-item" to="#">Soups & Salad</Link></li>
 
               <li><Link className="department-item" to="#">Dips & Spreads</Link></li>
             </ul>

@@ -7,7 +7,7 @@ export default class HamburgerNav extends Component {
   render() {
     return (
       <div className= "hamburger-menu">
-        <Menu width={'400px'}>
+        <Menu>
           <h1 className= "departments-header">Departments</h1>
           <ul className="parent-menu-hamburger">
 
@@ -35,7 +35,7 @@ export default class HamburgerNav extends Component {
 
               <ul className="parent-sub-menu-hamburger">
 
-                <li><Link className="department-item-hamburger" to="#">Fruit & Vegetable Trays</Link></li>
+                <li><Link className="department-item-hamburger" to="#">Fruit & Vegetable</Link></li>
 
                 <li><Link className="department-item-hamburger" to="#">Fruit</Link></li>
 
@@ -49,11 +49,11 @@ export default class HamburgerNav extends Component {
 
             <ul className="parent-sub-menu-hamburger">
 
-              <li><Link className="department-item-hamburger" to="#">Meat & Cheese Trays</Link></li>
+              <li><Link className="department-item-hamburger" to="#">Meat & Cheese</Link></li>
 
               <li><Link className="department-item-hamburger" to="#">Prepared Meals</Link></li>
 
-              <li><Link className="department-item-hamburger" to="#">Prepared Soups & Salad</Link></li>
+              <li><Link className="department-item-hamburger" to="#">Soups & Salad</Link></li>
 
               <li><Link className="department-item-hamburger" to="#">Dips & Spreads</Link></li>
             </ul>
