@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+
 .productCreate-Header{
  background-color: #2f821f;
 }
@@ -79,6 +80,32 @@
 .productCreate-title{
  margin-top: 2%;
  font-size: 30px;
- font-family: inherit;
- text-decoration: underline;
+ font-family: 'Open Sans', sans-serif;
+ letter-spacing: 2px;
+ color: rgba(2, 2, 19);
 }
+
+
+@media (max-width: 720px) {
+  .create-form {
+    width: 420px;
+    height: 700px;
+  }
+  .add-product-body {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 470px) {
+  .create-form {
+    width: 300px;
+    height: 600px;
+    padding: 10px;
+  }
+
+   .add-product-body {
+    height: 100vh;
+  }
+}
+  
+  
