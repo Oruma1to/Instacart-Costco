@@ -3,7 +3,7 @@
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 30px;
 }
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
@@ -12,7 +12,7 @@
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #323232;
 }
 
 /* Position and sizing of clickable cross button */
@@ -23,7 +23,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #b8b7ad;
 }
 
 /*
@@ -65,7 +65,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 0px
 }
 
+/* ==== BELOW ARE THE CREATED CLASSES ==== */
+
 .departments-header {
+  margin-top: 0px;
   font-size: 28px;
   color: #323232;
   font-family: 'Open Sans', sans-serif;
@@ -74,7 +77,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .parent-menu-hamburger, .departments-header{
   text-align: left;
-  /* margin: 0px */
 }
 ul, li, .department-item-hamburger {
   color: #2f821f;
@@ -86,7 +88,12 @@ ul, li, .department-item-hamburger {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: 2;
+  padding: 5px 13px
   }
+.department-item-hamburger:hover{
+  background-color: rgba(113, 113, 113, .2);
+  border-radius: 5px
+}
 
 
 @media(min-width: 900px){
