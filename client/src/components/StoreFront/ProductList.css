@@ -24,7 +24,9 @@
   font-size: 16px;
   font-weight: 600;
   color: #2f821f;
-  letter-spacing: .26px
+  letter-spacing: .26px;
+  /* font-weight: 400; */
+  /* margin: auto 0; */
 }
 
 .carousel {
