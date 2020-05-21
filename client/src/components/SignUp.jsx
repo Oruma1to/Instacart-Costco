@@ -56,7 +56,7 @@ class CreateAccount extends Component {
         </button>
       )
     } else {
-      return <button className="login-signup" type="submit">Sign Up / Log In</button>
+      return <button className="login-signup" type="submit">Sign Up & Log In</button>
     }
   }
 
@@ -73,7 +73,7 @@ class CreateAccount extends Component {
 
           {/* <div className="instacart-detail-image"></div> */}
           <div className="signup-welcome">Welcome to Instacart</div>
-          <div className="signup-prompt">Create a profile using your email and password</div>
+          <div className="signup-prompt">Create a profile with an email and password</div>
           <form onSubmit={this.onSignUp}>
 
             <div className="usernameInput">
