@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .apple-header{
-  background-image:url('../../images/demapples.png');
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.342), 
+    rgba(0, 0, 0, 0.342)
+  ), url('../../images/demapples.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
