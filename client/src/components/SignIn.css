@@ -160,11 +160,6 @@ img{
   .form-container{
     width: 280px;
   }
-
-  .sign-up-createAcc{
-    font-size: 15px;
-    margin-bottom: 20px
-  }
   .log-in, #email-input, #password-input,.google-button-signin, .facebook-button-signin{
     width: 238px;
     height: 40px;

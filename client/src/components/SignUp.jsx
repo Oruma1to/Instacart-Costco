@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './CreateAccount.css'
+import './SignUp.css'
 import { signUp, signIn } from '../services/user'
 import LandingHeader from './LandingHeader'
 import { Link } from 'react-router-dom'
@@ -48,7 +48,7 @@ class CreateAccount extends Component {
   }
 
   renderError = () => {
-    const toggleForm = this.state.isError ? 'danger' : ''
+    const toggleForm = this.state.isError ? 'danger-signup' : ''
     if (this.state.isError) {
       return (
         <button type="submit" className={toggleForm}>
@@ -56,7 +56,7 @@ class CreateAccount extends Component {
         </button>
       )
     } else {
-      return <button className="logIn" type="submit">Log In</button>
+      return <button className="login-signup" type="submit">Sign Up / Log In</button>
     }
   }
 
@@ -67,13 +67,13 @@ class CreateAccount extends Component {
       <>
         <LandingHeader />
 
-        <div className="form-container">
+        <div className="form-container-signup">
           <img className="sign-in-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
 
           {/* <div className="instacart-detail-image"></div> */}
-          <div className="sign-in-welcome">Welcome to Instacart</div>
-          <div className="login-prompt">Create a profile using your email and password</div>
+          <div className="signup-welcome">Welcome to Instacart</div>
+          <div className="signup-prompt">Create a profile using your email and password</div>
           <form onSubmit={this.onSignUp}>
 
             <div className="usernameInput">
@@ -82,7 +82,7 @@ class CreateAccount extends Component {
                 type="text"
                 name="username"
                 value={username}
-                id="usernameInput"
+                id="username-input-signup"
                 placeholder="Username"
                 onChange={this.handleChange}
               />
@@ -94,7 +94,7 @@ class CreateAccount extends Component {
                 type="text"
                 name="email"
                 value={email}
-                id="emailInput"
+                id="email-input-signup"
                 placeholder="Email address"
                 onChange={this.handleChange}
               />
@@ -105,23 +105,24 @@ class CreateAccount extends Component {
                 type="password"
                 name="password"
                 value={password}
+                id="password-input-signup"
                 placeholder="Password (min 6 characters)"
                 onChange={this.handleChange}
               />
             </div>
             {this.renderError()}
           </form>
-
-          <div className="separator">or</div>
+          
+          <div className="separator-signup">or</div>
 
           <div className="orLoginInfo">
             <div>
-              <button className="facebookButton">Sign up with Facebook</button>
+              <button className="facebook-button-signup">Sign up with Facebook</button>
             </div>
             <div>
-              <button className="googleButton">Sign up with Google</button>
+              <button className="google-button-signup">Sign up with Google</button>
             </div>
-            <div className="alreadyLogin">
+            <div className="already-signup">
               <h4>Already have an account? <Link to="/sign-in">Log In</Link></h4>
             </div>
           </div>
