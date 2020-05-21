@@ -44,7 +44,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #565656;
 }
 
 /* Wrapper for item list */
@@ -65,15 +65,28 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 0px
 }
 
+.departments-header {
+  font-size: 28px;
+  color: #323232;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.32px;
+}
 
-.parent-menu-hamburger{
-  text-align: left
+.parent-menu-hamburger, .departments-header{
+  text-align: left;
+  /* margin: 0px */
 }
 ul, li, .department-item-hamburger {
   color: #2f821f;
   text-decoration: none;
   list-style: none;
 }
+.department-item-hamburger {
+  letter-spacing: .26px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  }
 
 
 @media(min-width: 900px){

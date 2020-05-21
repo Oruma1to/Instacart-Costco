@@ -8,6 +8,7 @@ export default class HamburgerNav extends Component {
     return (
       <div className='hamburger-menu'>
         <Menu>
+          <h1 className= "departments-header">Departments</h1>
           <ul className="parent-menu-hamburger">
 
             <li><Link className="department-item-hamburger" to="#">Meat & Seafood</Link>
