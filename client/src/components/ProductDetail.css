@@ -127,3 +127,23 @@
     font-size: 18px;
   }
 }
+@media (max-width: 460px) {
+  .productDetail-container {
+    width: 320px;
+    height: 500px;
+  }
+  .productDetail-image {
+    width: 150px;
+    height: 150px;
+  }
+  .productDetail-buttons {
+    margin-top: 40px;
+  }
+  .productDetail-buttons > button {
+    height: 40px;
+    font-size: 20px;
+  }
+  .productDetail-image-container {
+    padding: 20px;
+  }
+}
