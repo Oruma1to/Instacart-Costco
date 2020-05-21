@@ -25,8 +25,6 @@ export default class Departments extends Component {
 
         <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Poultry")}>Poultry</Link></li>
 
-        <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Meat")}>Meat</Link></li>
-
        </ul>
 
       </li>
@@ -39,7 +37,7 @@ export default class Departments extends Component {
 
         <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Fruit")}>Fruit</Link></li>
 
-        <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Vegetables")}>Vegetables</Link></li>
+        <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Vegetable")}>Vegetables</Link></li>
 
         <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Salad Mix")}>Salad Mix</Link></li>
 
@@ -70,7 +68,10 @@ export default class Departments extends Component {
 
         <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Pies & Cakes")}>Pies & Cakes</Link></li>
 
-       </ul>
+            </ul>
+            
+            <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('category', "Meat")}>Back to Main</Link></li>
+
 
       </li>
      </ul>
