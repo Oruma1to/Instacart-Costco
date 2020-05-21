@@ -36,7 +36,11 @@ export default class StoreBody extends Component {
     <DeliveryTo />
     <main className="storeBodySection">
      <Departments />
-     {products ? <div className="carousel">{products}</div> :
+     {products ?
+      // <div className="searchProductsOuterDiv"></div>
+      <div className="searchProductsOuterDiv">{products}</div>
+
+      :
       <div className="storebody-products-list">
        <ProductList user={this.props.user} dataInfo={1} title="Buy Again" />
        <ProductList user={this.props.user} dataInfo={2} title="New Arrivals" />

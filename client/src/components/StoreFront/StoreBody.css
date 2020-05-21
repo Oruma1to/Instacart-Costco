@@ -22,3 +22,16 @@
     margin: 0;
   }
 }
+
+/* Search Result CSS */
+.searchProductsOuterDiv{
+ display: flex;
+ /* flex-direction: column; */
+ flex-wrap: wrap;
+/* justify-content: space-evenly; */
+background-color: white;
+margin: 10px 0;
+}
+.searchProductsOuterDiv > *{
+border: 2px solid lightcoral;
+}
