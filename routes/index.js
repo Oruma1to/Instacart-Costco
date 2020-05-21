@@ -14,7 +14,8 @@ router.delete('/products/:id', restrict, controllers.deleteProduct)
 
 //Testing new arrivals
 router.get('/search/newarrivals', controllers.newArrivals)
-
+//Testing Search
+router.get('/searching/:term', controllers.searchWord)
 
 //Routes for the user
 router.get('/users', controllers.getUsers)
