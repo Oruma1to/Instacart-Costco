@@ -29,9 +29,6 @@
  margin: 10px 0;
  margin-right: 15px;
 }
-.searchProductsOuterDiv > *{
- border: 2px solid lightgray;
-}
 .searchProductsOuterDiv > *:hover{
   border: 3px dotted #ff7a59;
   color: #ff7a59;

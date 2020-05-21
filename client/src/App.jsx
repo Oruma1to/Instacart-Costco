@@ -31,7 +31,7 @@ export default class App extends Component {
 
  searchForItem = async (term) => {
   console.log("In searchFortITEM......", term)
-  if (term !== "") {
+  if (term.length !== 0) {
    let searchProducts = await getSearchProducts(term);
    this.setState({ searchProducts });
   } else {

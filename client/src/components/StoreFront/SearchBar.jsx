@@ -13,7 +13,9 @@ export default class SearchBar extends Component {
  handleOnSubmit = (e) => {
   e.preventDefault();
   console.log("in handleSubmit", this.state.filteredValue)
-  this.setState({ filteredValue: "" })
+  if (this.state.filteredValue.length < 0) {
+   this.setState({ filteredValue: "" })
+  }
   this.props.searchForItem(this.state.filteredValue)
  }
  handleSearchChange = e => {
