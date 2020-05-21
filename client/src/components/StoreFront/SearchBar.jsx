@@ -29,7 +29,7 @@ export default class SearchBar extends Component {
  handleSearchChange = e => {
   console.log("SEARCHBAR HANDLESEARCHCHANGE ", e.target.value)
   let filteredValue = e.target.value
-  if (e.target.value !== "") {
+  if (filteredValue !== "") {
    this.setState({ filteredValue }, this.search)
   } else {
    this.props.setSearchProducts(null)

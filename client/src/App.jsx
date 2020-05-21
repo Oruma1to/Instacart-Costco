@@ -26,7 +26,6 @@ export default class App extends Component {
   if (user) {
    this.setState(user);
   }
-
  }
 
  setUser = (user) => this.setState({ user });

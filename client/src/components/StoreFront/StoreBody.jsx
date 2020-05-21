@@ -17,7 +17,7 @@ export default class StoreBody extends Component {
   // console.log("STOREBODY", this.props.user)
   let searchProductdata = true;
   console.log("STOREBODY SEARCH DATA", this.props.searchProducts)
-  if (this.props.searchProducts === null || this.props.searchProducts.length === 0) {
+  if (this.props.searchProducts === null) {
    searchProductdata = false
   }
   const products =
@@ -40,7 +40,6 @@ export default class StoreBody extends Component {
     <main className="storeBodySection">
      <Departments />
      {products ?
-      // <div className="searchProductsOuterDiv"></div>
       <div className="searchProductsOuterDiv">{products}</div>
       :
       <div className="storebody-products-list">
