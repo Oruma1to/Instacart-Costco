@@ -37,7 +37,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: rgba(255, 255,255, .5);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -56,6 +56,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  padding: 0px
 }
 
 /* Styling of overlay */
@@ -63,6 +64,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
   margin: 0px
 }
+
+
+.parent-menu-hamburger{
+  text-align: left
+}
+ul, li, .department-item-hamburger {
+  color: #2f821f;
+  text-decoration: none;
+  list-style: none;
+}
+
+
 @media(min-width: 900px){
   .hamburger-menu{
     display: none
