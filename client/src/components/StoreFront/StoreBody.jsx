@@ -25,12 +25,12 @@ export default class StoreBody extends Component {
   let found = this.state.filterValue.filter(function (product) {
    return product.department === value
   })
-  console.log(found)
+  console.log("Found products: ", found)
  }
  render() {
   // console.log("STOREBODY", this.props.user)
   let searchProductdata = true;
-  console.log("STOREBODY SEARCH DATA", this.props.searchProducts)
+  // console.log("STOREBODY SEARCH DATA", this.props.searchProducts)
   if (this.props.searchProducts === null) {
    searchProductdata = false
   }

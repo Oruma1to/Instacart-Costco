@@ -15,7 +15,7 @@ export default class Departments extends Component {
 
      <ul className="parent-menu">
 
-      <li><Link className="department-item" to="#">Meat & Seafood</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Meat & Seafood")}>Meat & Seafood</Link>
 
        <ul className="parent-sub-menu">
 
@@ -35,7 +35,7 @@ export default class Departments extends Component {
 
       </li>
 
-      <li><Link className="department-item" to="#">Produce</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Produce")}>Produce</Link>
 
        <ul className="parent-sub-menu">
 
@@ -49,7 +49,7 @@ export default class Departments extends Component {
 
        </ul></li>
 
-      <li><Link className="department-item" to="#">Deli</Link></li>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Deli")}>Deli</Link></li>
 
       <ul className="parent-sub-menu">
 
@@ -62,7 +62,7 @@ export default class Departments extends Component {
        <li><Link className="department-item" to="#">Dips & Spreads</Link></li>
       </ul>
 
-      <li><Link className="department-item" to="#">Bakery & Desserts</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Bakery & Deserts")}>Bakery & Desserts</Link>
 
        <ul className="parent-sub-menu">
 
