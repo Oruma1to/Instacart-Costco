@@ -9,6 +9,7 @@ export default class StoreFrontNavBar extends Component {
   render() {
     return (
       <>
+        <HamburgerNav />
         <nav className='header-navBar'>
           <div className='left-side'>
             <Link className="storeFrontNav-img-link" to="/costco">
