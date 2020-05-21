@@ -38,14 +38,12 @@ class CreateAccount extends Component {
       .catch((error) => {
         console.error(error);
 
-        let errorMSG = error ? validationError : "nothing here";
-
         this.setState({
           username: "",
           email: "",
           password: "",
           isError: true,
-          errorMsg: errorMSG,
+          errorMsg: "Sign Up Details Invalid",
         });
       });
   };
