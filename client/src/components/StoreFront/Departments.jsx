@@ -14,11 +14,11 @@ export default class Departments extends Component {
 
      <ul className="parent-menu">
 
-      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Meat & Seafood")}>Meat & Seafood</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('department', "Meat & Seafood")}>Meat & Seafood</Link>
 
        <ul className="parent-sub-menu">
 
-        <li><Link className="department-item" to="#">Prime Beef</Link></li>
+        <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar("Prime Beef")}>Prime Beef</Link></li>
 
         <li><Link className="department-item" to="#">Pork & Lamb</Link></li>
 
@@ -34,7 +34,7 @@ export default class Departments extends Component {
 
       </li>
 
-      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Produce")}>Produce</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('department', "Produce")}>Produce</Link>
 
        <ul className="parent-sub-menu">
 
@@ -48,7 +48,7 @@ export default class Departments extends Component {
 
        </ul></li>
 
-      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Deli")}>Deli</Link></li>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('department', "Deli")}>Deli</Link></li>
 
       <ul className="parent-sub-menu">
 
@@ -61,7 +61,7 @@ export default class Departments extends Component {
        <li><Link className="department-item" to="#">Dips & Spreads</Link></li>
       </ul>
 
-      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Bakery & Desserts")}>Bakery & Desserts</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkNavBar('department', "Bakery & Desserts")}>Bakery & Desserts</Link>
 
        <ul className="parent-sub-menu">
 

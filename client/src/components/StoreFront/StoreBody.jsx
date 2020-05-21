@@ -25,13 +25,22 @@ export default class StoreBody extends Component {
 
 
 
- linkDepartments = (value) => {
+ linkNavBar = (property, value) => {
+  console.log("linkNavBar", property, value)
   let products = this.state.filterValue.filter(function (product) {
-   return product.department === value
+   return product[property] === value
   })
   console.log("Found products: ", products)
   this.setState({ found: products })
  }
+
+ // linkCategories = (value) => {
+ //  let products = this.state.filterValue.filter(function (product) {
+ //   return product.department === value
+ //  })
+ //  console.log("Found products: ", products)
+ //  this.setState({ found: products })
+ // }
 
 
  renderingProducts = (value) => {
@@ -77,7 +86,7 @@ export default class StoreBody extends Component {
    <div className="storeBodyPage">
     <DeliveryTo />
     <main className="storeBodySection">
-     <Departments linkDepartments={this.linkDepartments} />
+     <Departments linkNavBar={this.linkNavBar} />
      {products ?
       <div className="searchProductsOuterDiv">{products}</div>
       :
