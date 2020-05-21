@@ -102,7 +102,7 @@ class CreateAccount extends Component {
             <div className="passwordInput">
               <input
                 required
-                type="text"
+                type="password"
                 name="password"
                 value={password}
                 id="password-input-signup"
@@ -112,7 +112,7 @@ class CreateAccount extends Component {
             </div>
             {this.renderError()}
           </form>
-
+          
           <div className="separator-signup">or</div>
 
           <div className="orLoginInfo">
