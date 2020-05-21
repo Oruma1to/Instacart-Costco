@@ -1,27 +1,37 @@
-const { Router } = require('express')
-const controllers = require('../controllers')
-const restrict = require('../helpers/index')
+const { Router } = require("express");
+const controllers = require("../controllers");
+const restrict = require("../helpers/index");
+const { check } = require("express-validator");
 
-const router = Router()
+const router = Router();
 
-router.get('/', (req, res) => res.send('There is no food here'))
+router.get("/", (req, res) => res.send("There is no food here"));
 
-router.get('/products', controllers.getProducts)
-router.get('/products/:id', controllers.getProduct)
-router.post('/products', restrict, controllers.createProduct)
-router.put('/products/:id', restrict, controllers.updateProduct)
-router.delete('/products/:id', restrict, controllers.deleteProduct)
+router.get("/products", controllers.getProducts);
+router.get("/products/:id", controllers.getProduct);
+router.post("/products", restrict, controllers.createProduct);
+router.put("/products/:id", restrict, controllers.updateProduct);
+router.delete("/products/:id", restrict, controllers.deleteProduct);
 
 //Testing new arrivals
-router.get('/search/newarrivals', controllers.newArrivals)
+router.get("/search/newarrivals", controllers.newArrivals);
 //Testing Search
-router.get('/searching/:term', controllers.searchWord)
+router.get("/searching/:term", controllers.searchWord);
 
 //Routes for the user
-router.get('/users', controllers.getUsers)
-router.post('/sign-up', controllers.signUp)
-router.post('/sign-in', controllers.signIn)
-router.post('/verify', controllers.verifyUser)
+router.get("/users", controllers.getUsers);
+router.post(
+  "/sign-up",
+  [
+    check("username", "Please add an username").not().isEmpty(),
+    check("email", "Please add a valid email").isEmail(),
+    check("password", "Password must be at least 6 characters").isLength({
+      min: 6,
+    }),
+  ],
+  controllers.signUp
+);
+router.post("/sign-in", controllers.signIn);
+router.post("/verify", controllers.verifyUser);
 
-
-module.exports = router
+module.exports = router;
