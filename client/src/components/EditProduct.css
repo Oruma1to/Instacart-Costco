@@ -124,4 +124,8 @@
     width: 150px;
     height: 150px;
   }
+  .editProduct-field-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
 }
