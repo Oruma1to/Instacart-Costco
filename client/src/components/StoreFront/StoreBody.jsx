@@ -11,8 +11,9 @@ export default class StoreBody extends Component {
   super(props);
 
   this.state = {
-   foundProducts: [],
-   filterValue: []
+   filterValue: [],
+   found: [],
+   products: null
   };
  }
 
@@ -21,21 +22,22 @@ export default class StoreBody extends Component {
   this.setState({ filterValue })
  }
 
+
+
+
  linkDepartments = (value) => {
-  let found = this.state.filterValue.filter(function (product) {
+  let products = this.state.filterValue.filter(function (product) {
    return product.department === value
   })
-  console.log("Found products: ", found)
+  console.log("Found products: ", products)
+  this.setState({ found: products })
  }
- render() {
-  // console.log("STOREBODY", this.props.user)
-  let searchProductdata = true;
-  // console.log("STOREBODY SEARCH DATA", this.props.searchProducts)
-  if (this.props.searchProducts === null) {
-   searchProductdata = false
-  }
-  const products =
-   searchProductdata ?
+
+
+ renderingProducts = (value) => {
+  // let searchProductdata = true;
+  if (this.props.searchProducts !== null) {
+   value =
     this.props.searchProducts.map((product, index) => (
      <Product
       user={this.props.user}
@@ -47,7 +49,30 @@ export default class StoreBody extends Component {
       price={product.price}
       size={product.size}
      />
-    )) : null;
+    ))
+  } else if (this.state.found.length > 0) {
+   value = this.state.found.map((product, index) => (
+    <Product
+     user={this.props.user}
+     key={index}
+     _id={product._id}
+     imageURL={product.imageURL}
+     brand={product.brand}
+     name={product.name}
+     price={product.price}
+     size={product.size}
+    />
+   ))
+  }
+
+  return value
+ }
+
+
+ render() {
+  let products = null
+  products = this.renderingProducts(products);
+
   return (
    <div className="storeBodyPage">
     <DeliveryTo />

@@ -7,7 +7,6 @@ export default class Departments extends Component {
   super(props);
  }
  render() {
-  console.log("DEPARTMENTS ", this.props.linkDepartments)
   return (
    <div className="department-container">
     <h1>Departments</h1>
@@ -62,7 +61,7 @@ export default class Departments extends Component {
        <li><Link className="department-item" to="#">Dips & Spreads</Link></li>
       </ul>
 
-      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Bakery & Deserts")}>Bakery & Desserts</Link>
+      <li><Link className="department-item" to="#" onClick={() => this.props.linkDepartments("Bakery & Desserts")}>Bakery & Desserts</Link>
 
        <ul className="parent-sub-menu">
 
