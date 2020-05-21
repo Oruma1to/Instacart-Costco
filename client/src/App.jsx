@@ -17,6 +17,7 @@ export default class App extends Component {
   super();
   this.state = {
    user: null,
+   searchProducts: null,
   };
  }
 
@@ -29,12 +30,16 @@ export default class App extends Component {
 
  setUser = (user) => this.setState({ user });
 
+ setSearchProducts = (searchProducts) => this.setState({ searchProducts });
+
  clearUser = () => this.setState({ user: null });
 
  render() {
   const { setUser, clearUser } = this;
   const { user } = this.state;
-  console.log("In App page", user);
+  // console.log("In App page", user);
+
+  console.log("App SEARCH DATA", this.state.searchProducts)
 
 
   return (
@@ -45,7 +50,7 @@ export default class App extends Component {
      <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
      <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
      <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-     <Route exact path="/costco" render={() => <StoreFront user={user} />} />
+     <Route exact path="/costco" render={() => <StoreFront user={user} setSearchProducts={this.setSearchProducts} searchProducts={this.state.searchProducts} />} />
      <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id" render={props => user ? <ProductDetail {...props} history={props.history} user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id/edit" render={props => <EditProduct {...props} user={user} />} />

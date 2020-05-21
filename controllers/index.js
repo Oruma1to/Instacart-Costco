@@ -156,6 +156,22 @@ const newArrivals = async (req, res) => {
  }
 }
 
+const searchWord = async (req, res) => {
+ try {
+  let { term } = req.params
+  console.log(term)
+  const product = await Product.find({ name: { $regex: term, $options: 'i' } })
+  console.log("product", product)
+  if (product) {
+   return res.json(product)
+  }
+  res.status(404).json({ message: "Product not found!" })
+ } catch (error) {
+  res.status(500).json({ error: error.message })
+ }
+
+}
+
 
 module.exports = {
  getProducts,
@@ -167,6 +183,7 @@ module.exports = {
  signIn,
  verifyUser,
  getUsers,
- newArrivals
+ newArrivals,
+ searchWord
 }
 
