@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "./App.css"
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/user'
+import { getSearchProducts } from './services/product'
 import Welcome from './components/Welcome'
 import LandingPage from "./components/LandingPage"
 import SignIn from './components/SignIn'
@@ -28,7 +29,13 @@ export default class App extends Component {
   }
  }
 
- 
+ searchForItem = async (term) => {
+  console.log("In searchFortITEM", term)
+  let products = await getSearchProducts(term);
+  this.setState({ products });
+ }
+
+
 
  setUser = (user) => this.setState({ user });
 
