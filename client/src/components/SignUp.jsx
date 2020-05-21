@@ -56,7 +56,7 @@ class CreateAccount extends Component {
         </button>
       )
     } else {
-      return <button className="login-signup" type="submit">Log In</button>
+      return <button className="login-signup" type="submit">Sign Up / Log In</button>
     }
   }
 
@@ -82,7 +82,7 @@ class CreateAccount extends Component {
                 type="text"
                 name="username"
                 value={username}
-                id="usernameInput"
+                id="username-input-signup"
                 placeholder="Username"
                 onChange={this.handleChange}
               />
@@ -94,7 +94,7 @@ class CreateAccount extends Component {
                 type="text"
                 name="email"
                 value={email}
-                id="emailInput"
+                id="email-input-signup"
                 placeholder="Email address"
                 onChange={this.handleChange}
               />
@@ -105,6 +105,7 @@ class CreateAccount extends Component {
                 type="text"
                 name="password"
                 value={password}
+                id="password-input-signup"
                 placeholder="Password (min 6 characters)"
                 onChange={this.handleChange}
               />

@@ -95,7 +95,7 @@ input {
   justify-content: center;
 }
 .separator-signup::before, .separator-signup::after {
-  content: "  ";
+  content: "";
   flex: 2;
   border-bottom: 1px solid gray;
 }
@@ -126,45 +126,35 @@ img{
 }
 
 @media(max-width: 450px){
-  .form-container{
+  .form-container-signup{
     width: 298px;
     height: 503px
   }
 }
 
 @media(max-width: 360px){
-  .form-container{
+  .form-container-signup{
     width: 280px;
+    height: 600px
   }
-
-  .sign-up-createAcc{
-    font-size: 15px;
-    margin-bottom: 20px
-  }
-  .log-in, #email-input, #password-input,.google-button-signin, .facebook-button-signin{
+  .login-signup, #username-input-signup, #email-input-signup, #password-input-signup,.google-button-signup, .facebook-button-signup{
     width: 238px;
     height: 40px;
     font-size: 14px;
     font-weight: 600; 
   }
 
-  #email-input, #password-input{
+  #username-input-signup, #email-input-signup, #password-input-signup{
     margin-top: 10px;
     font-size: 16px
   }
-
-  .terms-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .alreadyLogin {
+  .already-signup{
     font-size: 16px;
   }
-  .separator-signin{
+  .separator-signup{
     font-size: 14px
   } 
-  .login-prompt{
+  .signup-prompt{
     font-size: 16px
   }
 }
