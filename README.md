@@ -23,7 +23,7 @@ The developers and designers of this recreation are in no way affiliated with In
 - Build a functional server and database with an authentication feature 
 - CRUD functionality on the homepage of a signed-in administrator
   - The ability to create, read, update and delete items on the database from the client/admin view
-- 6 working categorical carousels to display all respective products on the homepage
+- 2 working categorical carousels to display all respective products on the homepage
 - Search functionality of any product stored on our database from the homepage
 - Content (JSX/HTML) and styling (CSS) resembling the wireframes provided to us by our UX collaborators. 
 - Accessible "sign-up", "sign-in", and "homepage/storefront"
