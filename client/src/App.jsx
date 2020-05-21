@@ -18,7 +18,7 @@ export default class App extends Component {
   super();
   this.state = {
    user: null,
-
+   searchProducts: null
   };
  }
 
@@ -31,8 +31,8 @@ export default class App extends Component {
 
  searchForItem = async (term) => {
   console.log("In searchFortITEM", term)
-  let products = await getSearchProducts(term);
-  this.setState({ products });
+  let searchProducts = await getSearchProducts(term);
+  this.setState({ searchProducts });
  }
 
 
@@ -55,7 +55,7 @@ export default class App extends Component {
      <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
      <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
      <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-     <Route exact path="/costco" render={() => <StoreFront user={user} />} />
+     <Route exact path="/costco" render={() => <StoreFront user={user} searchForItem={this.searchForItem} searchProducts={this.state.searchProducts} />} />
      <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id" render={props => user ? <ProductDetail {...props} history={props.history} user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id/edit" render={props => <EditProduct {...props} user={user} />} />

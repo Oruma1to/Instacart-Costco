@@ -9,8 +9,8 @@ export default class StoreFront extends Component {
   console.log("In Store Front ", this.props.user)
   return (
    <div className="store-front">
-    <StoreHeader user={this.props.user} />
-    <StoreBody user={this.props.user} />
+    <StoreHeader user={this.props.user} searchForItem={this.props.searchForItem} searchProducts={this.props.searchProducts} />
+    <StoreBody user={this.props.user} searchForItem={this.props.searchForItem} searchProducts={this.props.searchProducts} />
    </div>
   );
  }

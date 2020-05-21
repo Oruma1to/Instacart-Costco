@@ -6,6 +6,7 @@ import './StoreBody.css'
 
 export const StoreBody = (props) => {
  console.log("In storeBody", props.user)
+ console.log("IN STOREBODY", props.searchProducts)
  return (
   <div className="storeBodyPage">
    <DeliveryTo />
