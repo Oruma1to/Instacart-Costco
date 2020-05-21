@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './StoreFrontNavBar.css'
 import DropdownMenu from '../shared/DropdownMenu'
-
+import HamburgerNav from './HamburgerNav'
 export default class StoreFrontNavBar extends Component {
 
   render() {
@@ -10,7 +10,9 @@ export default class StoreFrontNavBar extends Component {
     console.log("In Store Front Nav Bar ", this.props.user)
     return (
       <>
+        <HamburgerNav />
         <nav className='header-navBar'>
+          
           <div className='left-side'>
             <Link className="storeFrontNav-img-link" to="/costco">
               <img className="instacart-logo" src={require("../../images/instacart-logo-white@3x.png")} alt="instacart" />

@@ -40,7 +40,7 @@ export default class DropdownMenu extends Component {
       ]
     }
     return (
-      <div id= {`dropDownMenu${this.props.titleMenu}`} className="dropDownMenu" >
+      <div className="dropDownMenu" >
         <button className="dropbtn">{this.props.titleMenu}
           <i className="dropdown-arrow-down"></i>
         </button>

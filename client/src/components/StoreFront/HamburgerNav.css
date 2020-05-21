@@ -1,0 +1,120 @@
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 30px;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ffffff;
+  border-width: thin
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #323232;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #323232;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: rgb(255, 255,255);
+  padding: 1em 1.5em 0;
+  font-size: 1.15em;
+  border-right: 3px solid rgba(50, 50, 50, .7)
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #565656;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  padding: 0px
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0px
+}
+
+/* ==== BELOW ARE THE CREATED CLASSES ==== */
+
+.departments-header {
+  margin-top: 0px;
+  font-size: 28px;
+  color: #323232;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.32px;
+}
+
+.parent-menu-hamburger, .departments-header{
+  text-align: left;
+}
+.parent-sub-menu-hamburger{
+  padding-left: 20px
+}
+ul, li, .department-item-hamburger {
+  color: #2f821f;
+  text-decoration: none;
+  list-style: none;
+}
+.department-item-hamburger {
+  letter-spacing: .26px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  padding: 5px 13px
+  }
+.department-item-hamburger:hover{
+  background-color: rgba(113, 113, 113, .2);
+  border-radius: 5px
+}
+
+
+@media(min-width: 900px){
+  .hamburger-menu{
+    display: none
+  }
+}
+@media(max-width: 700px){
+  .bm-burger-button {
+    left: 20px;
+    top: 20px;
+  }
+}
+@media(max-width: 400px){
+  .bm-burger-button {
+    width: 32px;
+    height: 28px;
+  }
+}

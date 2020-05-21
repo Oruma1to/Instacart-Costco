@@ -74,3 +74,8 @@
   width: 1px;
   height: 1px;
 }
+@media(max-width: 500px){
+  .dropDownMenu .dropbtn{
+    font-size: 18px;  
+  }
+}
