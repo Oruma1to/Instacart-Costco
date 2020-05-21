@@ -82,3 +82,55 @@
  font-family: inherit;
  text-decoration: underline;
 }
+
+
+
+@media (max-width: 720px) {
+  .create-form {
+    width: 420px;
+    height: 700px;
+  }
+  .add-product-body {
+    height: 100vh;
+  }
+}
+
+/* @media (max-width: 460px) {
+  .editProduct-container {
+    width: 320px;
+    height: 600px;
+    padding: 0;
+  }
+  .editProduct-items-details {
+    padding-top: 0;
+    margin: 0;
+  }
+  .editProduct-label {
+    font-size: 14px;
+  }
+  .editProduct {
+    width: 175px;
+    font-size: 12px;
+  }
+  .editProduct-image-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .details-of-editProduct {
+    flex-direction: column;
+  }
+  .editProduct-image {
+    width: 150px;
+    height: 150px;
+  }
+  .editProduct-field-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .editProduct-button {
+    margin-top: 30px;
+  } */
