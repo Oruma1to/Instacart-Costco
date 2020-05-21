@@ -84,7 +84,7 @@ class SignIn extends Component {
             <div className="passwordInput">
               <input
                 required
-                type="text"
+                type="password"
                 name="password"
                 value={password}
                 id="password-input"
