@@ -45,9 +45,18 @@ export const deleteProduct = async id => {
  }
 }
 
-export const getNewArrivals = async id => {
+export const getNewArrivals = async () => {
  try {
   const response = await api.get('/search/newarrivals')
+  return response.data
+ } catch (error) {
+  throw error
+ }
+}
+
+export const getSearchProducts = async (term) => {
+ try {
+  const response = await api.get(`searching/${term}`)
   return response.data
  } catch (error) {
   throw error

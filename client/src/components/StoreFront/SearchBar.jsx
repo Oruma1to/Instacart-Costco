@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+
+import { getSearchProducts } from "../services/product"
+
 import './SearchBar.css'
 
 export default class SearchBar extends Component {

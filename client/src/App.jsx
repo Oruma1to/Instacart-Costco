@@ -17,6 +17,7 @@ export default class App extends Component {
   super();
   this.state = {
    user: null,
+
   };
  }
 
@@ -26,6 +27,8 @@ export default class App extends Component {
    this.setState(user);
   }
  }
+
+ 
 
  setUser = (user) => this.setState({ user });
 
