@@ -37,7 +37,6 @@ export default class SearchBar extends Component {
  }
 
  render(props) {
-  console.log("Search", this.props.setSearchProducts)
   return (
    <div className="search-bar-container" >
     <form className="search-bar" onSubmit={this.handleOnSubmit}>

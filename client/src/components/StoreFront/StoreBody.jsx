@@ -4,24 +4,49 @@ import ProductList from "./ProductList";
 import Departments from "./Departments"
 import Product from "../StoreFront/Product"
 import './StoreBody.css'
+import { getProducts } from "../../services/product";
 
 export default class StoreBody extends Component {
  constructor(props) {
   super(props);
 
   this.state = {
-   foundProducts: [],
+   filterValue: [],
+   found: [],
+   products: null
   };
  }
- render() {
-  // console.log("STOREBODY", this.props.user)
-  let searchProductdata = true;
-  console.log("STOREBODY SEARCH DATA", this.props.searchProducts)
-  if (this.props.searchProducts === null) {
-   searchProductdata = false
-  }
-  const products =
-   searchProductdata ?
+
+ async componentDidMount() {
+  const filterValue = await getProducts();
+  this.setState({ filterValue })
+ }
+
+
+
+
+ linkNavBar = (property, value) => {
+  console.log("linkNavBar", property, value)
+  let products = this.state.filterValue.filter(function (product) {
+   return product[property] === value
+  })
+  console.log("Found products: ", products)
+  this.setState({ found: products })
+ }
+
+ // linkCategories = (value) => {
+ //  let products = this.state.filterValue.filter(function (product) {
+ //   return product.department === value
+ //  })
+ //  console.log("Found products: ", products)
+ //  this.setState({ found: products })
+ // }
+
+
+ renderingProducts = (value) => {
+  // let searchProductdata = true;
+  if (this.props.searchProducts !== null) {
+   value =
     this.props.searchProducts.map((product, index) => (
      <Product
       user={this.props.user}
@@ -33,12 +58,35 @@ export default class StoreBody extends Component {
       price={product.price}
       size={product.size}
      />
-    )) : null;
+    ))
+  } else if (this.state.found.length > 0) {
+   value = this.state.found.map((product, index) => (
+    <Product
+     user={this.props.user}
+     key={index}
+     _id={product._id}
+     imageURL={product.imageURL}
+     brand={product.brand}
+     name={product.name}
+     price={product.price}
+     size={product.size}
+    />
+   ))
+  }
+
+  return value
+ }
+
+
+ render() {
+  let products = null
+  products = this.renderingProducts(products);
+
   return (
    <div className="storeBodyPage">
     <DeliveryTo />
     <main className="storeBodySection">
-     <Departments />
+     <Departments linkNavBar={this.linkNavBar} />
      {products ?
       <div className="searchProductsOuterDiv">{products}</div>
       :
