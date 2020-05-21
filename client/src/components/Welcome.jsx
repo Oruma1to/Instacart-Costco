@@ -22,7 +22,7 @@ class Welcome extends Component {
  onSignUp = event => {
   event.preventDefault()
   localStorage.setItem('usersEmail', this.state.email);
-  console.log(localStorage.getItem('usersEmail') || '')
+  console.log(localStorage.getItem('usersEmail') || null)
   if (this.state.email) {
    this.props.history.push("/costco")
   }
