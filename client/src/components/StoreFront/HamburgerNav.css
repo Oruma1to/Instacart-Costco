@@ -1,5 +1,5 @@
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 36px;
   height: 30px;
   left: 36px;
@@ -100,5 +100,18 @@ ul, li, .department-item-hamburger {
 @media(min-width: 900px){
   .hamburger-menu{
     display: none
+  }
+}
+@media(max-width: 700px){
+  .bm-burger-button {
+    left: 20px;
+    top: 20px;
+  }
+}
+@media(max-width: 400px){
+  .bm-burger-button {
+    position: fixed;
+    width: 32px;
+    height: 28px;
   }
 }
