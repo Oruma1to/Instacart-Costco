@@ -4,6 +4,7 @@ import ProductList from "./ProductList";
 import Departments from "./Departments"
 import Product from "../StoreFront/Product"
 import './StoreBody.css'
+import { getProducts } from "../../services/product";
 
 export default class StoreBody extends Component {
  constructor(props) {
@@ -11,7 +12,20 @@ export default class StoreBody extends Component {
 
   this.state = {
    foundProducts: [],
+   filterValue: []
   };
+ }
+
+ async componentDidMount() {
+  const filterValue = await getProducts();
+  this.setState({ filterValue })
+ }
+
+ linkDepartments = (value) => {
+  let found = this.state.filterValue.filter(function (product) {
+   return product.department === value
+  })
+  console.log(found)
  }
  render() {
   // console.log("STOREBODY", this.props.user)
@@ -38,7 +52,7 @@ export default class StoreBody extends Component {
    <div className="storeBodyPage">
     <DeliveryTo />
     <main className="storeBodySection">
-     <Departments />
+     <Departments linkDepartments={this.linkDepartments} />
      {products ?
       <div className="searchProductsOuterDiv">{products}</div>
       :
