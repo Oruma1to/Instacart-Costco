@@ -76,3 +76,36 @@
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
 }
+@media (max-width: 650px) {
+  .editProduct-container {
+    width: 420px;
+    height: 525px;
+  }
+  .editProduct-items-details {
+    padding-top: 0;
+  }
+  .editProduct-label {
+    font-size: 14px;
+  }
+  .editProduct {
+    width: 150px;
+    font-size: 12px;
+  }
+  .details-of-Products {
+    object-fit: contain;
+  }
+  .productDetail-image {
+    width: 150px;
+    height: 150px;
+  }
+  .editProduct-image-container {
+    padding: 20px;
+  }
+  .productDetail-buttons {
+    margin-top: 25px;
+  }
+  .productDetail-buttons > button {
+    height: 30px;
+    font-size: 18px;
+  }
+}
