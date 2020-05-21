@@ -35,7 +35,7 @@ height: max-content;
   margin: 3px 0 8px 0;
 }
 
-.facebook-button-signin{
+.facebook-button-signup{
   color: white;
   background-color: #375089;
   border: #375089;
@@ -46,7 +46,7 @@ height: max-content;
   margin: 2px;
 
 }
-.google-button-signin {
+.google-button-signup {
   color: white;
   background-color: #214EC0;
   border:  #214EC0;

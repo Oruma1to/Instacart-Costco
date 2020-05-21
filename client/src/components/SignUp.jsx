@@ -116,10 +116,10 @@ class CreateAccount extends Component {
 
           <div className="orLoginInfo">
             <div>
-              <button className="facebookButton">Sign up with Facebook</button>
+              <button className="facebook-button-signup">Sign up with Facebook</button>
             </div>
             <div>
-              <button className="googleButton">Sign up with Google</button>
+              <button className="google-button-signup">Sign up with Google</button>
             </div>
             <div className="alreadyLogin">
               <h4>Already have an account? <Link to="/sign-in">Log In</Link></h4>
