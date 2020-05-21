@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './SignUp.css'
+import './Welcome.css'
 import { Link } from 'react-router-dom'
 import LandingHeader from "./LandingHeader"
 
