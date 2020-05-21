@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getSearchProducts } from "../../services/product"
 
 import './SearchBar.css'
+import { Redirect } from 'react-router-dom';
 
 export default class SearchBar extends Component {
  constructor(props) {
@@ -10,24 +11,33 @@ export default class SearchBar extends Component {
    filteredValue: ""
   };
  }
+ search = async () => {
+  const { filteredValue } = this.state
+  console.log("APP SEARCHFORITEM.....", filteredValue)
+  let searchProducts = await getSearchProducts(filteredValue);
+  console.log(searchProducts)
+  this.props.setSearchProducts(searchProducts)
+ }
+
  handleOnSubmit = (e) => {
   e.preventDefault();
-  console.log("in handleSubmit", this.state.filteredValue)
-  if (this.state.filteredValue.length < 0) {
-   this.setState({ filteredValue: "" })
-  }
-  this.props.searchForItem(this.state.filteredValue)
+  //console.log("in handleSubmit", this.state.filteredValue)
+  //this.search();
  }
+
+
  handleSearchChange = e => {
   console.log("SEARCHBAR HANDLESEARCHCHANGE ", e.target.value)
   let filteredValue = e.target.value
-  this.setState({ filteredValue })
-  this.props.searchForItem(this.state.filteredValue)
+  if (e.target.value !== "") {
+   this.setState({ filteredValue }, this.search)
+  } else {
+   this.props.setSearchProducts(null)
+  }
  }
+
  render(props) {
-  // console.log("in the search ", this.state.products)
-  // console.log("in the search ", this.props.searchForItem)
-  // console.log("in the search ", this.props.searchProducts)
+  console.log("Search", this.props.setSearchProducts)
   return (
    <div className="search-bar-container" >
     <form className="search-bar" onSubmit={this.handleOnSubmit}>

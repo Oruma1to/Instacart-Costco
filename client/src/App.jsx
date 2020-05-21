@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import "./App.css"
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/user'
-import { getSearchProducts } from './services/product'
 import Welcome from './components/Welcome'
 import LandingPage from "./components/LandingPage"
 import SignIn from './components/SignIn'
@@ -18,7 +17,7 @@ export default class App extends Component {
   super();
   this.state = {
    user: null,
-   searchProducts: null
+   searchProducts: null,
   };
  }
 
@@ -27,19 +26,8 @@ export default class App extends Component {
   if (user) {
    this.setState(user);
   }
+
  }
-
- searchForItem = async (term) => {
-  console.log("In searchFortITEM......", term)
-  if (term.length !== 0) {
-   let searchProducts = await getSearchProducts(term);
-   this.setState({ searchProducts });
-  } else {
-   this.setState({ searchProducts: null });
-  }
- }
-
-
 
  setUser = (user) => this.setState({ user });
 
@@ -50,7 +38,7 @@ export default class App extends Component {
  render() {
   const { setUser, clearUser } = this;
   const { user } = this.state;
-  console.log("In App page", user);
+  // console.log("In App page", user);
 
   console.log("App SEARCH DATA", this.state.searchProducts)
 
@@ -63,7 +51,7 @@ export default class App extends Component {
      <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
      <Route exact path="/sign-in" render={routerProps => <SignIn setUser={setUser} history={routerProps.history} />} />
      <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-     <Route exact path="/costco" render={() => <StoreFront user={user} searchForItem={this.searchForItem} searchProducts={this.state.searchProducts} />} />
+     <Route exact path="/costco" render={() => <StoreFront user={user} setSearchProducts={this.setSearchProducts} searchProducts={this.state.searchProducts} />} />
      <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id" render={props => user ? <ProductDetail {...props} history={props.history} user={user} /> : <Redirect to="/costco" />} />
      <Route exact path="/costco/:id/edit" render={props => <EditProduct {...props} user={user} />} />

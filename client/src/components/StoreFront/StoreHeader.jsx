@@ -23,7 +23,7 @@ export default class StoreHeader extends Component {
      <Link to="#">More info</Link>
     </div>
 
-    <SearchBar searchForItem={this.props.searchForItem} searchProducts={this.props.searchProducts} />
+    <SearchBar setSearchProducts={this.props.setSearchProducts} searchProducts={this.props.searchProducts} />
    </div>
   )
  }
