@@ -8,7 +8,7 @@ class Welcome extends Component {
   super()
 
   this.state = {
-   email: null
+   email: ''
   }
  }
 
@@ -55,7 +55,7 @@ class Welcome extends Component {
       <div className="terms-container">
        <p className="terms">By signing up, you agree to our</p>
        <div className="link-container">
-        <Link src="#blank">Terms of Service</Link> <span>&</span> <Link src="#blank">Privacy Policy</Link>
+        <Link to="#blank">Terms of Service</Link> <span>&</span> <Link to="#blank">Privacy Policy</Link>
        </div>
       </div>
 
