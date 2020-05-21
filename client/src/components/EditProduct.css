@@ -1,32 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
-
-.editProduct-outerDiv{
-  font-family: 'Open Sans', sans-serif;
+.editProduct-outerDiv {
+  font-family: "Open Sans", sans-serif;
   background-color: #aeaeae;
   height: 100vmax;
 }
-.editProduct-Header{
+.editProduct-Header {
   background-color: #2f821f;
 }
 
 .editProduct-container {
   display: flex;
   flex-direction: column;
- background-color:  #ffffff;
- margin: 50px auto;
- width: 600px;
- height: max-content;
- padding: 20px;
- box-shadow: 2px 2px 10px 2px rgb(148, 142, 142);
- }
- .details-of-editProduct{
+  background-color: #ffffff;
+  margin: 50px auto;
+  width: 600px;
+  height: max-content;
+  padding: 20px;
+  box-shadow: 2px 2px 10px 2px rgb(148, 142, 142);
+}
+.details-of-editProduct {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
- .editProduct-image-container{
+.editProduct-image-container {
   padding: 40px;
   align-self: center;
 }
@@ -39,41 +38,41 @@
   flex-direction: column;
   margin: 0 auto;
   letter-spacing: 0.8px;
-  padding-top: 40px ;
+  padding-top: 40px;
   line-height: 1.5;
 }
-.editProduct-label{
+.editProduct-label {
   font-size: 20px;
   font-weight: bold;
   text-decoration: underline;
 }
-.editProduct{
+.editProduct {
   margin-top: 2px;
   margin-left: 10px;
 }
-.editProduct-button{
+.editProduct-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.editProduct-save{
-    font-size: 22px;
-    border-radius: 4px;
-    height: 40px;
-    margin-top: 5px;
-    background-color: #2f821f;
-    color: white;
-    border: none;
-    box-shadow: 1px 1px 5px 1px #CECECE;
-    cursor: pointer;
-    align-self:center;
+.editProduct-save {
+  font-size: 22px;
+  border-radius: 4px;
+  height: 40px;
+  margin-top: 5px;
+  background-color: #2f821f;
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 5px 1px #cecece;
+  cursor: pointer;
+  align-self: center;
 }
 
 .edit-input-image-link {
-    width: 200px;
-    height: 30px;
-    text-align: left;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
+  width: 200px;
+  height: 30px;
+  text-align: left;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
 }
