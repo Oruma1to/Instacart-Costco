@@ -8,6 +8,7 @@
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #ffffff;
+  border-width: thin
 }
 
 /* Color/shape of burger icon bars on hover*/
