@@ -56,7 +56,7 @@ class CreateAccount extends Component {
         </button>
       )
     } else {
-      return <button className="log-in-signup" type="submit">Log In</button>
+      return <button className="login-signup" type="submit">Log In</button>
     }
   }
 
@@ -67,13 +67,13 @@ class CreateAccount extends Component {
       <>
         <LandingHeader />
 
-        <div className="form-container">
+        <div className="form-container-signup">
           <img className="sign-in-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
 
           {/* <div className="instacart-detail-image"></div> */}
-          <div className="sign-in-welcome">Welcome to Instacart</div>
-          <div className="login-prompt">Create a profile using your email and password</div>
+          <div className="signup-welcome">Welcome to Instacart</div>
+          <div className="signup-prompt">Create a profile using your email and password</div>
           <form onSubmit={this.onSignUp}>
 
             <div className="usernameInput">
@@ -121,7 +121,7 @@ class CreateAccount extends Component {
             <div>
               <button className="google-button-signup">Sign up with Google</button>
             </div>
-            <div className="alreadyLogin">
+            <div className="already-signup">
               <h4>Already have an account? <Link to="/sign-in">Log In</Link></h4>
             </div>
           </div>

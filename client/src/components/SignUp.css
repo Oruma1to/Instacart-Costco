@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
-.form-container {
+.form-container-signup {
 background: white;
 text-align: center;
 display: flex;
@@ -19,7 +19,7 @@ height: max-content;
 
 
 
-.sign-in-welcome{
+.signup-welcome{
   color: solid #4444;
   font-size: 20px;
   margin-top: 0;
@@ -27,7 +27,7 @@ height: max-content;
 }
 
 
-.login-prompt {
+.signup-prompt {
   color: grey;
   font-size: 14px;
   font-weight:600;
@@ -58,12 +58,12 @@ height: max-content;
 
 }
 
-.alreadyLogin {
+.already-signup {
   color: grey;
   font-size: 13px; 
 }
 
-.log-in-signup {
+.login-signup {
   background-color: rgb(45, 131, 40);
   color: white;
   height: 28px;
@@ -94,15 +94,15 @@ input {
   margin: 4px auto;
   justify-content: center;
 }
-.separator-signin::before, .separator-signin::after {
+.separator-signup::before, .separator-signup::after {
   content: "  ";
   flex: 2;
   border-bottom: 1px solid gray;
 }
-.separator-signin::before {
+.separator-signup::before {
   margin-right: 5px;
 }
-.separator-signin::after {
+.separator-signup::after {
     margin-left: 5px;
 }
 .sign-in-instacart-detail-image{
