@@ -81,13 +81,15 @@
     margin: 0 5px
   }
   .product-image{
-    width: 75px;
-    height: 75px;
-    margin: 0px 10px
+    /* width: 100px;
+    height: 100px; */
+    margin: 10px 10px;
+
   }
   .product-add-btn, .product-edit-btn{
     font-size: 18px;
-    margin: 0 15px 10px;
+    margin: 70px 15px 10px;
+
   }
 
   .product-container {
