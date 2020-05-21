@@ -12,19 +12,13 @@
   flex-direction: column;
   width: 100%;
 }
-@media (max-width: 900px){
-  .storebody-products-list{
-    align-items: center;
-  }
-  .storeBodySection{
-    margin: 0;
-  }
-}
+
 
 /* Search Result CSS */
 .searchProductsOuterDiv{
  display: flex;
  flex-wrap: wrap;
+ justify-content: center;
  background-color: white;
  margin: 10px 0;
  margin-right: 15px;
@@ -33,4 +27,13 @@
   border: 3px dotted #ff7a59;
   color: #ff7a59;
   background: #fff;
+}
+
+@media (max-width: 900px){
+  .storebody-products-list{
+    align-items: center;
+  }
+  .storeBodySection{
+    margin: 0;
+  }
 }
