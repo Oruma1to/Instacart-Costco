@@ -31,13 +31,13 @@ class Welcome extends Component {
     return (
       <>
         <LandingHeader />
-        <div id="suForm" className="form-container-signup">
+        <div id="suForm" className="form-container-welcome">
 
           <img className="sign-up-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
-          {/* <div> */}
-            <p className="sign-up-createAcc">Create an account to start shopping</p>
-          {/* </div> */}
+          <div>
+            <p className="sign-up-createAcc">Enter your email to start shopping</p>
+          </div>
           <form onSubmit={this.onSignUp}>
             <div className="sign-up-emailInput">
               <input
@@ -70,7 +70,7 @@ class Welcome extends Component {
               </div>
             </div>
             <div className="alreadyAcc">
-       Already have an account? <Link className="signIn" to="/sign-in">Log in</Link>
+       Already have an account? <Link className="sign-in-btn" to="/sign-in">Log in</Link>
             </div>
           </form>
         </div>

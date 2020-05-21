@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 
-.form-container-signup {
+.form-container-welcome {
 background: white;
 text-align: center;
 display: flex;
@@ -27,10 +27,11 @@ height: 420px;
 } */
 
 .sign-up-createAcc {
-  color: gray;
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0
+  color: grey;
+  font-size: 14px;
+  font-weight:600;
+  letter-spacing: .4px;
+  margin: 60px 0 8px 0;
 }
 
 .terms, .link-container > span {
@@ -52,7 +53,7 @@ height: 420px;
   margin: 5px 0 5px 0;
 }
 
-.signIn {
+.sign-in-btn{
   color: green;
   text-decoration: none;
 }
@@ -93,9 +94,6 @@ height: 420px;
   margin-bottom: -55px;
 }
 
-.sign-up-emailInput{
-  margin-top: -30px;
-}
 .facebook-button-signup {
   color: white;
   background-color: #375089;
@@ -131,10 +129,14 @@ h4 > a{
 }
 
 @media(max-width: 450px){
-  .form-container-signup{
+  .form-container-welcome{
     width: 298px;
     height: 426px
   }
+  .sign-up-createAcc {
+    margin: 0px;
+  }
+  
 }
 
 @media(max-width: 360px){
