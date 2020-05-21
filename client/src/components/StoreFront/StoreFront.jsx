@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import StoreHeader from "./StoreHeader";
-import { StoreBody } from "./StoreBody";
+import StoreBody from "./StoreBody";
 
 import "./StoreFront.css";
 
