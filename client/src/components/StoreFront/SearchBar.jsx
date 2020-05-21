@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-
-import { getSearchProducts } from "../services/product"
+import { getSearchProducts } from "../../services/product"
 
 import './SearchBar.css'
 
@@ -13,10 +12,15 @@ export default class SearchBar extends Component {
    filteredPosts: null
   };
  }
+ searchForItem = async (term) => {
+  console.log("In searchFortITEM", term)
+  let products = await getSearchProducts(term);
+  this.setState({ products });
+ }
  handleOnSubmit = (e) => {
   e.preventDefault();
-  console.log(e.target.value)
-  console.log("I was clicked")
+  console.log("in handleSubmit", this.state.filteredValue)
+  this.searchForItem(this.state.filteredValue)
  }
  handleSearchChange = e => {
   console.log(e.target.value)
@@ -24,6 +28,7 @@ export default class SearchBar extends Component {
   this.setState({ filteredValue })
  }
  render(props) {
+  console.log("in the search ", this.state.products)
   return (
    <div className="search-bar-container" >
     <form className="search-bar" onSubmit={this.handleOnSubmit}>
