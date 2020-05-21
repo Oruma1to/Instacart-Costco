@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import { bubble as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 import './HamburgerNav.css'
 
 export default class HamburgerNav extends Component {
   render() {
     return (
-      <div className='hamburger-menu'>
+      <div className= "hamburger-menu">
         <Menu width={'400px'}>
           <h1 className= "departments-header">Departments</h1>
           <ul className="parent-menu-hamburger">

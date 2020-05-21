@@ -24,7 +24,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #b8b7ad;
+  background: #323232;
 }
 
 /*
@@ -38,8 +38,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgba(255, 255,255, .5);
-  padding: 2.5em 1.5em 0;
+  background: rgb(255, 255,255);
+  padding: 1em 1.5em 0;
   font-size: 1.15em;
 }
 
@@ -107,11 +107,29 @@ ul, li, .department-item-hamburger {
     left: 20px;
     top: 20px;
   }
+  .department-item-hamburger {
+    font-size: 15px;
+  }
+  .departments-header{
+    font-size: 24px;
+  }
+}
+@media(max-width: 615px){
+  .bm-menu {
+    padding: 2.5em .5em 0;
+    font-size: 1.15em;
+  }
 }
 @media(max-width: 400px){
   .bm-burger-button {
-    position: fixed;
     width: 32px;
     height: 28px;
   }
+  .bm-menu {
+    background: rgba(255, 255,255, .8);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+
 }
