@@ -183,7 +183,7 @@ const main = async () => {
       name: "Jj Cassone Sandwich Rolls",
       brand: "Jj",
       department: "Bakery & Desserts",
-      category: "Bread",
+      category: "Buns & Rolls",
       imageURL: "https://d2d8wwwkmhfcva.cloudfront.net/271x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_830dabb6-7b5b-4d16-a84a-3991cfd1a56c.jpeg",
       price: 3.69,
       size: "12 ct",
