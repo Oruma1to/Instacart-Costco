@@ -34,17 +34,7 @@ export default class StoreBody extends Component {
   this.setState({ found: products })
  }
 
- // linkCategories = (value) => {
- //  let products = this.state.filterValue.filter(function (product) {
- //   return product.department === value
- //  })
- //  console.log("Found products: ", products)
- //  this.setState({ found: products })
- // }
-
-
  renderingProducts = (value) => {
-  // let searchProductdata = true;
   if (this.props.searchProducts !== null) {
    value =
     this.props.searchProducts.map((product, index) => (
