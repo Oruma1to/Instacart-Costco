@@ -4,9 +4,7 @@
 
 .storeBodySection{
   display: flex;
-  /* justify-content: flex-start; */
   margin-left: 10px;
-  /* width: 100%; */
 }
 .storebody-products-list{
   display: flex;
@@ -26,12 +24,11 @@
 /* Search Result CSS */
 .searchProductsOuterDiv{
  display: flex;
- /* flex-direction: column; */
  flex-wrap: wrap;
-/* justify-content: space-evenly; */
-background-color: white;
-margin: 10px 0;
+ background-color: white;
+ margin: 10px 0;
+ margin-right: 15px;
 }
 .searchProductsOuterDiv > *{
-border: 2px solid lightcoral;
+border: 2px solid lightgray;
 }

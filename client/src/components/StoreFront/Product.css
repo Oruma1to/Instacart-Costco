@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .product-wrapper {
-  /* width: 140px;
-  height: 300px;
-  margin: 30px 50px 10px 50px */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
-  margin: 30px 50px 10px 50px
+  margin: 30px 40px 10px 50px
 
 }
 .product-container {
@@ -35,6 +31,7 @@
 .product-title {
   font-size: 12px;
   color: #717171;
+  width: 200px;
   margin: 5px
 }
 .product-size {
