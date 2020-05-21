@@ -6,11 +6,11 @@ import "./StoreFront.css";
 
 export default class StoreFront extends Component {
  render() {
-  console.log("In Store Front ", this.props.user)
+  // console.log("In Store Front ", this.props.user)
   return (
    <div className="store-front">
-    <StoreHeader user={this.props.user} searchForItem={this.props.searchForItem} searchProducts={this.props.searchProducts} />
-    <StoreBody user={this.props.user} searchForItem={this.props.searchForItem} searchProducts={this.props.searchProducts} />
+    <StoreHeader user={this.props.user} searchForItem={this.props.searchForItem} />
+    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} />
    </div>
   );
  }

@@ -14,10 +14,14 @@ export default class StoreBody extends Component {
   };
  }
  render() {
-  console.log("In storeBody", this.props.user)
-  console.log("IN STOREBODY", this.props.searchProducts)
+  // console.log("STOREBODY", this.props.user)
+  let searchProductdata = true;
+  console.log("STOREBODY SEARCH DATA", this.props.searchProducts)
+  if (this.props.searchProducts === null || this.props.searchProducts.length === 0) {
+   searchProductdata = false
+  }
   const products =
-   this.props.searchProducts ?
+   searchProductdata ?
     this.props.searchProducts.map((product, index) => (
      <Product
       user={this.props.user}
@@ -29,8 +33,7 @@ export default class StoreBody extends Component {
       price={product.price}
       size={product.size}
      />
-    )) :
-    "";
+    )) : null;
   return (
    <div className="storeBodyPage">
     <DeliveryTo />
@@ -39,7 +42,6 @@ export default class StoreBody extends Component {
      {products ?
       // <div className="searchProductsOuterDiv"></div>
       <div className="searchProductsOuterDiv">{products}</div>
-
       :
       <div className="storebody-products-list">
        <ProductList user={this.props.user} dataInfo={1} title="Buy Again" />

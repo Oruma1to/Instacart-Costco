@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default class StoreHeader extends Component {
  render() {
-  console.log("In Store Header ", this.props.user)
+  // console.log("STOREHEADER ", this.props.user)
   return (
    <div className='apple-header'>
     <StoreFrontNavBar user={this.props.user} />

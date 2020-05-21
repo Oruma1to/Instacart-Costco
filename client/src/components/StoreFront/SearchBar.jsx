@@ -7,31 +7,25 @@ export default class SearchBar extends Component {
  constructor(props) {
   super(props);
   this.state = {
-   products: [],
-   filteredValue: "",
-   filteredPosts: null
+   filteredValue: ""
   };
  }
- // searchForItem = async (term) => {
- //  console.log("In searchFortITEM", term)
- //  let products = await getSearchProducts(term);
- //  this.setState({ products });
- // }
  handleOnSubmit = (e) => {
   e.preventDefault();
   console.log("in handleSubmit", this.state.filteredValue)
-  // this.searchForItem(this.state.filteredValue)
+  this.setState({ filteredValue: "" })
   this.props.searchForItem(this.state.filteredValue)
  }
  handleSearchChange = e => {
-  console.log(e.target.value)
+  console.log("SEARCHBAR HANDLESEARCHCHANGE ", e.target.value)
   let filteredValue = e.target.value
   this.setState({ filteredValue })
+  this.props.searchForItem(this.state.filteredValue)
  }
  render(props) {
-  console.log("in the search ", this.state.products)
-  console.log("in the search ", this.props.searchForItem)
-  console.log("in the search ", this.props.searchProducts)
+  // console.log("in the search ", this.state.products)
+  // console.log("in the search ", this.props.searchForItem)
+  // console.log("in the search ", this.props.searchProducts)
   return (
    <div className="search-bar-container" >
     <form className="search-bar" onSubmit={this.handleOnSubmit}>

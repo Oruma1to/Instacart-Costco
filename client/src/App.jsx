@@ -30,14 +30,20 @@ export default class App extends Component {
  }
 
  searchForItem = async (term) => {
-  console.log("In searchFortITEM", term)
-  let searchProducts = await getSearchProducts(term);
-  this.setState({ searchProducts });
+  console.log("In searchFortITEM......", term)
+  if (term !== "") {
+   let searchProducts = await getSearchProducts(term);
+   this.setState({ searchProducts });
+  } else {
+   this.setState({ searchProducts: null });
+  }
  }
 
 
 
  setUser = (user) => this.setState({ user });
+
+ setSearchProducts = (searchProducts) => this.setState({ searchProducts });
 
  clearUser = () => this.setState({ user: null });
 
@@ -45,6 +51,8 @@ export default class App extends Component {
   const { setUser, clearUser } = this;
   const { user } = this.state;
   console.log("In App page", user);
+
+  console.log("App SEARCH DATA", this.state.searchProducts)
 
 
   return (

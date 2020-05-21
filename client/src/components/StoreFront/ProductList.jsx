@@ -27,7 +27,7 @@ class ProductList extends Component {
 
  render() {
   console.log("all products-->", this.state.products);
-  console.log("all products-->", this.props.user);
+  // console.log("all products-->", this.props.user);
   const PRODUCTS = this.state.products
    .map((product, index) => (
     <Product
