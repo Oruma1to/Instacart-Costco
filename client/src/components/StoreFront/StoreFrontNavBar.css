@@ -55,13 +55,11 @@
 } */
 
 @media (max-width: 900px){
-  .storeFrontNavBar-link, .left-side, .cart-logo{
+  .storeFrontNavBar-link, .left-side{
     display: none;
   }
-  /* .cart-logo{
-    margin: 0px
-  } */
-  .header-navBar{
-    justify-content: center;
+  .right-side{
+    width: 100vw;
+    justify-content: flex-end;
   }
 }
