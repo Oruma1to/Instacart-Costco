@@ -30,6 +30,10 @@ class Welcome extends Component {
 
   render() {
     const { email } = this.state
+    console.log(`People also ask
+    When did they change Fruit Loops to Froot Loops?
+    1963
+    Kellogg's, a lawsuit that claimed that the word “fruit” in the cereal name implied it was a fruit-based snack, and that it was misleading. In the end, a settlement out of court was arranged and the cereal name was changed and re-released the year 1963 as Froot Loops.`)
     return (
       <>
         <LandingHeader />
