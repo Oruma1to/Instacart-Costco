@@ -23,9 +23,10 @@
  margin-right: 15px;
 }
 .searchProductsOuterDiv > *:hover{
-  border: 3px dotted #ff7a59;
-  color: #ff7a59;
-  background: #fff;
+  /* border: 3px dotted #ff7a59;
+  color: #ff7a59; */
+  border-radius: 5px;
+  background: lightgray;
 }
 
 @media (max-width: 900px){

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { getSearchProducts } from "../../services/product"
 
 import './SearchBar.css'
-import { Redirect } from 'react-router-dom';
 
 export default class SearchBar extends Component {
   constructor(props) {
