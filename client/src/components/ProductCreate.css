@@ -35,10 +35,6 @@
 
 .add-product-input{
     font-size: 22px;
-    /* border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: hidden; */
     border: 2px solid lightgrey;
     border-radius: 4px;
     margin: 10px;
@@ -103,7 +99,7 @@
     padding: 10px;
   }
 
-   .add-product-body {
+  .add-product-body {
     height: 100vh;
   }
 }

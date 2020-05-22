@@ -10,8 +10,6 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 const SALT_ROUNDS = 11;
 const TOKEN_KEY = process.env.TOKEN_MASTER;
 
-// Auth goes here
-
 const getProducts = async (req, res) => {
  try {
   const products = await Product.find()
