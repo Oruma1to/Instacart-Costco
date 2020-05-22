@@ -48,12 +48,6 @@
   margin: 10px;
 }
 
-/* .storeFrontNav-img-link{
-  width: max-content;
-  height: max-content;
- text-decoration: none;
-} */
-
 @media (max-width: 900px){
   .storeFrontNavBar-link, .left-side{
     display: none;

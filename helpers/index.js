@@ -13,5 +13,3 @@ module.exports = (req, res, next) => {
   res.status(403).send("Unauthorized");
  }
 };
-//This is for the back-End routes
-//validate json.token's header 

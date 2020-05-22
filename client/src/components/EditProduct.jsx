@@ -4,7 +4,6 @@ import { Redirect } from "react-router-dom";
 import StoreFrontNavBar from "./StoreFront/StoreFrontNavBar";
 import { departments, checker } from "./selectedOptions";
 import Select from "react-select";
-//This is tentative naming...I have to wait till josh finish his services
 import { getProduct, updateProduct } from "../services/product";
 
 class PostEdit extends Component {
@@ -93,7 +92,6 @@ class PostEdit extends Component {
               className="editProduct-items-details"
               onSubmit={this.handleSubmit}
             >
-              {/* <div className="editProduct-items-details"> */}
               <div className="editProduct-field-wrapper">
                 <div className="editProduct-label">Brand:</div>
                 <input
@@ -158,7 +156,6 @@ class PostEdit extends Component {
               </div>
               <div className="editProduct-field-wrapper">
                 <div className="editProduct-label">Category: </div>
-                {/* <div className="editProduct">{product.category}</div> */}
                 {product.department ? (
                   <Select
                     className="editProduct"
@@ -167,11 +164,10 @@ class PostEdit extends Component {
                     onChange={this.handleSelected}
                   />
                 ) : (
-                  ""
-                )}
+                    ""
+                  )}
               </div>
 
-              {/* </div> */}
               <div className="editProduct-button">
                 <button type="submit" className="editProduct-save">
                   Save

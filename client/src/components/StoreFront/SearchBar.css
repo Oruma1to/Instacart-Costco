@@ -1,10 +1,8 @@
 .search-input {
 width: 450px;
-/* height: 29.5px; */
 margin: 0;
 color: grey;
 border: 0;
-/* border-radius: 7px; */
 border-top-left-radius: 5px;
 border-bottom-left-radius: 5px;
 font-size: 16px;
@@ -26,7 +24,6 @@ width: 5px;
 }
 
 .search-icon {
-  /* height: 32px; */
   margin: 0px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;

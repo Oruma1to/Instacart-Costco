@@ -25,14 +25,12 @@
   font-weight: 600;
   color: #2f821f;
   letter-spacing: .26px;
-  /* font-weight: 400; */
-  /* margin: auto 0; */
+
 }
 
 .carousel {
   display: flex;
   flex-direction: row;
-  /* justify-content: flex-end; */
   width: 100%;
   overflow-x: scroll;
 }
@@ -44,11 +42,6 @@
   margin: 10px 0;
 }
 
-/* .all-carousels {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-} */
 @media(max-width: 740px){
   .buyagain{
     width:calc(100vw - 50px);

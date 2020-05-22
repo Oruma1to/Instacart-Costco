@@ -6,7 +6,7 @@ const LandingHeader = () => {
   return (
     <nav className="nav-main">
       <div className="shopper">
-        <p className = "shopper-text">Want to earn extra money?</p>
+        <p className="shopper-text">Want to earn extra money?</p>
         <button className="shopper-btn">Become a Shopper</button>
       </div>
 

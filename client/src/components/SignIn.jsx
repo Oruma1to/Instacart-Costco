@@ -66,7 +66,6 @@ class SignIn extends Component {
         <div className="form-container">
           <img className="sign-in-instacart-detail-image" alt="instacart-logo"
             src={require('../images/instacartlogo@3x.png')} />
-          {/* <div className="instacart-detail-image"></div> */}
           <div className="sign-in-welcome">Welcome back</div>
           <div className="login-prompt">Log in with your email and password</div>
           <form onSubmit={this.onSignIn}>
