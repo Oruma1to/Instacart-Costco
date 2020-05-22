@@ -18,8 +18,8 @@ export default class DropdownMenu extends Component {
       if (this.props.user !== null) {
         chosenMenu = [
           <Link key="1" className="dropdown-links" to={path}>{content}</Link>,
-          <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
-          <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
+          // <Link key="2" className="dropdown-links" to="#">Edit Product</Link>,
+          // <Link key="3" className="dropdown-links" to="#">Delete Product</Link>,
           <Link key="4" className="dropdown-links" to="/sign-out">Sign Out</Link>
         ]
 
