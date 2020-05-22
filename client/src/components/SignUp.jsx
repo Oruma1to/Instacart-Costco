@@ -33,6 +33,7 @@ class CreateAccount extends Component {
     signUp(this.state)
       .then(() => signIn(this.state))
       .then(res => setUser(res.user))
+      .then(localStorage.clear())
       .then(() => history.push('/costco'))
       .catch(error => {
         console.error(error)
@@ -61,9 +62,7 @@ class CreateAccount extends Component {
 
   render() {
     const { username, email, password } = this.state
-    console.log(localStorage.getItem('usersEmail') || '')
-    localStorage.clear();
-
+  
     return (
 
       <>

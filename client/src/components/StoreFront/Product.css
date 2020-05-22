@@ -58,7 +58,7 @@
   width: 100px;
   height: 40px;
   margin: 15px;
-  background-color: #717171;;
+  background-color: #5394F5;;
   color: #ffffff;
   font-size: 16px;
   border-radius: 10%;
@@ -81,23 +81,17 @@
     margin: 0 5px
   }
   .product-image{
-    /* width: 100px;
-    height: 100px; */
     margin: 10px 10px;
+    height: 90px;
+    width: 90px;
 
   }
   .product-add-btn, .product-edit-btn{
     font-size: 18px;
-    margin: 70px 15px 10px;
-
+    margin-top: 40px;
   }
 
   .product-container {
     height: 150px;
-  }
-
-  .product-add-btn {
-    margin-bottom: 30px;
-    margin-top: 0px;
   }
 }
