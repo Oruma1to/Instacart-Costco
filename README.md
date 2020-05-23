@@ -70,8 +70,19 @@ API SNIPPET
 }
 ```
 
-## Change Log
+## Credits
 
+SEI Team
+Juan Delgado ![GitHub](https://www.github.com/JohnJoseph2019)
+Bianca Biagioni ![GitHub](https://www.github.com/BiaCode9)
+Stefon Simmons ![GitHub](https://www.github.com/StefonSimmons)
+Joshua Aponte ![GitHub](https://www.github.com/Oruma1to)
+Abraham Tavarez ![GitHub](https://www.github.com/AbeTavarez)
+
+UX Team
+Caitlin Chen
+Lucas Zambelli
+Matt Zlotnick
 - 
 
 
