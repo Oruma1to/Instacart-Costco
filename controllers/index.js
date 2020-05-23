@@ -68,17 +68,19 @@ const deleteProduct = async (req, res) => {
   res.status(500).json({ error: error.message })
  }
 }
+
 ///Users
 
 const signUp = async (req, res) => {
  try {
-  const { username, email, password } = req.body
+  console.log(req.body)
+  const { username, email, password, admin_key } = req.body
   const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
   const user = await new User({
    username,
    email,
    password_digest,
-
+   admin_key
   })
   await user.save();
 
@@ -107,7 +109,6 @@ const signIn = async (req, res) => {
     email: user.email
    };
    const token = jwt.sign(payload, TOKEN_KEY);
-   console.log("in backend - signin", user)
    return res.status(201).json({ user, token });
   } else {
    res.status(401).send("Invalid Credentials");
@@ -143,11 +144,9 @@ const getUsers = async (req, res) => {
 
 const newArrivals = async (req, res) => {
  try {
-  console.log("newArivals");
   // const products = await Product.find()
   // const products = await Product.find({}, {}, { sort: { 'createdAt': -1 } });
   const products = await Product.find().sort({ _id: -1 }).limit(6)
-  console.log(products)
   res.json(products)
  } catch (error) {
   res.status(500).json({ error: error.message })
