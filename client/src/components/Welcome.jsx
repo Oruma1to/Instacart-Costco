@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Welcome.css'
 import { Link } from 'react-router-dom'
 import LandingHeader from "./LandingHeader"
+import Facebook from "./Facebook"
 
 class Welcome extends Component {
   constructor() {
@@ -69,7 +70,8 @@ class Welcome extends Component {
 
             <div className="orLoginInfo" >
               <div>
-                <button className="facebook-button-signup">Continue with Facebook</button>
+                {/* <button className="facebook-button-signup">Continue with Facebook</button> */}
+                <Facebook />
               </div>
               <div>
                 <button className="google-button-signup">Continue with Google</button>

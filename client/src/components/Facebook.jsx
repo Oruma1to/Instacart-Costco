@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+
 
 export default class Facebook extends Component {
   state = {
@@ -11,7 +12,7 @@ export default class Facebook extends Component {
   }
 
   responseFacebook = response => {
-    console.log(response);
+    // console.log(response);
   }
 
   componentClicked = () => console.log("clicked");
@@ -26,9 +27,11 @@ export default class Facebook extends Component {
       fbContent = (<FacebookLogin
         appId="537199860293174"
         autoLoad={true}
+        render={renderProps => <button onClick={renderProps.onClick} className="facebook-button-signup">Continue with Facebook</button>}
+
         fields="name,email,picture"
         onClick={this.componentClicked}
-        callback={this.responseFacebook} />);
+        callback={this.responseFacebook} />)
     }
 
     return (

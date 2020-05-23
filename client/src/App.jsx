@@ -53,7 +53,7 @@ export default class App extends Component {
           <Route exact path="/costco/:id" render={props => user ? <ProductDetail {...props} history={props.history} user={user} /> : <Redirect to="/costco" />} />
           <Route exact path="/costco/:id/edit" render={props => <EditProduct {...props} user={user} />} />
 
-          <Route exact path="/sign-in" render={() => <Facebook />} />
+          <Route exact path="/Facebook" render={() => <Facebook />} />
 
 
         </Switch>
