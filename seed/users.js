@@ -6,22 +6,22 @@ db.on('error', console.error.bind(console, "MongoDB connection error:"));
 const SALT_ROUNDS = 11
 
 const createUsers = async () => {
- const users = [
-  {
-   username: "jay",
-   email: "jay@jay.com",
-   password_digest: bcrypt.hashSync('123ga', SALT_ROUNDS),
-   admin_key: true
+  const users = [
+    {
+      username: "jay",
+      email: "jay@jay.com",
+      password_digest: bcrypt.hashSync('123ga', SALT_ROUNDS),
+      admin_key: true
 
-  }
- ]
- await User.insertMany(users);
- console.log('Successfully created 1 user!');
+    }
+  ]
+  await User.insertMany(users);
+  console.log('Successfully created 1 user!');
 }
 
 const run = async () => {
- await createUsers();
- db.close();
+  await createUsers();
+  db.close();
 }
 
 run();
