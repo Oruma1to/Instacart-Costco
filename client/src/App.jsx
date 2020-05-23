@@ -10,7 +10,9 @@ import SignOut from './components/SignOut'
 import ProductCreate from './components/ProductCreate'
 import ProductDetail from "./components/ProductDetail";
 import SignUp from './components/SignUp'
-import EditProduct from './components/EditProduct'
+import EditProduct from './components/EditProduct';
+
+import Facebook from './components/Facebook';
 
 export default class App extends Component {
   constructor() {
@@ -50,6 +52,9 @@ export default class App extends Component {
           <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to="/costco" />} />
           <Route exact path="/costco/:id" render={props => user ? <ProductDetail {...props} history={props.history} user={user} /> : <Redirect to="/costco" />} />
           <Route exact path="/costco/:id/edit" render={props => <EditProduct {...props} user={user} />} />
+
+          <Route exact path="/sign-in" render={() => <Facebook />} />
+
 
         </Switch>
       </div>
