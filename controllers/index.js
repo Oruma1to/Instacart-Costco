@@ -68,17 +68,19 @@ const deleteProduct = async (req, res) => {
   res.status(500).json({ error: error.message })
  }
 }
+
 ///Users
 
 const signUp = async (req, res) => {
  try {
-  const { username, email, password } = req.body
+  const { username, email, password, admin_key } = req.body
+  admin_key = false
   const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
   const user = await new User({
    username,
    email,
    password_digest,
-
+   admin_key
   })
   await user.save();
 
