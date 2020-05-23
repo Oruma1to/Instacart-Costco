@@ -144,11 +144,9 @@ const getUsers = async (req, res) => {
 
 const newArrivals = async (req, res) => {
  try {
-  console.log("newArivals");
   // const products = await Product.find()
   // const products = await Product.find({}, {}, { sort: { 'createdAt': -1 } });
   const products = await Product.find().sort({ _id: -1 }).limit(6)
-  console.log(products)
   res.json(products)
  } catch (error) {
   res.status(500).json({ error: error.message })
