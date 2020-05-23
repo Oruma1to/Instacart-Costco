@@ -73,8 +73,8 @@ const deleteProduct = async (req, res) => {
 
 const signUp = async (req, res) => {
  try {
+  console.log(req.body)
   const { username, email, password, admin_key } = req.body
-  admin_key = false
   const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
   const user = await new User({
    username,
