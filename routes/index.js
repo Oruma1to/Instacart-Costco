@@ -19,7 +19,7 @@ router.get('/searching/:term', controllers.searchWord)
 router.get('/users', controllers.getUsers)
 router.post('/sign-up', controllers.signUp)
 router.post('/sign-in', controllers.signIn)
-router.post('/verify', controllers.verifyUser)
+router.get('/verify', controllers.verifyUser)
 
 
 module.exports = router

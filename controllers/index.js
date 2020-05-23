@@ -123,7 +123,9 @@ const verifyUser = async (req, res) => {
  try {
   const token = req.headers.authorization.split(" ")[1];
   const legit = jwt.verify(token, TOKEN_KEY);
+  console.log(`Token: ${token} and Legit : ${legit}`)
   if (legit) {
+   const user = await User.findById(legit.id)
    res.json({ user })
   }
  } catch (error) {
