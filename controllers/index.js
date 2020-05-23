@@ -109,7 +109,6 @@ const signIn = async (req, res) => {
     email: user.email
    };
    const token = jwt.sign(payload, TOKEN_KEY);
-   console.log("in backend - signin", user)
    return res.status(201).json({ user, token });
   } else {
    res.status(401).send("Invalid Credentials");
