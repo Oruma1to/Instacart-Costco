@@ -121,16 +121,13 @@ const signIn = async (req, res) => {
 
 const verifyUser = async (req, res) => {
  try {
-  const token = req.headers.authorization.split(" ")[1];
-  const legit = jwt.verify(token, TOKEN_KEY);
-  if (legit) {
-   res.json({ user })
-  }
+  const user = await User.findById(res.locals.user.id)
+  res.json(user)
  } catch (error) {
   res.status(401).send("Not an Authorized User")
  }
-
 }
+
 
 const getUsers = async (req, res) => {
  try {
