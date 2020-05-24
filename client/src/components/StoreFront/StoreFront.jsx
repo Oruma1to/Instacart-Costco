@@ -20,7 +20,7 @@ export default class StoreFront extends Component {
   return (
    <div className="store-front">
     <StoreHeader user={this.props.user} setSearchProducts={this.props.setSearchProducts} />
-    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} />
+    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} setSearchProducts={this.props.setSearchProducts} />
    </div>
   );
  }

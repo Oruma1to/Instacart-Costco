@@ -10,14 +10,15 @@ export default class StoreBody extends Component {
   super(props);
 
   this.state = {
-   filterValue: [],
-   found: null
+   product: [],
+   found: []
   };
  }
- setFound = found => this.setState({ found })
+ setFound = found => this.setState({ found }, this.props.setSearchProducts(null))
 
 
  renderingProducts = (value) => {
+
 
   if (this.props.searchProducts !== null) {
    value =
@@ -28,8 +29,7 @@ export default class StoreBody extends Component {
       {...product}
      />
     ))
-  } else if (this.state.found) {
-   console.log("in the rendering else if statement", this.state.found)
+  } else if (this.state.found.length > 0) {
    value = this.state.found.map((product, index) => (
     <Product
      user={this.props.user}
@@ -43,20 +43,25 @@ export default class StoreBody extends Component {
  }
 
  componentDidUpdate = () => {
-  if (this.props.searchProducts !== null && this.state.found) {
+  if (this.props.searchProducts !== null && this.state.found.length) {
+   // this.props.setSearchProducts(null)
    this.setState({ found: [] })
   }
  }
 
  render() {
+  console.log("in rende")
+  console.log("Search products", this.props.searchProducts)
+  console.log("found", this.state.found)
   let products = null
   products = this.renderingProducts(products);
+  console.log("in render ", products)
 
   return (
    <div className="storeBodyPage">
     <DeliveryTo />
     <main className="storeBodySection">
-     <Departments setFound={this.setFound} products={this.props.products} />
+     <Departments setFound={this.setFound} products={this.props.products} setSearchProducts={this.props.setSearchProducts} />
      {products ?
       <div className="searchProductsOuterDiv">{products}</div>
       :
