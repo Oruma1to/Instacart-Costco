@@ -154,7 +154,17 @@ const searchWord = async (req, res) => {
  try {
   let { term } = req.params
   console.log(term)
-  const product = await Product.find({ name: { $regex: term, $options: 'i' } })
+  // { $or: [{ quantity: { $lt: 20 } }, { price: 10 }] } 
+  const product = await Product.find(
+   {
+    $or: [
+     { name: { $regex: term, $options: 'i' } },
+     { department: { $regex: term, $options: 'i' } },
+     { category: { $regex: term, $options: 'i' } }
+    ]
+   }
+
+  )
   console.log("product", product)
   if (product) {
    return res.json(product)
@@ -163,8 +173,9 @@ const searchWord = async (req, res) => {
  } catch (error) {
   res.status(500).json({ error: error.message })
  }
-
 }
+
+
 
 
 module.exports = {
