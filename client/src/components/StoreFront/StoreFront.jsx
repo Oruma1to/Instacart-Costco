@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import StoreHeader from "./StoreHeader";
 import StoreBody from "./StoreBody";
-
 import "./StoreFront.css";
+import linkNavBar from "../selectedOptions"
 
 export default class StoreFront extends Component {
  constructor() {
@@ -20,7 +20,7 @@ export default class StoreFront extends Component {
   return (
    <div className="store-front">
     <StoreHeader user={this.props.user} setSearchProducts={this.props.setSearchProducts} />
-    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} />
+    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} />
    </div>
   );
  }
