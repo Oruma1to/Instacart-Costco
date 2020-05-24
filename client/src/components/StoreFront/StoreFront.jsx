@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import StoreHeader from "./StoreHeader";
 import StoreBody from "./StoreBody";
 import "./StoreFront.css";
-import linkNavBar from "../selectedOptions"
+import { getProducts } from "../../services/product"
 
 export default class StoreFront extends Component {
  constructor() {

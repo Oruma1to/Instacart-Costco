@@ -51,9 +51,9 @@ export const checker = (value) => {
 
 export const linkNavBar = (products, setFound, property, value) => {
  console.log("linkNavBar", property, value)
- let filterValue = products.filter(function (product) {
+ let found = products.filter(function (product) {
   return product[property] === value
  })
- console.log("Found products: ", filterValue)
- setFound({ filterValue })
+ console.log("Found products: ", found)
+ setFound(found)
 }

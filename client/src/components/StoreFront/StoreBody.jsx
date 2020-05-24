@@ -11,13 +11,14 @@ export default class StoreBody extends Component {
 
   this.state = {
    filterValue: [],
-   found: []
+   found: null
   };
  }
  setFound = found => this.setState({ found })
 
 
  renderingProducts = (value) => {
+
   if (this.props.searchProducts !== null) {
    value =
     this.props.searchProducts.map((product, index) => (
@@ -27,7 +28,8 @@ export default class StoreBody extends Component {
       {...product}
      />
     ))
-  } else if (this.state.found.length > 0) {
+  } else if (this.state.found) {
+   console.log("in the rendering else if statement", this.state.found)
    value = this.state.found.map((product, index) => (
     <Product
      user={this.props.user}
@@ -41,7 +43,7 @@ export default class StoreBody extends Component {
  }
 
  componentDidUpdate = () => {
-  if (this.props.searchProducts !== null && this.state.found.length) {
+  if (this.props.searchProducts !== null && this.state.found) {
    this.setState({ found: [] })
   }
  }
@@ -54,7 +56,7 @@ export default class StoreBody extends Component {
    <div className="storeBodyPage">
     <DeliveryTo />
     <main className="storeBodySection">
-     <Departments setFound={this.setFound} product={this.props.products} />
+     <Departments setFound={this.setFound} products={this.props.products} />
      {products ?
       <div className="searchProductsOuterDiv">{products}</div>
       :
