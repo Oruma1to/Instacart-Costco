@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom'
 import { linkNavBar } from "../selectedOptions.js"
 
 export default class Departments extends Component {
- constructor(props) {
-  super(props)
- }
-
  render() {
   return (
    <div className="department-container">

@@ -9,7 +9,7 @@ export default class StoreFront extends Component {
   super()
   this.state = {
    products: null,
-   listDataFromChild: null
+   listDataFromChild: []
   }
  }
  async componentDidMount() {
@@ -17,10 +17,10 @@ export default class StoreFront extends Component {
   this.setState({ products })
  }
 
- setListDataFromChild = listDataFromChild => this.setState({ listDataFromChild }, this.props.setSearchProducts(null))
+ setListDataFromChild = listDataFromChild => this.setState({ listDataFromChild })
 
  myCallback = (dataFromChild) => {
-  this.setState({ listDataFromChild: dataFromChild });
+  this.setState({ listDataFromChild: dataFromChild }, this.props.setSearchProducts(null));
  }
 
  render() {

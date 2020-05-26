@@ -19,7 +19,7 @@ export default class StoreBody extends Component {
 
  renderingProducts = (value) => {
 
-  if (this.props.listDataFromChild !== null) {
+  if (this.props.listDataFromChild.length > 0) {
    value = this.props.listDataFromChild.map((product, index) => (
     <Product
      user={this.props.user}
@@ -55,8 +55,8 @@ export default class StoreBody extends Component {
   if (this.props.searchProducts !== null && this.state.found.length) {
    // this.props.setSearchProducts(null)
    this.setState({ found: [] })
-  } else if (this.props.searchProducts !== null && this.props.listDataFromChild) {
-   this.props.setListDataFromChild(null)
+  } else if (this.props.searchProducts !== null && this.props.listDataFromChild.length) {
+   this.props.setListDataFromChild({ listDataFromChild: [] })
   }
  }
 
