@@ -62,13 +62,13 @@ export default class HamburgerNav extends Component {
 
        <ul className="parent-sub-menu-hamburger">
 
-        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'department', "Meat & Seafood"))}>Bread</Link></li>
+        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'category', "Bread"))}>Bread</Link></li>
 
-        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'department', "Meat & Seafood"))}>Buns & Rolls</Link></li>
+        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'category', "Buns & Rolls"))}>Buns & Rolls</Link></li>
 
-        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'department', "Meat & Seafood"))}>Cookies</Link></li>
+        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'category', "Cookies"))}>Cookies</Link></li>
 
-        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'department', "Meat & Seafood"))}>Pies & Cakes</Link></li>
+        <li><Link className="department-item-hamburger" to="#" onClick={() => this.props.callbackFromParent(hamburgerLink(this.props.products, 'category', "Pies & Cakes"))}>Pies & Cakes</Link></li>
 
        </ul>
 

@@ -17,6 +17,8 @@ export default class StoreFront extends Component {
   this.setState({ products })
  }
 
+ setListDataFromChild = listDataFromChild => this.setState({ listDataFromChild }, this.props.setSearchProducts(null))
+
  myCallback = (dataFromChild) => {
   this.setState({ listDataFromChild: dataFromChild });
  }
@@ -26,7 +28,7 @@ export default class StoreFront extends Component {
   return (
    <div className="store-front">
     <StoreHeader user={this.props.user} setSearchProducts={this.props.setSearchProducts} products={this.state.products} callbackFromParent={this.myCallback} />
-    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} setSearchProducts={this.props.setSearchProducts} listDataFromChild={this.state.listDataFromChild} />
+    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} setSearchProducts={this.props.setSearchProducts} listDataFromChild={this.state.listDataFromChild} setListDataFromChild={this.setListDataFromChild} />
    </div>
   );
  }

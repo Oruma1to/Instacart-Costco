@@ -55,13 +55,15 @@ export default class StoreBody extends Component {
   if (this.props.searchProducts !== null && this.state.found.length) {
    // this.props.setSearchProducts(null)
    this.setState({ found: [] })
+  } else if (this.props.searchProducts !== null && this.props.listDataFromChild) {
+   this.props.setListDataFromChild(null)
   }
  }
 
  render() {
   console.log("StoreBody", this.props.listDataFromChild)
-  // console.log("in rende")
-  // console.log("Search products", this.props.searchProducts)
+  console.log("in rende")
+  console.log("Search products", this.props.searchProducts)
   // console.log("found", this.state.found)
   let products = null
   products = this.renderingProducts(products);
