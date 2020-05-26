@@ -57,3 +57,14 @@ export const linkNavBar = (products, setFound, property, value) => {
  console.log("Found products: ", found)
  setFound(found)
 }
+
+
+export const hamburgerLink = (products, property, value) => {
+ console.log("linkNavBar", property, value)
+ let found = products.filter(function (product) {
+  return product[property] === value
+ })
+ console.log("Found products: ", found)
+ return found
+ // setFound(found)
+}

@@ -19,25 +19,34 @@ export default class StoreBody extends Component {
 
  renderingProducts = (value) => {
 
-
-  if (this.props.searchProducts !== null) {
-   value =
-    this.props.searchProducts.map((product, index) => (
-     <Product
-      user={this.props.user}
-      key={index}
-      {...product}
-     />
-    ))
-  } else if (this.state.found.length > 0) {
-   value = this.state.found.map((product, index) => (
+  if (this.props.listDataFromChild !== null) {
+   value = this.props.listDataFromChild.map((product, index) => (
     <Product
      user={this.props.user}
      key={index}
-     _id={product._id}
      {...product}
     />
    ))
+  } else {
+   if (this.props.searchProducts !== null) {
+    value =
+     this.props.searchProducts.map((product, index) => (
+      <Product
+       user={this.props.user}
+       key={index}
+       {...product}
+      />
+     ))
+   } else if (this.state.found.length > 0) {
+    value = this.state.found.map((product, index) => (
+     <Product
+      user={this.props.user}
+      key={index}
+      _id={product._id}
+      {...product}
+     />
+    ))
+   }
   }
   return value
  }
@@ -50,12 +59,13 @@ export default class StoreBody extends Component {
  }
 
  render() {
-  console.log("in rende")
-  console.log("Search products", this.props.searchProducts)
-  console.log("found", this.state.found)
+  console.log("StoreBody", this.props.listDataFromChild)
+  // console.log("in rende")
+  // console.log("Search products", this.props.searchProducts)
+  // console.log("found", this.state.found)
   let products = null
   products = this.renderingProducts(products);
-  console.log("in render ", products)
+  // console.log("in render ", products)
 
   return (
    <div className="storeBodyPage">

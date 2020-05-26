@@ -7,9 +7,10 @@ export default class StoreFrontNavBar extends Component {
 
 
  render() {
+  console.log("In StoreFrontNavBar", this.props)
   return (
    <>
-    <HamburgerNav callbackFromParent={this.props.callbackFromParent} />
+    <HamburgerNav products={this.props.products} callbackFromParent={this.props.callbackFromParent} />
     <nav className='header-navBar'>
      <div className='left-side'>
       <Link className="storeFrontNav-img-link" to="/costco">

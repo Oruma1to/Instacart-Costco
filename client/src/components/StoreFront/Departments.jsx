@@ -9,7 +9,6 @@ export default class Departments extends Component {
  }
 
  render() {
-  console.log("in departments", this.props)
   return (
    <div className="department-container">
     <h1>Departments</h1>

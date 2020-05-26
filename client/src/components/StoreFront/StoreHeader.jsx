@@ -5,11 +5,12 @@ import SearchBar from './SearchBar'
 import { Link } from 'react-router-dom'
 
 export default class StoreHeader extends Component {
- //this.props.callbackFromParent(listInfo);
+
  render() {
+  console.log("In StoreHeader", this.props)
   return (
    <div className='apple-header'>
-    <StoreFrontNavBar user={this.props.user} callbackFromParent={this.props.callbackFromParent} />
+    <StoreFrontNavBar user={this.props.user} products={this.props.products} callbackFromParent={this.props.callbackFromParent} />
 
     <div className="circle-logo">
      <img className="costco-logo" src={require("../../images/costco-logo2.png")} alt="costco-logo" />

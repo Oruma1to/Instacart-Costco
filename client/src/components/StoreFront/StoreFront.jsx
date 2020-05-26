@@ -19,13 +19,14 @@ export default class StoreFront extends Component {
 
  myCallback = (dataFromChild) => {
   this.setState({ listDataFromChild: dataFromChild });
- },
+ }
 
  render() {
+  console.log("StoreFront", this.state.listDataFromChild)
   return (
    <div className="store-front">
-    <StoreHeader user={this.props.user} setSearchProducts={this.props.setSearchProducts} callbackFromParent={this.myCallback} />
-    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} setSearchProducts={this.props.setSearchProducts} />
+    <StoreHeader user={this.props.user} setSearchProducts={this.props.setSearchProducts} products={this.state.products} callbackFromParent={this.myCallback} />
+    <StoreBody user={this.props.user} searchProducts={this.props.searchProducts} products={this.state.products} setSearchProducts={this.props.setSearchProducts} listDataFromChild={this.state.listDataFromChild} />
    </div>
   );
  }
