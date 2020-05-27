@@ -93,6 +93,18 @@ class PostEdit extends Component {
               onSubmit={this.handleSubmit}
             >
               <div className="editProduct-field-wrapper">
+                <div className="editProduct-label">Name:</div>
+                <input
+                  className="editProduct"
+                  placeholder="Name"
+                  value={product.name}
+                  name="name"
+                  required
+                  autoFocus
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="editProduct-field-wrapper">
                 <div className="editProduct-label">Brand:</div>
                 <input
                   className="editProduct"
