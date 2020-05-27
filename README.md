@@ -1,10 +1,22 @@
-<img src="https://cdn.dribbble.com/users/232783/screenshots/5897974/ecommerce-page-faster-shopping-experience-dribbble-cover.gif" alt= "shopping-cart-rocket" width="25%"/>
-
-![Costco](https://media.giphy.com/media/A7Jsc3LEcsDCg/giphy.gif)
+<img src="https://cdn.dribbble.com/users/232783/screenshots/5897974/ecommerce-page-faster-shopping-experience-dribbble-cover.gif" alt= "shopping-cart-rocket" width="31%"/> ![Costco](https://media.giphy.com/media/A7Jsc3LEcsDCg/giphy.gif) 
 
 ![Instacart-Costco](https://media.giphy.com/media/MF1XrtS1F0YrC21R3K/giphy.gif)
 
 # Instacart-Costco
+
+## Credits
+
+SEI Team
+- Juan Delgado [GitHub](https://www.github.com/JohnJoseph2019)
+- Bianca Biagioni [GitHub](https://www.github.com/BiaCode9)
+- Stefon Simmons [GitHub](https://www.github.com/StefonSimmons)
+- Joshua Aponte [GitHub](https://www.github.com/Oruma1to)
+- Abraham Tavarez [GitHub](https://www.github.com/AbeTavarez)
+
+UX Team
+- Caitlin Chen
+- Lucas Zambelli
+- Matt Zlotnick
 
 ### Description
 A team effort to recreate the Instacart desktop and mobile application. Instacart is a grocery delivery and pick-up service. The team consists of 5 software engineers and 3 user experience (UX) designers.
@@ -70,8 +82,6 @@ API SNIPPET
 }
 ```
 
-## Change Log
 
-- 
 
 
