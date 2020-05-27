@@ -4,34 +4,22 @@ import ProductList from "./ProductList";
 import Departments from "./Departments"
 import Product from "../StoreFront/Product"
 import './StoreBody.css'
-import { getProducts } from "../../services/product";
 
 export default class StoreBody extends Component {
-  constructor(props) {
-    super(props);
+ constructor(props) {
+  super(props);
 
-    this.state = {
-      filterValue: [],
-      found: [],
-      products: null
-    };
-  }
-
-  async componentDidMount() {
-    const filterValue = await getProducts();
-    this.setState({ filterValue })
-  }
-  
- linkNavBar = (property, value) => {
-  console.log("linkNavBar", property, value)
-  let products = this.state.filterValue.filter(function (product) {
-   return product[property] === value
-  })
-  console.log("Found products: ", products)
-  this.setState({ found: products })
+  this.state = {
+   product: [],
+   found: []
+  };
  }
+ setFound = found => this.setState({ found }, this.props.setSearchProducts(null))
+
 
  renderingProducts = (value) => {
+
+
   if (this.props.searchProducts !== null) {
    value =
     this.props.searchProducts.map((product, index) => (
@@ -53,32 +41,37 @@ export default class StoreBody extends Component {
   }
   return value
  }
- 
+
  componentDidUpdate = () => {
   if (this.props.searchProducts !== null && this.state.found.length) {
+   // this.props.setSearchProducts(null)
    this.setState({ found: [] })
   }
  }
 
-  render() {
-    let products = null
-    products = this.renderingProducts(products);
+ render() {
+  console.log("in rende")
+  console.log("Search products", this.props.searchProducts)
+  console.log("found", this.state.found)
+  let products = null
+  products = this.renderingProducts(products);
+  console.log("in render ", products)
 
-    return (
-      <div className="storeBodyPage">
-        <DeliveryTo />
-        <main className="storeBodySection">
-          <Departments linkNavBar={this.linkNavBar} />
-          {products ?
-            <div className="searchProductsOuterDiv">{products}</div>
-            :
-            <div className="storebody-products-list">
-              <ProductList user={this.props.user} dataInfo={1} title="Buy Again" />
-              <ProductList user={this.props.user} dataInfo={2} title="New Arrivals" />
-            </div>
-          }
-        </main>
+  return (
+   <div className="storeBodyPage">
+    <DeliveryTo />
+    <main className="storeBodySection">
+     <Departments setFound={this.setFound} products={this.props.products} setSearchProducts={this.props.setSearchProducts} />
+     {products ?
+      <div className="searchProductsOuterDiv">{products}</div>
+      :
+      <div className="storebody-products-list">
+       <ProductList user={this.props.user} dataInfo={1} title="Buy Again" />
+       <ProductList user={this.props.user} dataInfo={2} title="New Arrivals" />
       </div>
-    );
-  }
+     }
+    </main>
+   </div>
+  );
+ }
 };
